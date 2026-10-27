@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "Taller integración — RabbitMQ",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Solicitudes iniciales; no sustituyen los procedimientos ni las evidencias de los diez casos RabbitMQ."
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Crear pedido — esperado HTTP 202",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/orders",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerName\": \"Pedro\",\n  \"product\": \"Libro de arquitectura\",\n  \"quantity\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "console.log(\"HTTP_EVIDENCE \" + JSON.stringify({timestamp: new Date().toISOString(), request: {method: pm.request.method, url: pm.variables.replaceIn(pm.request.url.toString()), body: pm.request.body.raw}, response: {code: pm.response.code, headers: pm.response.headers.toJSON(), body: pm.response.text(), responseTime: pm.response.responseTime}}));",
+              "pm.test(\"HTTP 202\", () => pm.response.to.have.status(202));",
+              "const body = pm.response.json();",
+              "pm.test(\"status accepted\", () => pm.expect(body.status).to.eql(\"accepted\"));",
+              "pm.test(\"Mensaje esperado\", () => pm.expect(body.message).to.eql(\"Pedido recibido y enviado a RabbitMQ\"));",
+              "pm.test(\"orderId ORD UUID no vacío\", () => pm.expect(body.orderId).to.match(/^ORD-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i));",
+              "pm.collectionVariables.set(\"orderId\", body.orderId);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cantidad inválida — esperado HTTP 400",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/orders",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"customerName\":\"Prueba\",\"product\":\"Libro\",\"quantity\":0}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "console.log(\"HTTP_EVIDENCE \" + JSON.stringify({timestamp: new Date().toISOString(), request: {method: pm.request.method, url: pm.variables.replaceIn(pm.request.url.toString()), body: pm.request.body.raw}, response: {code: pm.response.code, headers: pm.response.headers.toJSON(), body: pm.response.text(), responseTime: pm.response.responseTime}}));",
+              "pm.test(\"quantity cero: HTTP 400\", () => pm.response.to.have.status(400));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

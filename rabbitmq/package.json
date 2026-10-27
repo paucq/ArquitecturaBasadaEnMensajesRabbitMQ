@@ -1,0 +1,13 @@
+{
+  "name": "taller-integracion-rabbitmq",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test pruebas/*.test.mjs"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.9",
+    "express": "^5.1.0"
+  }
+}

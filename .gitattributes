@@ -1,0 +1,25 @@
+# Keep evidence bytes untouched; normalize only application/docs/scripts.
+* -text
+/README.md text eol=lf
+/PLAN_DE_TRABAJO.md text eol=lf
+/.gitignore text eol=lf
+/.gitattributes text eol=lf
+/docs/**/*.md text eol=lf
+/rabbitmq/*.md text eol=lf
+/rabbitmq/*.mjs text eol=lf
+/rabbitmq/*.json text eol=lf
+/rabbitmq/*.yml text eol=lf
+/rabbitmq/*.yaml text eol=lf
+/rabbitmq/Dockerfile text eol=lf
+/rabbitmq/**/*.mjs text eol=lf
+/rabbitmq/**/*.json text eol=lf
+/rabbitmq/**/*.sh text eol=lf
+/scripts/windows/*.ps1 text eol=crlf
+/tools/*.py text eol=lf
+/tools/**/*.py text eol=lf
+/tools/*.txt text eol=lf
+/docs/**/*.svg text eol=lf
+/evidencias/** -text
+/entrega/** -text
+# ReportLab can emit ASCII-only PDFs; never diff, merge or normalize them as text.
+/entrega/*.pdf binary
