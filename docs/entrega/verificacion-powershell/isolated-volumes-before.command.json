@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "docker",
+    "volume",
+    "ls",
+    "--filter",
+    "label=com.docker.compose.project=qa-rabbitmq-entrega-verificacion",
+    "--format",
+    "{{.Name}}"
+  ],
+  "cwd": "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/entregas/ArquitecturaBasadaEnMensajesRabbitMQ",
+  "start": "2026-10-27T04:23:12.799Z",
+  "timeoutMs": 15000,
+  "end": "2026-10-27T04:23:12.907Z",
+  "exitcode": 0,
+  "signal": null,
+  "timedOut": false
+}

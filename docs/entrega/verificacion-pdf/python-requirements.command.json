@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/trabajos/entrega-rabbitmq/.venv_tooling/bin/python",
+    "-c",
+    "import importlib.metadata as m; print({p:{'version':m.version(p),'python':m.metadata(p).get('Requires-Python')} for p in ['pypdf','reportlab','pillow','charset-normalizer']})"
+  ],
+  "cwd": "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/entregas/ArquitecturaBasadaEnMensajesRabbitMQ",
+  "start": "2026-10-27T04:33:52.492Z",
+  "end": "2026-10-27T04:33:52.641Z",
+  "exitcode": 0,
+  "signal": null
+}

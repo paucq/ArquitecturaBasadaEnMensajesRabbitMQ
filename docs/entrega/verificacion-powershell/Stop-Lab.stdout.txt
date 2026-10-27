@@ -1,0 +1,1 @@
+Proyecto qa-rabbitmq-entrega-verificacion apagado. Volumen conservado; no se uso -v.

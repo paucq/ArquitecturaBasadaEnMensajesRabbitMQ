@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checkedAtUtc": "2026-10-27T04:54:57.291585+00:00",
+  "indexedFilesBeforeThisReceipt": 1137,
+  "indexedSourceBytes": 3592985,
+  "validJSONFiles": 279,
+  "originalPNGFiles": 9,
+  "localMarkdownLinksChecked": 574,
+  "brokenLinks": [],
+  "evidenceFilesByteIdenticalInGitIndex": 1045,
+  "privateMaterialPatternsFound": 0,
+  "windowsNamesPortable": true,
+  "windowsCaseCollisions": 0,
+  "symlinks": 0,
+  "nodeModulesOrVirtualenvTracked": false,
+  "pdfSha256MatchesVisualReview": "dd737f0d227e74173219dfc0c93ebbe8c94920d8acea4739bbf80d2f1802aa22",
+  "pdfGitBlobByteIdentical": true,
+  "notes": [
+    "This receipt is staged after this check, so the index gains one file.",
+    "Pattern scans are heuristic; admin/admin is documented local-only lab configuration.",
+    "Native assessment flags archived shell commands, RDD off; no native review approval is claimed. Functional/structural checks are separately recorded."
+  ]
+}

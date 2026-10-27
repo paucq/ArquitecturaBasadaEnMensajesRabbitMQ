@@ -1,0 +1,52 @@
+[
+  {
+    "document": "README.md",
+    "block": 1,
+    "code": "git clone https://github.com/paucq/ArquitecturaBasadaEnMensajesRabbitMQ.git\nSet-Location .\\ArquitecturaBasadaEnMensajesRabbitMQ\npowershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\windows\\Start-Lab.ps1\nInvoke-RestMethod -Uri http://localhost:3000/health -TimeoutSec 5\n"
+  },
+  {
+    "document": "README.md",
+    "block": 2,
+    "code": "$body = @{ customerName = 'Pedro'; product = 'Libro de arquitectura'; quantity = 1 } | ConvertTo-Json\n$pedido = Invoke-RestMethod -Method Post -Uri http://localhost:3000/orders -ContentType 'application/json' -Body $body -TimeoutSec 5\n$pedido\n"
+  },
+  {
+    "document": "README.md",
+    "block": 3,
+    "code": "docker compose --project-name arquitectura-basada-mensajes-rabbitmq --file .\\rabbitmq\\docker-compose.yml logs --timestamps orders-api notification-worker\npowershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\windows\\Test-Lab.ps1\n"
+  },
+  {
+    "document": "README.md",
+    "block": 4,
+    "code": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\windows\\Stop-Lab.ps1\n"
+  },
+  {
+    "document": "README.md",
+    "block": 5,
+    "code": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\windows\\Start-Lab.ps1 -ProjectName qa-rabbitmq-entrega-verificacion -ApiPort 3300 -ManagementPort 15673 -AmqpPort 5673\npowershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\windows\\Test-Lab.ps1 -ProjectName qa-rabbitmq-entrega-verificacion -ApiPort 3300 -ManagementPort 15673 -AmqpPort 5673\npowershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\windows\\Stop-Lab.ps1 -ProjectName qa-rabbitmq-entrega-verificacion -ApiPort 3300 -ManagementPort 15673 -AmqpPort 5673\n"
+  },
+  {
+    "document": "README.md",
+    "block": 6,
+    "code": "py -3 -m venv .venv\n.\\.venv\\Scripts\\python.exe -m pip install -r .\\tools\\requirements-informe.txt\n.\\.venv\\Scripts\\python.exe .\\tools\\generar_informe.py\n"
+  },
+  {
+    "document": "docs/EJECUCION_WINDOWS.md",
+    "block": 1,
+    "code": "docker version\nif ($LASTEXITCODE -ne 0) { throw 'Docker no disponible' }\ndocker compose version\nif ($LASTEXITCODE -ne 0) { throw 'Compose no disponible' }\ndocker info --format '{{.OSType}}'\nif ($LASTEXITCODE -ne 0) { throw 'Motor no disponible' }\n"
+  },
+  {
+    "document": "docs/EJECUCION_WINDOWS.md",
+    "block": 2,
+    "code": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\windows\\Start-Lab.ps1 -WaitTimeout 300\n"
+  },
+  {
+    "document": "docs/EJECUCION_WINDOWS.md",
+    "block": 3,
+    "code": "postman collection run .\\rabbitmq\\pruebas\\RabbitMQ.postman_collection.json -i 'Crear pedido — esperado HTTP 202' --env-var 'baseUrl=http://localhost:3000' --no-report-events --verbose\nif ($LASTEXITCODE -ne 0) { throw 'Postman CLI reporto error' }\n"
+  },
+  {
+    "document": "docs/EJECUCION_WINDOWS.md",
+    "block": 4,
+    "code": "docker compose --project-name arquitectura-basada-mensajes-rabbitmq --file .\\rabbitmq\\docker-compose.yml ps\ndocker compose --project-name arquitectura-basada-mensajes-rabbitmq --file .\\rabbitmq\\docker-compose.yml logs --tail 100 orders-api notification-worker\n"
+  }
+]

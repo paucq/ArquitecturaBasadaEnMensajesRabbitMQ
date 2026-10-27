@@ -1,0 +1,22 @@
+{
+  "filesChecked": 1102,
+  "originalEvidenceFilesByteIdentical": 1045,
+  "invalidWindowsNames": [],
+  "filesOver40MiB": [],
+  "credentialPatternMatches": [],
+  "longestRelativePaths": [
+    [
+      111,
+      "evidencias/rabbitmq/consumidores-apagados/corrida-03/consumo-posterior/05-logs-notification-worker-exitcode.txt"
+    ],
+    [
+      110,
+      "evidencias/rabbitmq/consumidores-apagados/corrida-03/consumo-posterior/05-logs-notification-worker-comando.txt"
+    ],
+    [
+      109,
+      "evidencias/rabbitmq/consumidores-apagados/corrida-03/consumo-posterior/05-logs-notification-worker-stdout.txt"
+    ]
+  ],
+  "note": "Pattern scan is not proof of absence of every secret. admin/admin and Basic auth in lab evidence are documented local-only credentials."
+}

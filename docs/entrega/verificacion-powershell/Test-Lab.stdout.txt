@@ -1,0 +1,36 @@
+v26.8.1
+[33;1mWARNING: Prueba exclusiva del laboratorio: detiene ambos workers, publica pedidos y reencola hasta 100 mensajes. No ejecutar en paralelo.[0m
+
+added 70 packages, and audited 71 packages in 4s
+
+29 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+> taller-integracion-rabbitmq@1.0.0 test
+> node --test pruebas/*.test.mjs
+
+ Container qa-rabbitmq-entrega-verificacion-notification-worker-2 Stopping 
+ Container qa-rabbitmq-entrega-verificacion-notification-worker-1 Stopping 
+ Container qa-rabbitmq-entrega-verificacion-notification-worker-1 Stopped 
+ Container qa-rabbitmq-entrega-verificacion-notification-worker-2 Stopped 
+ Container qa-rabbitmq-entrega-verificacion-rabbitmq-1 Waiting 
+ Container qa-rabbitmq-entrega-verificacion-rabbitmq-1 Healthy 
+ Container qa-rabbitmq-entrega-verificacion-notification-worker-1 Starting 
+ Container qa-rabbitmq-entrega-verificacion-notification-worker-1 Started 
+ Container qa-rabbitmq-entrega-verificacion-notification-worker-2 Starting 
+ Container qa-rabbitmq-entrega-verificacion-notification-worker-2 Started 
+ Container qa-rabbitmq-entrega-verificacion-rabbitmq-1 Waiting 
+ Container qa-rabbitmq-entrega-verificacion-rabbitmq-1 Healthy 
+✔ API publica en RabbitMQ y el worker independiente procesa el mismo pedido (16954.259364ms)
+✔ API rechaza datos inválidos sin aceptarlos como pedido (33.580273ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17212.535358
+Runner terminado: revise que ambos tests pasaron (positivo y cantidad cero). No equivale a los diez casos formales.

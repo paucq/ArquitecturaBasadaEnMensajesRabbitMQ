@@ -1,0 +1,68 @@
+FFFFFF
+======================================================================
+FAIL: test_code_wrap_and_unicode (test_generar_informe.CompilationTests.test_code_wrap_and_unicode)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/trabajos/entrega-rabbitmq/preparacion/tools/test_generar_informe.py", line 39, in test_code_wrap_and_unicode
+    self.assertLessEqual(max(map(len, lines)), 90)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 250 not less than or equal to 90
+
+======================================================================
+FAIL: test_escape_rejected (test_generar_informe.CompilationTests.test_escape_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/trabajos/entrega-rabbitmq/preparacion/tools/test_generar_informe.py", line 32, in test_escape_rejected
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_images_include_markdown_links_not_only_bang (test_generar_informe.CompilationTests.test_images_include_markdown_links_not_only_bang)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/trabajos/entrega-rabbitmq/preparacion/tools/test_generar_informe.py", line 28, in test_images_include_markdown_links_not_only_bang
+    self.assertEqual(informe.image_links('[a](a.png) ![b](b.png) [c](x.txt)'),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     ['a.png', 'b.png'])
+                     ^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != ['a.png', 'b.png']
+
+Second list contains 2 additional elements.
+First extra element 0:
+'a.png'
+
+- []
++ ['a.png', 'b.png']
+
+======================================================================
+FAIL: test_rewrite_links_preserves_code (test_generar_informe.CompilationTests.test_rewrite_links_preserves_code)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/trabajos/entrega-rabbitmq/preparacion/tools/test_generar_informe.py", line 24, in test_rewrite_links_preserves_code
+    self.assertIn('../../evidencias/rabbitmq/casos-funcionales/a.png', result)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '../../evidencias/rabbitmq/casos-funcionales/a.png' not found in '[foto](a.png)\n```js\nconst x = "[x](a.png)";\n```\n'
+
+======================================================================
+FAIL: test_root_permission (test_generar_informe.CompilationTests.test_root_permission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/trabajos/entrega-rabbitmq/preparacion/tools/test_generar_informe.py", line 44, in test_root_permission
+    with self.assertRaises(PermissionError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: PermissionError not raised
+
+======================================================================
+FAIL: test_ten_cases_and_eleven_fields (test_generar_informe.CompilationTests.test_ten_cases_and_eleven_fields)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/trabajos/entrega-rabbitmq/preparacion/tools/test_generar_informe.py", line 13, in test_ten_cases_and_eleven_fields
+    self.assertEqual(len(informe.CASES), 10)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 10
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.010s
+
+FAILED (failures=6)

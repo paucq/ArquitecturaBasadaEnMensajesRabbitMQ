@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/trabajos/entrega-rabbitmq/.tooling/powershell-7.6.9/pwsh",
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/entregas/ArquitecturaBasadaEnMensajesRabbitMQ/scripts/windows/Start-Lab.ps1",
+    "-ProjectName",
+    "qa-rabbitmq-entrega-verificacion",
+    "-ApiPort",
+    "3300",
+    "-ManagementPort",
+    "15673",
+    "-AmqpPort",
+    "5673"
+  ],
+  "cwd": "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/entregas/ArquitecturaBasadaEnMensajesRabbitMQ",
+  "start": "2026-10-27T04:23:12.908Z",
+  "timeoutMs": 240000,
+  "end": "2026-10-27T04:23:49.286Z",
+  "exitcode": 0,
+  "signal": null,
+  "timedOut": false
+}

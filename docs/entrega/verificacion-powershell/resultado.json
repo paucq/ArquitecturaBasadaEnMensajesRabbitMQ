@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "finished": "2026-10-27T04:24:29.131Z",
+  "project": "qa-rabbitmq-entrega-verificacion",
+  "apiPort": 3300,
+  "managementPort": 15673,
+  "amqpPort": 5673,
+  "host": "Linux/WSL2 with Docker Desktop; PowerShell 7.6.9 portable",
+  "nativeWindowsHyperVValidated": false,
+  "originalContainerIDsUnchanged": true,
+  "isolatedContainersRemoved": true,
+  "isolatedVolumeRetained": true,
+  "originalProjectUntouched": true
+}

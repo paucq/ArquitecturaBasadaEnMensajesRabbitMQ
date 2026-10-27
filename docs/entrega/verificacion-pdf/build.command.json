@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/trabajos/entrega-rabbitmq/.venv_tooling/bin/python",
+    "tools/generar_informe.py"
+  ],
+  "cwd": "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/entregas/ArquitecturaBasadaEnMensajesRabbitMQ",
+  "start": "2026-10-27T04:33:48.152Z",
+  "end": "2026-10-27T04:33:52.492Z",
+  "exitcode": 0,
+  "signal": null
+}

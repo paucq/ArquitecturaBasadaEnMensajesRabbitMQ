@@ -1,0 +1,35 @@
+{
+  "cwd": "Raíz del repositorio académico 8thSemester",
+  "variables": {
+    "BASE": "Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración",
+    "B": "Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/trabajos/entrega-rabbitmq"
+  },
+  "red": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 \"$B/.venv_tooling/bin/python\" -m unittest discover -s \"$B/preparacion/tools\" -p 'test_generar_informe.py'",
+    "exitcode": 1,
+    "observed": "6 tests, 6 failures sobre implementación contractual inicial: casos/campos, enlaces/código, PNG, escape, permisos y ancho de código",
+    "stdout": "red.stdout.txt",
+    "stderr": "red.stderr.txt"
+  },
+  "green": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 \"$B/.venv_tooling/bin/python\" -m unittest discover -s \"$B/preparacion/tools\" -p 'test_generar_informe.py'",
+    "exitcode": 0,
+    "observed": "12 tests OK; incluye triangulación de errores I/O, raíz inexistente, campo ausente, enlaces remotos/escape y destinos PDF portables",
+    "stdout": "green.stdout.txt",
+    "stderr": "green.stderr.txt"
+  },
+  "build": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 \"$B/.venv_tooling/bin/python\" \"$B/preparacion/tools/generar_informe.py\" --source-root \"$BASE\" --output-root \"$B/preparacion\"",
+    "exitcode": 0,
+    "stdout": "build.stdout.json",
+    "stderr": "build.stderr.txt",
+    "checks": "../validation-generacion.json"
+  },
+  "delivery_rebuild_from_clone_root": ".venv\\Scripts\\python tools/generar_informe.py",
+  "limits": [
+    "No Docker/Postman/curl/request en esta transacción; no modificación de originales ni clone independiente",
+    "No validación nativa Windows/Hyper-V; el padre informó PASS aislado de scripts PowerShell ejecutados en Linux",
+    "No renderizado/revisión visual final del PDF aquí; el padre lo realizará con tooling opcional de auditoría",
+    "El generador no necesita PyMuPDF; requirements solo fija las cuatro dependencias verificadas"
+  ]
+}

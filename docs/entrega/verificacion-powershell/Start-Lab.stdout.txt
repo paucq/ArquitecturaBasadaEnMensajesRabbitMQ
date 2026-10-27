@@ -1,0 +1,76 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.62kB done
+#1 DONE 0.0s
+
+#2 [orders-api internal] load build definition from Dockerfile
+#2 transferring dockerfile: 205B 0.0s done
+#2 DONE 0.1s
+
+#3 [notification-worker internal] load metadata for docker.io/library/node:24-alpine
+#3 DONE 1.3s
+
+#4 [orders-api internal] load .dockerignore
+#4 transferring context: 76B done
+#4 DONE 0.0s
+
+#5 [notification-worker internal] load build context
+#5 transferring context: 36.36kB 0.0s done
+#5 DONE 0.0s
+
+#6 [orders-api 1/5] FROM docker.io/library/node:24-alpine@sha256:06d7adf3e0ef61a13f1d28682726366f97a15aa1888c934d3ecec86c33918b53
+#6 resolve docker.io/library/node:24-alpine@sha256:06d7adf3e0ef61a13f1d28682726366f97a15aa1888c934d3ecec86c33918b53 0.1s done
+#6 DONE 0.1s
+
+#7 [notification-worker 4/5] RUN npm ci --omit=dev
+#7 CACHED
+
+#8 [notification-worker 2/5] WORKDIR /app
+#8 CACHED
+
+#9 [notification-worker 3/5] COPY package.json package-lock.json ./
+#9 CACHED
+
+#10 [notification-worker 5/5] COPY broker.mjs api.mjs worker.mjs ./
+#10 CACHED
+
+#9 [orders-api 3/5] COPY package.json package-lock.json ./
+#9 CACHED
+
+#7 [orders-api 4/5] RUN npm ci --omit=dev
+#7 CACHED
+
+#8 [orders-api 2/5] WORKDIR /app
+#8 CACHED
+
+#10 [orders-api 5/5] COPY broker.mjs api.mjs worker.mjs ./
+#10 CACHED
+
+#11 [orders-api] exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:906a771febd45d3e2ca630e760aecdeb364c7407fc96549dde66cc0dfa46460b 0.0s done
+#11 exporting config sha256:4b3fe24443cec6d1fd78126a8b57944a4815e49a1154bb0c4069243e1e1c8921 0.0s done
+#11 exporting attestation manifest sha256:3ed18966fe586123ad084163918dabf38b442c36bbc88f89141533c402acab60
+#11 exporting attestation manifest sha256:3ed18966fe586123ad084163918dabf38b442c36bbc88f89141533c402acab60 0.1s done
+#11 exporting manifest list sha256:d62039fae0a801f489cef34db9b7a71915015ddf04463173b85d69053180067a 0.0s done
+#11 naming to docker.io/library/qa-rabbitmq-entrega-verificacion-orders-api:latest
+#11 naming to docker.io/library/qa-rabbitmq-entrega-verificacion-orders-api:latest 0.0s done
+#11 unpacking to docker.io/library/qa-rabbitmq-entrega-verificacion-orders-api:latest 0.0s done
+#11 DONE 0.4s
+
+#12 [notification-worker] exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:b96d503ff3e3f8689c94234f81f8493118ce9a3f245693eb37731d555e2cf516 0.0s done
+#12 exporting config sha256:c615a1da75e0027a7fb15c0e910834db91c996b882337c57f570965f2f1f8ac2 0.0s done
+#12 exporting attestation manifest sha256:0eae37a6d8dc9767be6f000492df777652ba60921e2dedce3ad1894699fdf03f 0.1s done
+#12 exporting manifest list sha256:e52415f5967a04e1c62c19708c069bd559e39f48cc80ad129f5e671f1680e981 0.0s done
+#12 naming to docker.io/library/qa-rabbitmq-entrega-verificacion-notification-worker:latest done
+#12 unpacking to docker.io/library/qa-rabbitmq-entrega-verificacion-notification-worker:latest 0.0s done
+#12 DONE 0.4s
+
+#13 [notification-worker] resolving provenance for metadata file
+#13 DONE 0.0s
+
+#14 [orders-api] resolving provenance for metadata file
+#14 DONE 0.0s
+API: http://localhost:3300 | Management: http://localhost:15673 (admin/admin; solo laboratorio)
+Proyecto: qa-rabbitmq-entrega-verificacion. Use los mismos parametros al probar y apagar.

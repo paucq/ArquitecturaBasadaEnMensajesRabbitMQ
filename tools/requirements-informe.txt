@@ -1,0 +1,5 @@
+# Tooling opcional del informe; la aplicación Node no depende de Python.
+pypdf==6.21.2
+reportlab==5.1.0
+pillow==13.0.0
+charset-normalizer==3.5.2

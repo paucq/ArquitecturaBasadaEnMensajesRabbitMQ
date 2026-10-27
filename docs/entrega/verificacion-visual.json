@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "checkedAtUtc": "2026-10-27T04:44:56.824954+00:00",
+  "pdfSha256": "dd737f0d227e74173219dfc0c93ebbe8c94920d8acea4739bbf80d2f1802aa22",
+  "renderedPages": 27,
+  "dpi": 110,
+  "imageGalleryPages": [
+    {
+      "page": 21,
+      "images": 1
+    },
+    {
+      "page": 22,
+      "images": 1
+    },
+    {
+      "page": 23,
+      "images": 1
+    },
+    {
+      "page": 24,
+      "images": 1
+    },
+    {
+      "page": 25,
+      "images": 1
+    },
+    {
+      "page": 26,
+      "images": 1
+    },
+    {
+      "page": 27,
+      "images": 1
+    }
+  ],
+  "bboxWarnings": [],
+  "renderExitcode": 0,
+  "renderElapsedSeconds": 4.11,
+  "overviewReviewedPages": "1-27 in contact sheets",
+  "additionalFullPagesReviewed": [
+    12,
+    21,
+    26,
+    27
+  ],
+  "guideDiagramReviewedPage": 7,
+  "manualConclusion": "Captions and full images preserved, readable in full-page previews; no observed clipping or footer overlap. GUI log details may require PDF zoom; original full-resolution PNGs are linked. Whitespace in continuation pages is intentional separation, not missing cases.",
+  "limitations": [
+    "BBox heuristics and sampled full-page inspection are not a universal typography guarantee.",
+    "Previews are derived PDF review artifacts, not new runtime evidence.",
+    "No native Windows/Hyper-V validation."
+  ],
+  "previewImagesPublished": false,
+  "note": "Generated validation-generacion.json records compilation before this independent visual review; its pending review label is historical for that phase."
+}

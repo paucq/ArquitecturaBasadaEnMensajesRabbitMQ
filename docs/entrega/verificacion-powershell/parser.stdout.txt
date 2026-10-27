@@ -1,0 +1,14 @@
+[
+  {
+    "script": "Start-Lab.ps1",
+    "errors": 0
+  },
+  {
+    "script": "Stop-Lab.ps1",
+    "errors": 0
+  },
+  {
+    "script": "Test-Lab.ps1",
+    "errors": 0
+  }
+]

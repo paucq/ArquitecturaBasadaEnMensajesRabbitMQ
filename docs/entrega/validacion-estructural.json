@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checkedAtUtc": "2026-10-27T04:40:32.644479+00:00",
+  "markdownFiles": 33,
+  "localMarkdownLinksChecked": 569,
+  "missingLinks": [],
+  "linksEscapingRepository": [],
+  "gitignoreProbes": 11,
+  "applicationFilesByteIdenticalToCourse": [
+    "api.mjs",
+    "broker.mjs",
+    "worker.mjs",
+    "Dockerfile",
+    "package.json",
+    "package-lock.json",
+    "pruebas/flujo.test.mjs",
+    "pruebas/RabbitMQ.postman_collection.json"
+  ],
+  "rabbitmqReportsComplete": 10,
+  "kafkaReportsComplete": 0,
+  "note": "Full PDF visual review and final Git publication still follow this structural check."
+}
