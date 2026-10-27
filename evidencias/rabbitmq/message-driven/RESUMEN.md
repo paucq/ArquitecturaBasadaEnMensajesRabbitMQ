@@ -1,0 +1,13 @@
+# CP-08 RabbitMQ — mediación por mensajes
+
+**Cumple**, conclusión propia del [reporte de 11 campos](reporteCP08.md), no calificación del profesor. Revisión estática de API, conexión AMQP, worker y Compose, combinada con evidencia nativa real de una corrida existente; no basta Docker ni una explicación teórica.
+
+- Fuentes de implementación: [API](../../../rabbitmq/api.mjs), [broker](../../../rabbitmq/broker.mjs), [worker](../../../rabbitmq/worker.mjs), [Compose](../../../rabbitmq/docker-compose.yml) y [dependencias](../../../rabbitmq/package.json). Fragmentos literales/rangos en el reporte. Configuración real: `AMQP_URL`; cola `pedidos` constante en broker.mjs. No se inventan variables RABBITMQ_URL/RABBITMQ_QUEUE.
+- Única corrida seleccionada: [CP-06 trazabilidad/corrida-01](../trazabilidad/RESUMEN.md), `ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e`. [JSONL nativo](../trazabilidad/corrida-01/broker-native-original.jsonl): published 02:42:35.087 y received 02:42:35.103 UTC del 2026-10-27; mismo correlation_id/message_id/payload.orderId. Exchange predeterminado, enrutamiento y entrega en pedidos.
+- [API original](../trazabilidad/corrida-01/logs-orders-api-same-id.txt): published 02:42:35.123Z. [Worker-1 original](../trazabilidad/corrida-01/logs-notification-worker-same-id.txt): received 02:42:35.158Z y processed 02:42:38.411Z. La traza del broker, junto al código, acredita mediación; no se infiere una llamada directa porque existan logs de aplicaciones.
+- [Captura real existente](../trazabilidad/corrida-01/captura-trazabilidad-api-broker-worker.png) revisada completa, de [vista derivada identificada](../trazabilidad/corrida-01/VISTA_EVIDENCIAS.txt); no GUI ni log nativo alterado. Se reutiliza sin fabricar imágenes ni nuevos diagramas.
+- Diagnóstico ya apagado según [limpieza conservada](../trazabilidad/corrida-01/cleanup-verification.json); sin operaciones live, nuevos pedidos ni cambios de aplicación. `received` del broker es entrega, no ack. Ack manual/prefetch 1 están en código; no exactly-once, resiliencia o recuperación demostradas aquí. HTTP 202/1655 ms original no es benchmark.
+
+[Validación offline](validacion.json): campos, enlaces, fragmentos literales y líneas, identidad/payload/eventos, matriz 8/10 y Kafka pendiente; hashes de fuentes originales registrados y comprobados sin escrituras sobre ellas durante la validación. No se agregan tests de aplicación ni validador persistente. RED/GREEN no activos: trabajo documental pasivo. Marksman no se declara limpio; revisión LSP final corresponde al padre.
+
+Cobertura vigente RabbitMQ: **CP-01/02/03/06/07/08/10/11 = 8 de 10**. Pendientes CP-09/12; todo Kafka pendiente. CP-07 y las evidencias originales se preservan.

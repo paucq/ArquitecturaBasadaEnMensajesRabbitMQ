@@ -1,0 +1,13 @@
+✔ real multiline response (10.757116ms)
+✔ six real-shaped wrapped responses (0.867094ms)
+✔ duplicates rejected (1.18366ms)
+✔ missing responses rejected (0.465051ms)
+✔ non202 rejected (1.811675ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 124.314034

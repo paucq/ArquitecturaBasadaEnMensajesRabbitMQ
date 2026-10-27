@@ -1,0 +1,107 @@
+{
+  "id": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e",
+  "api": [
+    {
+      "timestamp": "2026-10-27T02:42:35.123Z",
+      "service": "orders-api",
+      "instance": "28a4ac996bc2",
+      "event": "order_published",
+      "orderId": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e",
+      "correlationId": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e",
+      "queue": "pedidos"
+    }
+  ],
+  "broker": [
+    {
+      "native": {
+        "node": "rabbit@rabbitmq",
+        "timestamp": "2026-10-27T02:42:35.087+00:00",
+        "type": "published",
+        "exchange": "",
+        "user": "admin",
+        "queue": "none",
+        "connection": "172.23.0.4:59440 -> 172.23.0.2:5672",
+        "vhost": "/",
+        "channel": 1,
+        "routing_keys": [
+          "pedidos"
+        ],
+        "properties": {
+          "content_type": "application/json",
+          "correlation_id": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e",
+          "delivery_mode": 2,
+          "headers": {},
+          "message_id": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e"
+        },
+        "payload": "eyJ0eXBlIjoiUHJvY2Vzc09yZGVyIiwib3JkZXJJZCI6Ik9SRC04ZDQ4OGZiOC02MmM5LTRlMzctOTM1ZC0zMWFlZDJhOGFhOWUiLCJjdXN0b21lck5hbWUiOiJQZWRybyIsInByb2R1Y3QiOiJMaWJybyBkZSBhcnF1aXRlY3R1cmEiLCJxdWFudGl0eSI6MSwiY3JlYXRlZEF0IjoiMjAyNi0xMC0yN1QwMjo0MjozNC42MTZaIn0=",
+        "routed_queues": [
+          "pedidos"
+        ]
+      },
+      "decodedPayload": {
+        "type": "ProcessOrder",
+        "orderId": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e",
+        "customerName": "Pedro",
+        "product": "Libro de arquitectura",
+        "quantity": 1,
+        "createdAt": "2026-10-27T02:42:34.616Z"
+      }
+    },
+    {
+      "native": {
+        "node": "rabbit@rabbitmq",
+        "timestamp": "2026-10-27T02:42:35.103+00:00",
+        "type": "received",
+        "exchange": "",
+        "user": "admin",
+        "queue": "pedidos",
+        "connection": "172.23.0.5:41064 -> 172.23.0.2:5672",
+        "vhost": "/",
+        "channel": 1,
+        "routing_keys": [
+          "pedidos"
+        ],
+        "properties": {
+          "content_type": "application/json",
+          "correlation_id": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e",
+          "delivery_mode": 2,
+          "headers": {},
+          "message_id": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e"
+        },
+        "payload": "eyJ0eXBlIjoiUHJvY2Vzc09yZGVyIiwib3JkZXJJZCI6Ik9SRC04ZDQ4OGZiOC02MmM5LTRlMzctOTM1ZC0zMWFlZDJhOGFhOWUiLCJjdXN0b21lck5hbWUiOiJQZWRybyIsInByb2R1Y3QiOiJMaWJybyBkZSBhcnF1aXRlY3R1cmEiLCJxdWFudGl0eSI6MSwiY3JlYXRlZEF0IjoiMjAyNi0xMC0yN1QwMjo0MjozNC42MTZaIn0=",
+        "routed_queues": "none"
+      },
+      "decodedPayload": {
+        "type": "ProcessOrder",
+        "orderId": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e",
+        "customerName": "Pedro",
+        "product": "Libro de arquitectura",
+        "quantity": 1,
+        "createdAt": "2026-10-27T02:42:34.616Z"
+      }
+    }
+  ],
+  "worker": [
+    {
+      "timestamp": "2026-10-27T02:42:35.158Z",
+      "service": "notification-worker",
+      "instance": "9daaf02d21e3",
+      "event": "order_received",
+      "orderId": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e",
+      "correlationId": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e",
+      "redelivered": false
+    },
+    {
+      "timestamp": "2026-10-27T02:42:38.411Z",
+      "service": "notification-worker",
+      "instance": "9daaf02d21e3",
+      "event": "order_processed",
+      "orderId": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e",
+      "correlationId": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e",
+      "redelivered": false
+    }
+  ],
+  "postmanExitcode": 0,
+  "workerProcessingSeconds": 3.253,
+  "source": "Derived offline from original native JSONL and application logs; no new order."
+}

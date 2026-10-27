@@ -1,0 +1,6 @@
+Only if orchestrator was SIGKILLed or cleanup failed: verify original IDs and project labels first.
+Target: 9daaf02d21e371996a271e5593f53808da530dc096c7a372c9b4e6b1db568437
+Peer: aea9d0d7aa0048044777558fc51b45495452dbfe31c4b334536eb498d53837f7
+If original target running but frozen: docker kill --signal SIGCONT TARGET.
+If original worker exited: docker start ORIGINAL_ID. Never start replacement or republish.
+Verify two running workers, Consumers=2 and queue=0/0/0; preserve failed attempt.

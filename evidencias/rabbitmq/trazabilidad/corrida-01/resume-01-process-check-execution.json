@@ -1,0 +1,12 @@
+{
+  "command": [
+    "pgrep",
+    "-af",
+    "[r]un-cp06.mjs"
+  ],
+  "cwd": "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq",
+  "start": "2026-10-27T02:45:35.291Z",
+  "end": "2026-10-27T02:45:35.340Z",
+  "exitcode": 1,
+  "signal": null
+}

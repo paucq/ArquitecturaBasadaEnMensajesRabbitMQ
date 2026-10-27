@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/evidencias/rabbitmq/recuperacion/cp12.test.mjs"
+  ],
+  "start": "2026-10-27T03:44:48.839Z",
+  "end": "2026-10-27T03:44:49.192Z",
+  "exitcode": 1,
+  "signal": null
+}

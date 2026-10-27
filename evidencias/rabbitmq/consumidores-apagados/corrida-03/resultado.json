@@ -1,0 +1,29 @@
+{
+  "status": "espera_captura_y_consumo",
+  "orderId": "ORD-b7a74952-2957-49cb-a5db-f88d7b2ce443",
+  "initial": {
+    "durable": true,
+    "consumers": 0,
+    "messages_ready": 0,
+    "messages_unacknowledged": 0,
+    "messages": 0
+  },
+  "final": {
+    "durable": true,
+    "consumers": 0,
+    "messages_ready": 1,
+    "messages_unacknowledged": 0,
+    "messages": 1
+  },
+  "timestamp": "2026-10-27T01:39:45.394411+00:00",
+  "workers": [
+    {
+      "Name": "qa-taller-integracion-rabbitmq-notification-worker-1",
+      "State": "exited"
+    },
+    {
+      "Name": "qa-taller-integracion-rabbitmq-notification-worker-2",
+      "State": "exited"
+    }
+  ]
+}

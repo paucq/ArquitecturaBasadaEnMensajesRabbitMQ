@@ -1,0 +1,1 @@
+'postman' 'collection' 'run' 'pruebas/RabbitMQ.postman_collection.json' '-i' 'Crear pedido — esperado HTTP 202' '--iteration-count' '6' '--timeout' '60000' '--timeout-request' '10000' '--timeout-script' '5000' '--no-report-events' '--verbose'

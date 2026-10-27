@@ -1,0 +1,32 @@
+CP-06 RABBITMQ | VISTA DERIVADA DE REGISTROS REALES
+No es captura GUI ni log nativo nuevo. No se ejecuta otra solicitud.
+Fuentes originales conservadas en esta misma carpeta.
+
+API: logs-orders-api-same-id.txt
+2026-10-27T02:42:35.123Z  order_published
+orderId:       ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e
+correlationId: ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e
+
+BROKER NATIVO: broker-native-original.jsonl
+2026-10-27T02:42:35.087+00:00  published  nodo=rabbit@rabbitmq
+correlation_id: ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e
+message_id:     ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e
+payload.orderId (base64 decodificado): ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e
+routing_keys=["pedidos"]; queue=none
+2026-10-27T02:42:35.103+00:00  received  nodo=rabbit@rabbitmq
+correlation_id: ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e
+message_id:     ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e
+payload.orderId (base64 decodificado): ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e
+routing_keys=["pedidos"]; queue=pedidos
+
+WORKER-1: logs-notification-worker-same-id.txt
+2026-10-27T02:42:35.158Z  order_received
+orderId:       ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e
+correlationId: ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e
+2026-10-27T02:42:38.411Z  order_processed
+orderId:       ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e
+correlationId: ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e
+
+Postman: HTTP 202; 1 solicitud; 4/4 aserciones; exitcode=0.
+Limpieza verificada: tracing OFF; 2 workers; cola 0/0/0.
+Vista con campos seleccionados. JSON y stdout originales no modificados.

@@ -1,0 +1,54 @@
+GREEN: dos réplicas declaradas por defecto
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Running 
+ Container qa-taller-integracion-rabbitmq-orders-api-1 Running 
+ Container qa-taller-integracion-rabbitmq-notification-worker-2 Creating 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Recreate 
+ Container qa-taller-integracion-rabbitmq-notification-worker-2 Created 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Recreated 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Waiting 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Waiting 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Healthy 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Healthy 
+ Container qa-taller-integracion-rabbitmq-notification-worker-2 Starting 
+ Container qa-taller-integracion-rabbitmq-notification-worker-2 Started 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Starting 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Started 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Waiting 
+ Container qa-taller-integracion-rabbitmq-orders-api-1 Waiting 
+ Container qa-taller-integracion-rabbitmq-notification-worker-2 Waiting 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Waiting 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Healthy 
+ Container qa-taller-integracion-rabbitmq-notification-worker-2 Healthy 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Healthy 
+ Container qa-taller-integracion-rabbitmq-orders-api-1 Healthy 
+NAME                                                   IMAGE                                                COMMAND                  SERVICE               CREATED          STATUS                   PORTS
+qa-taller-integracion-rabbitmq-notification-worker-1   qa-taller-integracion-rabbitmq-notification-worker   "docker-entrypoint.s…"   notification-worker   12 seconds ago   Up Less than a second    
+qa-taller-integracion-rabbitmq-notification-worker-2   qa-taller-integracion-rabbitmq-notification-worker   "docker-entrypoint.s…"   notification-worker   12 seconds ago   Up 1 second              
+qa-taller-integracion-rabbitmq-orders-api-1            qa-taller-integracion-rabbitmq-orders-api            "docker-entrypoint.s…"   orders-api            2 minutes ago    Up 2 minutes (healthy)   127.0.0.1:3000->3000/tcp
+qa-taller-integracion-rabbitmq-rabbitmq-1              rabbitmq:4-management                                "docker-entrypoint.s…"   rabbitmq              2 minutes ago    Up 2 minutes (healthy)   127.0.0.1:5672->5672/tcp, 127.0.0.1:15672->15672/tcp
+
+> taller-integracion-rabbitmq@1.0.0 test
+> node --test pruebas/*.test.mjs
+
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Stopping 
+ Container qa-taller-integracion-rabbitmq-notification-worker-2 Stopping 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Stopped 
+ Container qa-taller-integracion-rabbitmq-notification-worker-2 Stopped 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Waiting 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Healthy 
+ Container qa-taller-integracion-rabbitmq-notification-worker-2 Starting 
+ Container qa-taller-integracion-rabbitmq-notification-worker-2 Started 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Starting 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Started 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Waiting 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Healthy 
+✔ API publica en RabbitMQ y el worker independiente procesa el mismo pedido (16415.391265ms)
+✔ API rechaza datos inválidos sin aceptarlos como pedido (11.00001ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16535.623365

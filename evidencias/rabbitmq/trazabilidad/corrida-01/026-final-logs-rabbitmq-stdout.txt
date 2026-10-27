@@ -1,0 +1,16 @@
+rabbitmq-1  | 2026-10-27T02:41:38.933029250Z 2026-10-27 02:41:38.849534+00:00 [info] <0.4522.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T02:41:41.912122273Z 2026-10-27 02:41:41.899112+00:00 [info] <0.4529.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T02:41:41.978474010Z 2026-10-27 02:41:41.972490+00:00 [info] <0.4532.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T02:42:15.942411793Z 2026-10-27 02:42:15.902245+00:00 [info] <0.4622.0> Plugins changed; enabled [rabbitmq_tracing][0m
+rabbitmq-1  | 2026-10-27T02:42:16.238281379Z 2026-10-27 02:42:16.237504+00:00 [info] <0.4674.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T02:42:16.335597470Z 2026-10-27 02:42:16.313904+00:00 [info] <0.4676.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T02:42:16.339634246Z 2026-10-27 02:42:16.338772+00:00 [info] <0.4647.0> Enabling tracing for vhost '/'[0m
+rabbitmq-1  | 2026-10-27T02:42:16.933219994Z 2026-10-27 02:42:16.898320+00:00 [info] <0.4685.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T02:42:19.052174951Z 2026-10-27 02:42:19.051492+00:00 [info] <0.4681.0> Tracer opened log file "/var/tmp/rabbitmq-tracing/CP06-2026-10-27T02-40-01-594Z.log" with format json[0m
+rabbitmq-1  | 2026-10-27T02:42:19.126055445Z 2026-10-27 02:42:19.121486+00:00 [info] <0.4703.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T02:42:19.187963002Z 2026-10-27 02:42:19.187139+00:00 [info] <0.4705.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T02:42:38.836875456Z 2026-10-27 02:42:38.775220+00:00 [info] <0.4712.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T02:42:39.147332756Z 2026-10-27 02:42:39.133617+00:00 [info] <0.4714.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T02:42:40.712367209Z 2026-10-27 02:42:40.694642+00:00 [info] <0.4716.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T02:42:40.734245814Z 2026-10-27 02:42:40.733588+00:00 [info] <0.4718.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T02:42:40.787433514Z 2026-10-27 02:42:40.779828+00:00 [info] <0.4720.0> User 'admin' authenticated successfully[0m

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "docker",
+    "stop",
+    "--timeout",
+    "10",
+    "aea9d0d7aa0048044777558fc51b45495452dbfe31c4b334536eb498d53837f7"
+  ],
+  "started": "2026-10-27T03:46:02.924Z",
+  "startMonotonicMs": 1152.213752,
+  "timeoutMs": 12000,
+  "finished": "2026-10-27T03:46:14.012Z",
+  "durationMs": 11091.433636,
+  "exitcode": 0,
+  "signal": null,
+  "timedOut": false
+}

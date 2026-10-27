@@ -1,0 +1,1 @@
+2026-10-27T03:46:49.056270436Z {"timestamp":"2026-10-27T03:46:49.055Z","service":"notification-worker","instance":"aea9d0d7aa00","event":"worker_ready","queue":"pedidos","processingDelayMs":3000}

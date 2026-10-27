@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "start": "2026-10-27T02:51:05.963Z",
+  "end": "2026-10-27T02:51:06.231Z",
+  "exitcode": 0,
+  "localLinksChecked": 83,
+  "reportFields": [
+    "ID del caso",
+    "Arquitectura",
+    "Objetivo",
+    "Precondiciones",
+    "Datos de entrada",
+    "Pasos ejecutados",
+    "Resultado esperado",
+    "Resultado obtenido",
+    "Evidencia (capturas)",
+    "Estado",
+    "Análisis técnico"
+  ],
+  "id": "ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e",
+  "nativeBrokerRecords": 2,
+  "sha256LocalAndBroker": "04c9a549f36c5253a7e2ee3927a6e403a38b20609b4c967bbb08f613c3f99146",
+  "postmanRequests": 1,
+  "postmanExitcode": 0,
+  "offlineTests": "3/3",
+  "restoredPlugins": true,
+  "restoredFirehose": true,
+  "pending": "Real user screenshot for CP-06; checkbox remains unchecked",
+  "noRuntimePublishDuringParentResume": true
+}

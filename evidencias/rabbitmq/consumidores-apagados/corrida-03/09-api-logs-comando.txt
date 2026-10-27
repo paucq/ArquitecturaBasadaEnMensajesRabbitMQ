@@ -1,0 +1,2 @@
+cwd: /home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq
+docker compose -p qa-taller-integracion-rabbitmq logs --no-color --since 2026-10-27T01:39:35.604048+00:00 orders-api

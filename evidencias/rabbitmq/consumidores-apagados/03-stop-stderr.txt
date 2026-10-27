@@ -1,0 +1,4 @@
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Stopping 
+ Container qa-taller-integracion-rabbitmq-notification-worker-2 Stopping 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Stopped 
+ Container qa-taller-integracion-rabbitmq-notification-worker-2 Stopped 

@@ -1,0 +1,2 @@
+cwd: /home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq
+postman collection run pruebas/RabbitMQ.postman_collection.json -i 'Crear pedido — esperado HTTP 202' --no-report-events --verbose --timeout 30000 --timeout-request 10000 --timeout-script 5000

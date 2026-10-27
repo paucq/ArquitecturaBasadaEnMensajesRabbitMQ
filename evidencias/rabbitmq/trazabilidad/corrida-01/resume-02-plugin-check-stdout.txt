@@ -1,0 +1,8 @@
+Listing plugins with pattern ".*" ...
+ Configured: E = explicitly enabled; e = implicitly enabled
+ | Status: * = running on rabbit@rabbitmq
+ |/
+[E*] rabbitmq_management       4.4.0
+[e*] rabbitmq_management_agent 4.4.0
+[E*] rabbitmq_prometheus       4.4.0
+[e*] rabbitmq_web_dispatch     4.4.0

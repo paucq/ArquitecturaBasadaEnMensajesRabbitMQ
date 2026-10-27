@@ -1,0 +1,25 @@
+python3 -c 'import json, subprocess, time, sys
+end = time.monotonic() + 45
+ID = "ORD-b7a74952-2957-49cb-a5db-f88d7b2ce443"
+dc = ["docker", "compose", "-p", "qa-taller-integracion-rabbitmq"]
+while time.monotonic() < end:
+    remaining = end - time.monotonic()
+    try:
+        logs = subprocess.run(dc + ["logs", "--no-color", "--timestamps", "notification-worker"], capture_output=True, text=True, timeout=min(3, remaining))
+        print(logs.stdout, end=""); print(logs.stderr, file=sys.stderr, end="")
+        if logs.returncode: sys.exit(logs.returncode)
+        remaining = end - time.monotonic()
+        if remaining <= 0: break
+        q = subprocess.run(["curl", "--silent", "--show-error", "--fail", "--max-time", "3", "--user", "admin:admin", "http://localhost:15672/api/queues/%2F/pedidos"], capture_output=True, text=True, timeout=min(3, remaining))
+        print(q.stdout); print(q.stderr, file=sys.stderr, end="")
+        if q.returncode: sys.exit(q.returncode)
+        data = json.loads(q.stdout)
+        lines = [line for line in logs.stdout.splitlines() if ID in line]
+        if all(any(event in line for line in lines) for event in ["order_received", "order_processed"]) and all(data.get(k) == v for k,v in {"consumers":2,"messages_ready":0,"messages_unacknowledged":0,"messages":0}.items()):
+            sys.exit(0)
+    except subprocess.TimeoutExpired:
+        break
+    time.sleep(min(1, max(0, end-time.monotonic())))
+print("TIMEOUT: condición no verificada en 45 segundos", file=sys.stderr)
+sys.exit(124)
+'

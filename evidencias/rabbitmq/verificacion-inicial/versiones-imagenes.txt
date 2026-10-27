@@ -1,0 +1,6 @@
+Docker version 29.6.2, build dfc4efb
+Docker Compose version v5.3.1
+29.6.2
+image=rabbitmq:4-management id=sha256:c200fd496482cda18c412be4e6f244830e1e75949b8cf5f0e887cea9ea456109 digests=rabbitmq@sha256:c200fd496482cda18c412be4e6f244830e1e75949b8cf5f0e887cea9ea456109
+image=qa-taller-integracion-rabbitmq-orders-api:latest id=sha256:96ad90c88ac9e3395e80395c5fcec7bb546a809542fdffd293c0099290974689 digests=qa-taller-integracion-rabbitmq-orders-api@sha256:96ad90c88ac9e3395e80395c5fcec7bb546a809542fdffd293c0099290974689
+image=qa-taller-integracion-rabbitmq-notification-worker:latest id=sha256:a0f4088aca8cb0e38926cea4ad7cfec4cb41e9f960c69172d0cda8ca27783c9a digests=qa-taller-integracion-rabbitmq-notification-worker@sha256:a0f4088aca8cb0e38926cea4ad7cfec4cb41e9f960c69172d0cda8ca27783c9a

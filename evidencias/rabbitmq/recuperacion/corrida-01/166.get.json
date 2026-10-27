@@ -1,0 +1,9 @@
+{
+  "method": "GET",
+  "url": "http://127.0.0.1:3000/health",
+  "started": "2026-10-27T03:46:52.955Z",
+  "finished": "2026-10-27T03:46:52.957Z",
+  "durationMs": 2.2097910000011325,
+  "status": 200,
+  "body": "{\"status\":\"ready\"}"
+}

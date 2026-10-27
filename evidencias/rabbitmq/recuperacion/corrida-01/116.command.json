@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "docker",
+    "logs",
+    "--timestamps",
+    "--since",
+    "2026-10-27T03:46:42.958Z",
+    "9daaf02d21e371996a271e5593f53808da530dc096c7a372c9b4e6b1db568437"
+  ],
+  "started": "2026-10-27T03:46:48.194Z",
+  "startMonotonicMs": 46428.267467,
+  "timeoutMs": 12000,
+  "finished": "2026-10-27T03:46:48.283Z",
+  "durationMs": 88.6044830000028,
+  "exitcode": 0,
+  "signal": null,
+  "timedOut": false
+}

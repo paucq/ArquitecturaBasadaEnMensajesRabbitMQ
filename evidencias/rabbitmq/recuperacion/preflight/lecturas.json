@@ -1,0 +1,140 @@
+[
+  {
+    "command": "docker",
+    "args": [
+      "compose",
+      "-p",
+      "qa-taller-integracion-rabbitmq",
+      "-f",
+      "Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq/docker-compose.yml",
+      "ps",
+      "--format",
+      "json"
+    ],
+    "started": "2026-10-27T03:30:23.312Z",
+    "finished": "2026-10-27T03:30:23.563Z",
+    "exitcode": 0,
+    "signal": null,
+    "stdout": "{\"Command\":\"\\\"docker-entrypoint.s…\\\"\",\"CreatedAt\":\"2026-10-26 20:01:01 -0500 -05\",\"ExitCode\":0,\"Health\":\"\",\"ID\":\"9daaf02d21e3\",\"Image\":\"qa-taller-integracion-rabbitmq-notification-worker\",\"Labels\":\"com.docker.compose.replace=notification-worker-1,com.docker.compose.service=notification-worker,com.docker.compose.version=5.3.1,desktop.docker.io/ports.scheme=v2,desktop.docker.io/wsl-distro=Ubuntu,com.docker.compose.config-hash=0bd4b224550a2cce5cf3d0ee351b1e6a1fa4afb3681a1976755d2a6e2444615d,com.docker.compose.container-number=1,com.docker.compose.depends_on=rabbitmq:service_healthy:false,com.docker.compose.image=sha256:a0f4088aca8cb0e38926cea4ad7cfec4cb41e9f960c69172d0cda8ca27783c9a,com.docker.compose.oneoff=False,com.docker.compose.project.working_dir=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq,com.docker.compose.project=qa-taller-integracion-rabbitmq,com.docker.compose.project.config_files=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq/docker-compose.yml\",\"LocalVolumes\":\"0\",\"Mounts\":\"\",\"Name\":\"qa-taller-integracion-rabbitmq-notification-worker-1\",\"Names\":\"qa-taller-integracion-rabbitmq-notification-worker-1\",\"Networks\":\"qa-taller-integracion-rabbitmq_default\",\"Ports\":\"\",\"Project\":\"qa-taller-integracion-rabbitmq\",\"Publishers\":[],\"RunningFor\":\"2 hours ago\",\"Service\":\"notification-worker\",\"Size\":\"0B\",\"State\":\"running\",\"Status\":\"Up 2 hours\"}\n{\"Command\":\"\\\"docker-entrypoint.s…\\\"\",\"CreatedAt\":\"2026-10-26 20:01:01 -0500 -05\",\"ExitCode\":0,\"Health\":\"\",\"ID\":\"aea9d0d7aa00\",\"Image\":\"qa-taller-integracion-rabbitmq-notification-worker\",\"Labels\":\"com.docker.compose.version=5.3.1,desktop.docker.io/ports.scheme=v2,desktop.docker.io/wsl-distro=Ubuntu,com.docker.compose.container-number=2,com.docker.compose.image=sha256:a0f4088aca8cb0e38926cea4ad7cfec4cb41e9f960c69172d0cda8ca27783c9a,com.docker.compose.oneoff=False,com.docker.compose.project=qa-taller-integracion-rabbitmq,com.docker.compose.service=notification-worker,com.docker.compose.config-hash=0bd4b224550a2cce5cf3d0ee351b1e6a1fa4afb3681a1976755d2a6e2444615d,com.docker.compose.depends_on=rabbitmq:service_healthy:false,com.docker.compose.project.config_files=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq/docker-compose.yml,com.docker.compose.project.working_dir=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq\",\"LocalVolumes\":\"0\",\"Mounts\":\"\",\"Name\":\"qa-taller-integracion-rabbitmq-notification-worker-2\",\"Names\":\"qa-taller-integracion-rabbitmq-notification-worker-2\",\"Networks\":\"qa-taller-integracion-rabbitmq_default\",\"Ports\":\"\",\"Project\":\"qa-taller-integracion-rabbitmq\",\"Publishers\":[],\"RunningFor\":\"2 hours ago\",\"Service\":\"notification-worker\",\"Size\":\"0B\",\"State\":\"running\",\"Status\":\"Up 2 hours\"}\n{\"Command\":\"\\\"docker-entrypoint.s…\\\"\",\"CreatedAt\":\"2026-10-26 19:58:42 -0500 -05\",\"ExitCode\":0,\"Health\":\"healthy\",\"ID\":\"28a4ac996bc2\",\"Image\":\"qa-taller-integracion-rabbitmq-orders-api\",\"Labels\":\"com.docker.compose.depends_on=rabbitmq:service_healthy:false,com.docker.compose.project.working_dir=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq,com.docker.compose.service=orders-api,com.docker.compose.version=5.3.1,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/3000/tcp=127.0.0.1:3000,com.docker.compose.config-hash=67fe91529757285a1a2ad29517b0a8a4af5b4d1d2197aaf8617a65235475e070,com.docker.compose.container-number=1,com.docker.compose.image=sha256:96ad90c88ac9e3395e80395c5fcec7bb546a809542fdffd293c0099290974689,com.docker.compose.oneoff=False,com.docker.compose.project=qa-taller-integracion-rabbitmq,com.docker.compose.project.config_files=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq/docker-compose.yml,desktop.docker.io/wsl-distro=Ubuntu\",\"LocalVolumes\":\"0\",\"Mounts\":\"\",\"Name\":\"qa-taller-integracion-rabbitmq-orders-api-1\",\"Names\":\"qa-taller-integracion-rabbitmq-orders-api-1\",\"Networks\":\"qa-taller-integracion-rabbitmq_default\",\"Ports\":\"127.0.0.1:3000-\\u003e3000/tcp\",\"Project\":\"qa-taller-integracion-rabbitmq\",\"Publishers\":[{\"URL\":\"127.0.0.1\",\"TargetPort\":3000,\"PublishedPort\":3000,\"Protocol\":\"tcp\"}],\"RunningFor\":\"3 hours ago\",\"Service\":\"orders-api\",\"Size\":\"0B\",\"State\":\"running\",\"Status\":\"Up 3 hours (healthy)\"}\n{\"Command\":\"\\\"docker-entrypoint.s…\\\"\",\"CreatedAt\":\"2026-10-26 19:58:42 -0500 -05\",\"ExitCode\":0,\"Health\":\"healthy\",\"ID\":\"874ff8f0d7a7\",\"Image\":\"rabbitmq:4-management\",\"Labels\":\"com.docker.compose.container-number=1,com.docker.compose.image=sha256:c200fd496482cda18c412be4e6f244830e1e75949b8cf5f0e887cea9ea456109,com.docker.compose.project=qa-taller-integracion-rabbitmq,desktop.docker.io/ports/15672/tcp=127.0.0.1:15672,org.opencontainers.image.description=The Ubuntu container image maintained by Canonical\\n\\nUbuntu is a Debian-based Linux operating system that runs from the desktop to the cloud, to all your internet connected things.\\nIt is the world's most popular operating system across public clouds and OpenStack clouds.\\nIt is the number one platform for containers; from Docker to Kubernetes to LXD, Ubuntu can run your containers at scale.\\nFast, secure and simple, Ubuntu powers millions of PCs worldwide.\\n,org.opencontainers.image.title=ubuntu,com.docker.compose.config-hash=0e943a4d5883712150b65e41bedd3680b135c74b9bd6963509cb2e364202ebe8,com.docker.compose.depends_on=,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq/docker-compose.yml,com.docker.compose.version=5.3.1,org.opencontainers.image.version=26.04,desktop.docker.io/ports/5672/tcp=127.0.0.1:5672,desktop.docker.io/wsl-distro=Ubuntu,com.docker.compose.project.working_dir=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq,com.docker.compose.service=rabbitmq,desktop.docker.io/ports.scheme=v2,org.opencontainers.image.created=2026-10-06T21:25:30.040262+00:00\",\"LocalVolumes\":\"1\",\"Mounts\":\"qa-taller-inte…\",\"Name\":\"qa-taller-integracion-rabbitmq-rabbitmq-1\",\"Names\":\"qa-taller-integracion-rabbitmq-rabbitmq-1\",\"Networks\":\"qa-taller-integracion-rabbitmq_default\",\"Ports\":\"127.0.0.1:5672-\\u003e5672/tcp, 127.0.0.1:15672-\\u003e15672/tcp\",\"Project\":\"qa-taller-integracion-rabbitmq\",\"Publishers\":[{\"URL\":\"127.0.0.1\",\"TargetPort\":5672,\"PublishedPort\":5672,\"Protocol\":\"tcp\"},{\"URL\":\"127.0.0.1\",\"TargetPort\":15672,\"PublishedPort\":15672,\"Protocol\":\"tcp\"}],\"RunningFor\":\"3 hours ago\",\"Service\":\"rabbitmq\",\"Size\":\"0B\",\"State\":\"running\",\"Status\":\"Up 3 hours (healthy)\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": "docker",
+    "args": [
+      "inspect",
+      "--format",
+      "{{json .Id}} {{json .Path}} {{json .Args}} {{json .State.Status}} {{json .State.Paused}} {{json .HostConfig.RestartPolicy}} {{json .Config.Entrypoint}}",
+      "9daaf02d21e3",
+      "aea9d0d7aa00"
+    ],
+    "started": "2026-10-27T03:30:23.563Z",
+    "finished": "2026-10-27T03:30:23.693Z",
+    "exitcode": 0,
+    "signal": null,
+    "stdout": "\"9daaf02d21e371996a271e5593f53808da530dc096c7a372c9b4e6b1db568437\" \"docker-entrypoint.sh\" [\"node\",\"worker.mjs\"] \"running\" false {\"MaximumRetryCount\":0,\"Name\":\"unless-stopped\"} [\"docker-entrypoint.sh\"]\n\"aea9d0d7aa0048044777558fc51b45495452dbfe31c4b334536eb498d53837f7\" \"docker-entrypoint.sh\" [\"node\",\"worker.mjs\"] \"running\" false {\"MaximumRetryCount\":0,\"Name\":\"unless-stopped\"} [\"docker-entrypoint.sh\"]\n",
+    "stderr": ""
+  },
+  {
+    "command": "curl",
+    "args": [
+      "--silent",
+      "--show-error",
+      "--fail",
+      "--max-time",
+      "4",
+      "http://127.0.0.1:3000/health"
+    ],
+    "started": "2026-10-27T03:30:23.693Z",
+    "finished": "2026-10-27T03:30:23.851Z",
+    "exitcode": 0,
+    "signal": null,
+    "stdout": "{\"status\":\"ready\"}",
+    "stderr": ""
+  },
+  {
+    "command": "curl",
+    "args": [
+      "--silent",
+      "--show-error",
+      "--fail",
+      "--max-time",
+      "4",
+      "-u",
+      "admin:admin",
+      "http://127.0.0.1:15672/api/queues/%2F/pedidos"
+    ],
+    "started": "2026-10-27T03:30:23.851Z",
+    "finished": "2026-10-27T03:30:23.954Z",
+    "exitcode": 0,
+    "signal": null,
+    "stdout": "{\"consumer_details\":[{\"arguments\":{},\"channel_details\":{\"connection_name\":\"172.23.0.3:60626 -> 172.23.0.2:5672\",\"name\":\"172.23.0.3:60626 -> 172.23.0.2:5672 (1)\",\"node\":\"rabbit@rabbitmq\",\"number\":1,\"peer_host\":\"172.23.0.3\",\"peer_port\":60626,\"user\":\"admin\"},\"ack_required\":true,\"active\":true,\"activity_status\":\"up\",\"consumer_tag\":\"amq.ctag-_lZiSyXDQwyk57j9j72x4g\",\"consumer_timeout\":1800000,\"exclusive\":false,\"prefetch_count\":1,\"queue\":{\"name\":\"pedidos\",\"vhost\":\"/\"}},{\"arguments\":{},\"channel_details\":{\"connection_name\":\"172.23.0.5:41064 -> 172.23.0.2:5672\",\"name\":\"172.23.0.5:41064 -> 172.23.0.2:5672 (1)\",\"node\":\"rabbit@rabbitmq\",\"number\":1,\"peer_host\":\"172.23.0.5\",\"peer_port\":41064,\"user\":\"admin\"},\"ack_required\":true,\"active\":true,\"activity_status\":\"up\",\"consumer_tag\":\"amq.ctag-J-8rIuo6RwuZ3zonzbkpYg\",\"consumer_timeout\":1800000,\"exclusive\":false,\"prefetch_count\":1,\"queue\":{\"name\":\"pedidos\",\"vhost\":\"/\"}}],\"arguments\":{\"x-queue-type\":\"classic\"},\"auto_delete\":false,\"consumer_capacity\":1.0,\"consumer_utilisation\":1.0,\"consumers\":2,\"deliveries\":[],\"durable\":true,\"effective_policy_definition\":{},\"exclusive\":false,\"exclusive_consumer_tag\":null,\"garbage_collection\":{\"fullsweep_after\":65535,\"max_heap_size\":0,\"min_bin_vheap_size\":46422,\"min_heap_size\":233,\"minor_gcs\":15},\"head_message_timestamp\":null,\"idle_since\":\"2026-10-27T02:42:42.466+00:00\",\"incoming\":[],\"internal\":false,\"internal_owner\":false,\"memory\":6792,\"message_bytes\":0,\"message_bytes_persistent\":0,\"message_bytes_ram\":0,\"message_bytes_ready\":0,\"message_bytes_unacknowledged\":0,\"message_stats\":{\"ack\":12,\"ack_details\":{\"rate\":0.0},\"deliver\":12,\"deliver_details\":{\"rate\":0.0},\"deliver_get\":14,\"deliver_get_details\":{\"rate\":0.0},\"deliver_no_ack\":0,\"deliver_no_ack_details\":{\"rate\":0.0},\"get\":2,\"get_details\":{\"rate\":0.0},\"get_empty\":2,\"get_empty_details\":{\"rate\":0.0},\"get_no_ack\":0,\"get_no_ack_details\":{\"rate\":0.0},\"publish\":12,\"publish_details\":{\"rate\":0.0},\"redeliver\":2,\"redeliver_details\":{\"rate\":0.0}},\"messages\":0,\"messages_details\":{\"rate\":0.0},\"messages_persistent\":0,\"messages_ram\":0,\"messages_ready\":0,\"messages_ready_details\":{\"rate\":0.0},\"messages_ready_ram\":0,\"messages_unacknowledged\":0,\"messages_unacknowledged_details\":{\"rate\":0.0},\"messages_unacknowledged_ram\":0,\"name\":\"pedidos\",\"node\":\"rabbit@rabbitmq\",\"operator_policy\":null,\"policy\":null,\"reductions\":54195,\"reductions_details\":{\"rate\":0.0},\"single_active_consumer_tag\":null,\"state\":\"running\",\"storage_version\":2,\"type\":\"classic\",\"vhost\":\"/\"}",
+    "stderr": ""
+  },
+  {
+    "command": "curl",
+    "args": [
+      "--silent",
+      "--show-error",
+      "--fail",
+      "--max-time",
+      "4",
+      "-u",
+      "admin:admin",
+      "http://127.0.0.1:15672/api/connections"
+    ],
+    "started": "2026-10-27T03:30:23.954Z",
+    "finished": "2026-10-27T03:30:23.980Z",
+    "exitcode": 0,
+    "signal": null,
+    "stdout": "[{\"auth_mechanism\":\"PLAIN\",\"channel_max\":2047,\"channels\":1,\"client_properties\":{\"capabilities\":{\"authentication_failure_close\":true,\"basic.nack\":true,\"connection.blocked\":true,\"consumer_cancel_notify\":true,\"exchange_exchange_bindings\":true,\"publisher_confirms\":true},\"information\":\"https://amqp-node.github.io/amqplib/\",\"platform\":\"Node.JS v24.22.1\",\"product\":\"amqplib\",\"version\":\"0.10.9\"},\"connected_at\":1793065591066,\"frame_max\":131072,\"garbage_collection\":{\"fullsweep_after\":65535,\"max_heap_size\":0,\"min_bin_vheap_size\":46422,\"min_heap_size\":233,\"minor_gcs\":680},\"host\":\"172.23.0.2\",\"name\":\"172.23.0.3:60626 -> 172.23.0.2:5672\",\"node\":\"rabbit@rabbitmq\",\"peer_cert_issuer\":null,\"peer_cert_serial_number\":null,\"peer_cert_subject\":null,\"peer_cert_validity\":null,\"peer_host\":\"172.23.0.3\",\"peer_port\":60626,\"port\":5672,\"protocol\":\"AMQP 0-9-1\",\"recv_cnt\":117,\"recv_oct\":1363,\"recv_oct_details\":{\"rate\":0.0},\"reductions\":1019542,\"reductions_details\":{\"rate\":160.0},\"send_cnt\":216,\"send_oct\":3857,\"send_oct_details\":{\"rate\":0.0},\"send_pend\":0,\"ssl\":false,\"ssl_cipher\":null,\"ssl_hash\":null,\"ssl_key_exchange\":null,\"ssl_protocol\":null,\"state\":\"running\",\"timeout\":60,\"type\":\"network\",\"user\":\"admin\",\"user_who_performed_action\":\"admin\",\"vhost\":\"/\"},{\"auth_mechanism\":\"PLAIN\",\"channel_max\":2047,\"channels\":1,\"client_properties\":{\"capabilities\":{\"authentication_failure_close\":true,\"basic.nack\":true,\"connection.blocked\":true,\"consumer_cancel_notify\":true,\"exchange_exchange_bindings\":true,\"publisher_confirms\":true},\"information\":\"https://amqp-node.github.io/amqplib/\",\"platform\":\"Node.JS v24.22.1\",\"product\":\"amqplib\",\"version\":\"0.10.9\"},\"connected_at\":1793062732218,\"frame_max\":131072,\"garbage_collection\":{\"fullsweep_after\":65535,\"max_heap_size\":0,\"min_bin_vheap_size\":46422,\"min_heap_size\":233,\"minor_gcs\":1009},\"host\":\"172.23.0.2\",\"name\":\"172.23.0.4:59440 -> 172.23.0.2:5672\",\"node\":\"rabbit@rabbitmq\",\"peer_cert_issuer\":null,\"peer_cert_serial_number\":null,\"peer_cert_subject\":null,\"peer_cert_validity\":null,\"peer_host\":\"172.23.0.4\",\"peer_port\":59440,\"port\":5672,\"protocol\":\"AMQP 0-9-1\",\"recv_cnt\":195,\"recv_oct\":5821,\"recv_oct_details\":{\"rate\":1.6},\"reductions\":1486133,\"reductions_details\":{\"rate\":181.2},\"send_cnt\":314,\"send_oct\":3269,\"send_oct_details\":{\"rate\":1.6},\"send_pend\":0,\"ssl\":false,\"ssl_cipher\":null,\"ssl_hash\":null,\"ssl_key_exchange\":null,\"ssl_protocol\":null,\"state\":\"running\",\"timeout\":60,\"type\":\"network\",\"user\":\"admin\",\"user_who_performed_action\":\"admin\",\"vhost\":\"/\"},{\"auth_mechanism\":\"PLAIN\",\"channel_max\":2047,\"channels\":1,\"client_properties\":{\"capabilities\":{\"authentication_failure_close\":true,\"basic.nack\":true,\"connection.blocked\":true,\"consumer_cancel_notify\":true,\"exchange_exchange_bindings\":true,\"publisher_confirms\":true},\"information\":\"https://amqp-node.github.io/amqplib/\",\"platform\":\"Node.JS v24.22.1\",\"product\":\"amqplib\",\"version\":\"0.10.9\"},\"connected_at\":1793065591595,\"frame_max\":131072,\"garbage_collection\":{\"fullsweep_after\":65535,\"max_heap_size\":0,\"min_bin_vheap_size\":46422,\"min_heap_size\":233,\"minor_gcs\":693},\"host\":\"172.23.0.2\",\"name\":\"172.23.0.5:41064 -> 172.23.0.2:5672\",\"node\":\"rabbit@rabbitmq\",\"peer_cert_issuer\":null,\"peer_cert_serial_number\":null,\"peer_cert_subject\":null,\"peer_cert_validity\":null,\"peer_host\":\"172.23.0.5\",\"peer_port\":41064,\"port\":5672,\"protocol\":\"AMQP 0-9-1\",\"recv_cnt\":117,\"recv_oct\":1363,\"recv_oct_details\":{\"rate\":0.0},\"reductions\":1024800,\"reductions_details\":{\"rate\":160.0},\"send_cnt\":216,\"send_oct\":3849,\"send_oct_details\":{\"rate\":0.0},\"send_pend\":0,\"ssl\":false,\"ssl_cipher\":null,\"ssl_hash\":null,\"ssl_key_exchange\":null,\"ssl_protocol\":null,\"state\":\"running\",\"timeout\":60,\"type\":\"network\",\"user\":\"admin\",\"user_who_performed_action\":\"admin\",\"vhost\":\"/\"}]",
+    "stderr": ""
+  },
+  {
+    "command": "curl",
+    "args": [
+      "--silent",
+      "--show-error",
+      "--fail",
+      "--max-time",
+      "4",
+      "-u",
+      "admin:admin",
+      "http://127.0.0.1:15672/api/consumers/%2F"
+    ],
+    "started": "2026-10-27T03:30:23.980Z",
+    "finished": "2026-10-27T03:30:24.004Z",
+    "exitcode": 0,
+    "signal": null,
+    "stdout": "[{\"arguments\":{},\"ack_required\":true,\"active\":true,\"activity_status\":\"up\",\"channel_details\":{\"connection_name\":\"172.23.0.3:60626 -> 172.23.0.2:5672\",\"name\":\"172.23.0.3:60626 -> 172.23.0.2:5672 (1)\",\"node\":\"rabbit@rabbitmq\",\"number\":1,\"peer_host\":\"172.23.0.3\",\"peer_port\":60626,\"user\":\"admin\"},\"consumer_tag\":\"amq.ctag-_lZiSyXDQwyk57j9j72x4g\",\"consumer_timeout\":1800000,\"exclusive\":false,\"prefetch_count\":1,\"queue\":{\"name\":\"pedidos\",\"vhost\":\"/\"}},{\"arguments\":{},\"ack_required\":true,\"active\":true,\"activity_status\":\"up\",\"channel_details\":{\"connection_name\":\"172.23.0.5:41064 -> 172.23.0.2:5672\",\"name\":\"172.23.0.5:41064 -> 172.23.0.2:5672 (1)\",\"node\":\"rabbit@rabbitmq\",\"number\":1,\"peer_host\":\"172.23.0.5\",\"peer_port\":41064,\"user\":\"admin\"},\"consumer_tag\":\"amq.ctag-J-8rIuo6RwuZ3zonzbkpYg\",\"consumer_timeout\":1800000,\"exclusive\":false,\"prefetch_count\":1,\"queue\":{\"name\":\"pedidos\",\"vhost\":\"/\"}}]",
+    "stderr": ""
+  },
+  {
+    "command": "docker",
+    "args": [
+      "logs",
+      "--tail",
+      "8",
+      "9daaf02d21e3"
+    ],
+    "started": "2026-10-27T03:30:24.004Z",
+    "finished": "2026-10-27T03:30:24.108Z",
+    "exitcode": 0,
+    "signal": null,
+    "stdout": "{\"timestamp\":\"2026-10-27T01:58:33.983Z\",\"service\":\"notification-worker\",\"instance\":\"9daaf02d21e3\",\"event\":\"order_received\",\"orderId\":\"ORD-962eb263-4dcf-488c-8cda-3e4c81eecac0\",\"correlationId\":\"ORD-962eb263-4dcf-488c-8cda-3e4c81eecac0\",\"redelivered\":false}\n{\"timestamp\":\"2026-10-27T01:58:36.998Z\",\"service\":\"notification-worker\",\"instance\":\"9daaf02d21e3\",\"event\":\"order_processed\",\"orderId\":\"ORD-962eb263-4dcf-488c-8cda-3e4c81eecac0\",\"correlationId\":\"ORD-962eb263-4dcf-488c-8cda-3e4c81eecac0\",\"redelivered\":false}\n{\"timestamp\":\"2026-10-27T01:58:37.009Z\",\"service\":\"notification-worker\",\"instance\":\"9daaf02d21e3\",\"event\":\"order_received\",\"orderId\":\"ORD-fbd6453d-7827-4b34-acee-9830dbcb9641\",\"correlationId\":\"ORD-fbd6453d-7827-4b34-acee-9830dbcb9641\",\"redelivered\":false}\n{\"timestamp\":\"2026-10-27T01:58:40.015Z\",\"service\":\"notification-worker\",\"instance\":\"9daaf02d21e3\",\"event\":\"order_processed\",\"orderId\":\"ORD-fbd6453d-7827-4b34-acee-9830dbcb9641\",\"correlationId\":\"ORD-fbd6453d-7827-4b34-acee-9830dbcb9641\",\"redelivered\":false}\n{\"timestamp\":\"2026-10-27T01:58:40.019Z\",\"service\":\"notification-worker\",\"instance\":\"9daaf02d21e3\",\"event\":\"order_received\",\"orderId\":\"ORD-e3d243ec-52e8-4afe-a5ca-442066ef336e\",\"correlationId\":\"ORD-e3d243ec-52e8-4afe-a5ca-442066ef336e\",\"redelivered\":false}\n{\"timestamp\":\"2026-10-27T01:58:43.023Z\",\"service\":\"notification-worker\",\"instance\":\"9daaf02d21e3\",\"event\":\"order_processed\",\"orderId\":\"ORD-e3d243ec-52e8-4afe-a5ca-442066ef336e\",\"correlationId\":\"ORD-e3d243ec-52e8-4afe-a5ca-442066ef336e\",\"redelivered\":false}\n{\"timestamp\":\"2026-10-27T02:42:35.158Z\",\"service\":\"notification-worker\",\"instance\":\"9daaf02d21e3\",\"event\":\"order_received\",\"orderId\":\"ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e\",\"correlationId\":\"ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e\",\"redelivered\":false}\n{\"timestamp\":\"2026-10-27T02:42:38.411Z\",\"service\":\"notification-worker\",\"instance\":\"9daaf02d21e3\",\"event\":\"order_processed\",\"orderId\":\"ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e\",\"correlationId\":\"ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e\",\"redelivered\":false}\n",
+    "stderr": ""
+  },
+  {
+    "command": "docker",
+    "args": [
+      "kill",
+      "--help"
+    ],
+    "started": "2026-10-27T03:30:24.108Z",
+    "finished": "2026-10-27T03:30:32.736Z",
+    "exitcode": null,
+    "signal": "SIGPIPE",
+    "error": "spawnSync docker ETIMEDOUT",
+    "stdout": "",
+    "stderr": ""
+  }
+]

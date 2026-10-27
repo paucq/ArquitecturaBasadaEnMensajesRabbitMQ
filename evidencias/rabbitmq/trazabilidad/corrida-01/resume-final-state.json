@@ -1,0 +1,352 @@
+{
+  "captured": "2026-10-27T02:46:41.929Z",
+  "ps": [
+    {
+      "Command": "\"docker-entrypoint.s…\"",
+      "CreatedAt": "2026-10-26 20:01:01 -0500 -05",
+      "ExitCode": 0,
+      "Health": "",
+      "ID": "9daaf02d21e3",
+      "Image": "qa-taller-integracion-rabbitmq-notification-worker",
+      "Labels": "com.docker.compose.replace=notification-worker-1,desktop.docker.io/ports.scheme=v2,com.docker.compose.project.config_files=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq/docker-compose.yml,com.docker.compose.project.working_dir=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq,com.docker.compose.service=notification-worker,com.docker.compose.version=5.3.1,desktop.docker.io/wsl-distro=Ubuntu,com.docker.compose.config-hash=0bd4b224550a2cce5cf3d0ee351b1e6a1fa4afb3681a1976755d2a6e2444615d,com.docker.compose.container-number=1,com.docker.compose.depends_on=rabbitmq:service_healthy:false,com.docker.compose.image=sha256:a0f4088aca8cb0e38926cea4ad7cfec4cb41e9f960c69172d0cda8ca27783c9a,com.docker.compose.oneoff=False,com.docker.compose.project=qa-taller-integracion-rabbitmq",
+      "LocalVolumes": "0",
+      "Mounts": "",
+      "Name": "qa-taller-integracion-rabbitmq-notification-worker-1",
+      "Names": "qa-taller-integracion-rabbitmq-notification-worker-1",
+      "Networks": "qa-taller-integracion-rabbitmq_default",
+      "Ports": "",
+      "Project": "qa-taller-integracion-rabbitmq",
+      "Publishers": [],
+      "RunningFor": "2 hours ago",
+      "Service": "notification-worker",
+      "Size": "0B",
+      "State": "running",
+      "Status": "Up About an hour"
+    },
+    {
+      "Command": "\"docker-entrypoint.s…\"",
+      "CreatedAt": "2026-10-26 20:01:01 -0500 -05",
+      "ExitCode": 0,
+      "Health": "",
+      "ID": "aea9d0d7aa00",
+      "Image": "qa-taller-integracion-rabbitmq-notification-worker",
+      "Labels": "com.docker.compose.oneoff=False,com.docker.compose.project=qa-taller-integracion-rabbitmq,com.docker.compose.project.working_dir=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq,com.docker.compose.version=5.3.1,desktop.docker.io/ports.scheme=v2,com.docker.compose.container-number=2,com.docker.compose.image=sha256:a0f4088aca8cb0e38926cea4ad7cfec4cb41e9f960c69172d0cda8ca27783c9a,com.docker.compose.project.config_files=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq/docker-compose.yml,com.docker.compose.service=notification-worker,desktop.docker.io/wsl-distro=Ubuntu,com.docker.compose.config-hash=0bd4b224550a2cce5cf3d0ee351b1e6a1fa4afb3681a1976755d2a6e2444615d,com.docker.compose.depends_on=rabbitmq:service_healthy:false",
+      "LocalVolumes": "0",
+      "Mounts": "",
+      "Name": "qa-taller-integracion-rabbitmq-notification-worker-2",
+      "Names": "qa-taller-integracion-rabbitmq-notification-worker-2",
+      "Networks": "qa-taller-integracion-rabbitmq_default",
+      "Ports": "",
+      "Project": "qa-taller-integracion-rabbitmq",
+      "Publishers": [],
+      "RunningFor": "2 hours ago",
+      "Service": "notification-worker",
+      "Size": "0B",
+      "State": "running",
+      "Status": "Up About an hour"
+    },
+    {
+      "Command": "\"docker-entrypoint.s…\"",
+      "CreatedAt": "2026-10-26 19:58:42 -0500 -05",
+      "ExitCode": 0,
+      "Health": "healthy",
+      "ID": "28a4ac996bc2",
+      "Image": "qa-taller-integracion-rabbitmq-orders-api",
+      "Labels": "com.docker.compose.depends_on=rabbitmq:service_healthy:false,com.docker.compose.project=qa-taller-integracion-rabbitmq,com.docker.compose.project.config_files=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq/docker-compose.yml,com.docker.compose.service=orders-api,com.docker.compose.version=5.3.1,desktop.docker.io/ports.scheme=v2,com.docker.compose.config-hash=67fe91529757285a1a2ad29517b0a8a4af5b4d1d2197aaf8617a65235475e070,com.docker.compose.container-number=1,com.docker.compose.image=sha256:96ad90c88ac9e3395e80395c5fcec7bb546a809542fdffd293c0099290974689,com.docker.compose.oneoff=False,com.docker.compose.project.working_dir=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq,desktop.docker.io/ports/3000/tcp=127.0.0.1:3000,desktop.docker.io/wsl-distro=Ubuntu",
+      "LocalVolumes": "0",
+      "Mounts": "",
+      "Name": "qa-taller-integracion-rabbitmq-orders-api-1",
+      "Names": "qa-taller-integracion-rabbitmq-orders-api-1",
+      "Networks": "qa-taller-integracion-rabbitmq_default",
+      "Ports": "127.0.0.1:3000->3000/tcp",
+      "Project": "qa-taller-integracion-rabbitmq",
+      "Publishers": [
+        {
+          "URL": "127.0.0.1",
+          "TargetPort": 3000,
+          "PublishedPort": 3000,
+          "Protocol": "tcp"
+        }
+      ],
+      "RunningFor": "2 hours ago",
+      "Service": "orders-api",
+      "Size": "0B",
+      "State": "running",
+      "Status": "Up 2 hours (healthy)"
+    },
+    {
+      "Command": "\"docker-entrypoint.s…\"",
+      "CreatedAt": "2026-10-26 19:58:42 -0500 -05",
+      "ExitCode": 0,
+      "Health": "healthy",
+      "ID": "874ff8f0d7a7",
+      "Image": "rabbitmq:4-management",
+      "Labels": "com.docker.compose.config-hash=0e943a4d5883712150b65e41bedd3680b135c74b9bd6963509cb2e364202ebe8,com.docker.compose.container-number=1,com.docker.compose.image=sha256:c200fd496482cda18c412be4e6f244830e1e75949b8cf5f0e887cea9ea456109,com.docker.compose.project.working_dir=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq,desktop.docker.io/ports.scheme=v2,org.opencontainers.image.description=The Ubuntu container image maintained by Canonical\n\nUbuntu is a Debian-based Linux operating system that runs from the desktop to the cloud, to all your internet connected things.\nIt is the world's most popular operating system across public clouds and OpenStack clouds.\nIt is the number one platform for containers; from Docker to Kubernetes to LXD, Ubuntu can run your containers at scale.\nFast, secure and simple, Ubuntu powers millions of PCs worldwide.\n,org.opencontainers.image.version=26.04,com.docker.compose.depends_on=,com.docker.compose.version=5.3.1,desktop.docker.io/ports/15672/tcp=127.0.0.1:15672,org.opencontainers.image.title=ubuntu,com.docker.compose.oneoff=False,com.docker.compose.project=qa-taller-integracion-rabbitmq,com.docker.compose.service=rabbitmq,desktop.docker.io/ports/5672/tcp=127.0.0.1:5672,org.opencontainers.image.created=2026-10-06T21:25:30.040262+00:00,com.docker.compose.project.config_files=/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq/docker-compose.yml,desktop.docker.io/wsl-distro=Ubuntu",
+      "LocalVolumes": "1",
+      "Mounts": "qa-taller-inte…",
+      "Name": "qa-taller-integracion-rabbitmq-rabbitmq-1",
+      "Names": "qa-taller-integracion-rabbitmq-rabbitmq-1",
+      "Networks": "qa-taller-integracion-rabbitmq_default",
+      "Ports": "127.0.0.1:5672->5672/tcp, 127.0.0.1:15672->15672/tcp",
+      "Project": "qa-taller-integracion-rabbitmq",
+      "Publishers": [
+        {
+          "URL": "127.0.0.1",
+          "TargetPort": 5672,
+          "PublishedPort": 5672,
+          "Protocol": "tcp"
+        },
+        {
+          "URL": "127.0.0.1",
+          "TargetPort": 15672,
+          "PublishedPort": 15672,
+          "Protocol": "tcp"
+        }
+      ],
+      "RunningFor": "2 hours ago",
+      "Service": "rabbitmq",
+      "Size": "0B",
+      "State": "running",
+      "Status": "Up 2 hours (healthy)"
+    }
+  ],
+  "plugins": "Listing plugins with pattern \".*\" ...\n Configured: E = explicitly enabled; e = implicitly enabled\n | Status: * = running on rabbit@rabbitmq\n |/\n[E*] rabbitmq_management       4.4.0\n[e*] rabbitmq_management_agent 4.4.0\n[E*] rabbitmq_prometheus       4.4.0\n[e*] rabbitmq_web_dispatch     4.4.0\n",
+  "vhosts": [
+    {
+      "messages": 0,
+      "name": "/",
+      "recv_oct": 12701,
+      "send_oct": 18481,
+      "description": "Default virtual host",
+      "metadata": {
+        "description": "Default virtual host",
+        "tags": [],
+        "default_queue_type": "classic"
+      },
+      "tags": [],
+      "protected_from_deletion": false,
+      "tracing": false,
+      "default_queue_type": "classic",
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "cluster_state": {
+        "rabbit@rabbitmq": "running"
+      },
+      "message_stats": {
+        "ack": 12,
+        "ack_details": {
+          "rate": 0
+        },
+        "confirm": 12,
+        "confirm_details": {
+          "rate": 0
+        },
+        "deliver": 12,
+        "deliver_details": {
+          "rate": 0
+        },
+        "deliver_get": 16,
+        "deliver_get_details": {
+          "rate": 0
+        },
+        "deliver_no_ack": 2,
+        "deliver_no_ack_details": {
+          "rate": 0
+        },
+        "drop_unroutable": 0,
+        "drop_unroutable_details": {
+          "rate": 0
+        },
+        "get": 2,
+        "get_details": {
+          "rate": 0
+        },
+        "get_empty": 2,
+        "get_empty_details": {
+          "rate": 0
+        },
+        "get_no_ack": 0,
+        "get_no_ack_details": {
+          "rate": 0
+        },
+        "publish": 12,
+        "publish_details": {
+          "rate": 0
+        },
+        "redeliver": 2,
+        "redeliver_details": {
+          "rate": 0
+        },
+        "return_unroutable": 0,
+        "return_unroutable_details": {
+          "rate": 0
+        }
+      },
+      "recv_oct_details": {
+        "rate": 0
+      },
+      "send_oct_details": {
+        "rate": 0
+      },
+      "messages_details": {
+        "rate": 0
+      },
+      "messages_unacknowledged_details": {
+        "rate": 0
+      },
+      "messages_ready_details": {
+        "rate": 0
+      }
+    }
+  ],
+  "queue": {
+    "consumer_details": [
+      {
+        "arguments": {},
+        "channel_details": {
+          "connection_name": "172.23.0.3:60626 -> 172.23.0.2:5672",
+          "name": "172.23.0.3:60626 -> 172.23.0.2:5672 (1)",
+          "node": "rabbit@rabbitmq",
+          "number": 1,
+          "peer_host": "172.23.0.3",
+          "peer_port": 60626,
+          "user": "admin"
+        },
+        "ack_required": true,
+        "active": true,
+        "activity_status": "up",
+        "consumer_tag": "amq.ctag-_lZiSyXDQwyk57j9j72x4g",
+        "consumer_timeout": 1800000,
+        "exclusive": false,
+        "prefetch_count": 1,
+        "queue": {
+          "name": "pedidos",
+          "vhost": "/"
+        }
+      },
+      {
+        "arguments": {},
+        "channel_details": {
+          "connection_name": "172.23.0.5:41064 -> 172.23.0.2:5672",
+          "name": "172.23.0.5:41064 -> 172.23.0.2:5672 (1)",
+          "node": "rabbit@rabbitmq",
+          "number": 1,
+          "peer_host": "172.23.0.5",
+          "peer_port": 41064,
+          "user": "admin"
+        },
+        "ack_required": true,
+        "active": true,
+        "activity_status": "up",
+        "consumer_tag": "amq.ctag-J-8rIuo6RwuZ3zonzbkpYg",
+        "consumer_timeout": 1800000,
+        "exclusive": false,
+        "prefetch_count": 1,
+        "queue": {
+          "name": "pedidos",
+          "vhost": "/"
+        }
+      }
+    ],
+    "arguments": {
+      "x-queue-type": "classic"
+    },
+    "auto_delete": false,
+    "consumer_capacity": 1,
+    "consumer_utilisation": 1,
+    "consumers": 2,
+    "deliveries": [],
+    "durable": true,
+    "effective_policy_definition": {},
+    "exclusive": false,
+    "exclusive_consumer_tag": null,
+    "garbage_collection": {
+      "fullsweep_after": 65535,
+      "max_heap_size": 0,
+      "min_bin_vheap_size": 46422,
+      "min_heap_size": 233,
+      "minor_gcs": 15
+    },
+    "head_message_timestamp": null,
+    "idle_since": "2026-10-27T02:42:42.466+00:00",
+    "incoming": [],
+    "internal": false,
+    "internal_owner": false,
+    "memory": 6792,
+    "message_bytes": 0,
+    "message_bytes_persistent": 0,
+    "message_bytes_ram": 0,
+    "message_bytes_ready": 0,
+    "message_bytes_unacknowledged": 0,
+    "message_stats": {
+      "ack": 12,
+      "ack_details": {
+        "rate": 0
+      },
+      "deliver": 12,
+      "deliver_details": {
+        "rate": 0
+      },
+      "deliver_get": 14,
+      "deliver_get_details": {
+        "rate": 0
+      },
+      "deliver_no_ack": 0,
+      "deliver_no_ack_details": {
+        "rate": 0
+      },
+      "get": 2,
+      "get_details": {
+        "rate": 0
+      },
+      "get_empty": 2,
+      "get_empty_details": {
+        "rate": 0
+      },
+      "get_no_ack": 0,
+      "get_no_ack_details": {
+        "rate": 0
+      },
+      "publish": 12,
+      "publish_details": {
+        "rate": 0
+      },
+      "redeliver": 2,
+      "redeliver_details": {
+        "rate": 0
+      }
+    },
+    "messages": 0,
+    "messages_details": {
+      "rate": 0
+    },
+    "messages_persistent": 0,
+    "messages_ram": 0,
+    "messages_ready": 0,
+    "messages_ready_details": {
+      "rate": 0
+    },
+    "messages_ready_ram": 0,
+    "messages_unacknowledged": 0,
+    "messages_unacknowledged_details": {
+      "rate": 0
+    },
+    "messages_unacknowledged_ram": 0,
+    "name": "pedidos",
+    "node": "rabbit@rabbitmq",
+    "operator_policy": null,
+    "policy": null,
+    "reductions": 54195,
+    "reductions_details": {
+      "rate": 0
+    },
+    "single_active_consumer_tag": null,
+    "state": "running",
+    "storage_version": 2,
+    "type": "classic",
+    "vhost": "/"
+  },
+  "health": {
+    "status": "ready"
+  }
+}

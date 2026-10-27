@@ -1,0 +1,291 @@
+No authorization data found. Please use the `postman login` command.
+Refer:https://learning.postman.com/docs/postman-cli/postman-cli-options/#postman-login
+
+Running your collection...
+postman
+
+Taller integración — RabbitMQ
+
+Iteration 1/6
+
+Root Crear pedido — esperado HTTP 202
+
+  POST http://localhost:3000/orders  
+  202 Accepted * 94 ms time * 369 B^ 365 Bv size * 9^ 7v headers * 0 cookies
+  - ^ raw * 84 B
+  | {
+  |   "customerName": "Pedro",
+  |   "product": "Libro de arquitectura",
+  |   "quantity": 1
+  | }
+  - 
+  - v application/json * text * json * utf8 * 123 B
+  | {"status":"accepted","message":"Pedido recibido y envi
+  | ado a RabbitMQ","orderId":"ORD-d047fa00-4ab7-4753-8162
+  | -a70551aaedb8"}
+  -
+  prepare   wait    dns-lookup   tcp-handshake   transfer-start   download   process   total 
+  2 ms      17 ms   8 ms         2 ms            51 ms            13 ms      2 ms      98 ms 
+
+  -
+  | 'HTTP_EVIDENCE {"timestamp":"2026-10-27T01:58:33.928Z"
+  | ,"request":{"method":"POST","url":"http://localhost:30
+  | 00/orders","body":"{\\n  \\"customerName\\": \\"Pedro\
+  | \",\\n  \\"product\\": \\"Libro de arquitectura\\",\\n
+  |   \\"quantity\\": 1\\n}"},"response":{"code":202,"head
+  | ers":[{"key":"X-Powered-By","value":"Express"},{"key":
+  | "Content-Type","value":"application/json; charset=utf-
+  | 8"},{"key":"Content-Length","value":"123"},{"key":"ETa
+  | g","value":"W/\\"7b-Kji1JJCtr+5AT7qmMIR4rF/lZv8\\""},{
+  | "key":"Date","value":"Tue, 27 Oct 2026 01:58:33 GMT"},
+  | {"key":"Connection","value":"keep-alive"},{"key":"Keep
+  | -Alive","value":"timeout=5"}],"body":"{\\"status\\":\\
+  | "accepted\\",\\"message\\":\\"Pedido recibido y enviad
+  | o a RabbitMQ\\",\\"orderId\\":\\"ORD-d047fa00-4ab7-475
+  | 3-8162-a70551aaedb8\\"}","responseTime":94}}'
+  -
+  Pass  HTTP 202
+  Pass  status accepted
+  Pass  Mensaje esperado
+  Pass  orderId ORD UUID no vacío
+
+Iteration 2/6
+
+Root Crear pedido — esperado HTTP 202
+
+  POST http://localhost:3000/orders  
+  202 Accepted * 18 ms time * 369 B^ 365 Bv size * 9^ 7v headers * 0 cookies
+  - ^ raw * 84 B
+  | {
+  |   "customerName": "Pedro",
+  |   "product": "Libro de arquitectura",
+  |   "quantity": 1
+  | }
+  - 
+  - v application/json * text * json * utf8 * 123 B
+  | {"status":"accepted","message":"Pedido recibido y envi
+  | ado a RabbitMQ","orderId":"ORD-962eb263-4dcf-488c-8cda
+  | -3e4c81eecac0"}
+  -
+  prepare   wait   dns-lookup   tcp-handshake   transfer-start   download   process   total 
+  1 ms      2 ms   (cache)      (cache)         10 ms            4 ms       444 us    20 ms 
+
+  -
+  | 'HTTP_EVIDENCE {"timestamp":"2026-10-27T01:58:33.995Z"
+  | ,"request":{"method":"POST","url":"http://localhost:30
+  | 00/orders","body":"{\\n  \\"customerName\\": \\"Pedro\
+  | \",\\n  \\"product\\": \\"Libro de arquitectura\\",\\n
+  |   \\"quantity\\": 1\\n}"},"response":{"code":202,"head
+  | ers":[{"key":"X-Powered-By","value":"Express"},{"key":
+  | "Content-Type","value":"application/json; charset=utf-
+  | 8"},{"key":"Content-Length","value":"123"},{"key":"ETa
+  | g","value":"W/\\"7b-B/IHzmb3LNdi8gumOYgNdX76dAQ\\""},{
+  | "key":"Date","value":"Tue, 27 Oct 2026 01:58:33 GMT"},
+  | {"key":"Connection","value":"keep-alive"},{"key":"Keep
+  | -Alive","value":"timeout=5"}],"body":"{\\"status\\":\\
+  | "accepted\\",\\"message\\":\\"Pedido recibido y enviad
+  | o a RabbitMQ\\",\\"orderId\\":\\"ORD-962eb263-4dcf-488
+  | c-8cda-3e4c81eecac0\\"}","responseTime":18}}'
+  -
+  Pass  HTTP 202
+  Pass  status accepted
+  Pass  Mensaje esperado
+  Pass  orderId ORD UUID no vacío
+
+Iteration 3/6
+
+Root Crear pedido — esperado HTTP 202
+
+  POST http://localhost:3000/orders  
+  202 Accepted * 13 ms time * 369 B^ 365 Bv size * 9^ 7v headers * 0 cookies
+  - ^ raw * 84 B
+  | {
+  |   "customerName": "Pedro",
+  |   "product": "Libro de arquitectura",
+  |   "quantity": 1
+  | }
+  - 
+  - v application/json * text * json * utf8 * 123 B
+  | {"status":"accepted","message":"Pedido recibido y envi
+  | ado a RabbitMQ","orderId":"ORD-f83a6ad1-6a43-470e-8965
+  | -1af15a07f6e5"}
+  -
+  prepare   wait     dns-lookup   tcp-handshake   transfer-start   download   process   total 
+  934 us    524 us   (cache)      (cache)         9 ms             3 ms       428 us    14 ms 
+
+  -
+  | 'HTTP_EVIDENCE {"timestamp":"2026-10-27T01:58:34.043Z"
+  | ,"request":{"method":"POST","url":"http://localhost:30
+  | 00/orders","body":"{\\n  \\"customerName\\": \\"Pedro\
+  | \",\\n  \\"product\\": \\"Libro de arquitectura\\",\\n
+  |   \\"quantity\\": 1\\n}"},"response":{"code":202,"head
+  | ers":[{"key":"X-Powered-By","value":"Express"},{"key":
+  | "Content-Type","value":"application/json; charset=utf-
+  | 8"},{"key":"Content-Length","value":"123"},{"key":"ETa
+  | g","value":"W/\\"7b-vA7m+RcmQH3zzDBuOpbg91Zxrzo\\""},{
+  | "key":"Date","value":"Tue, 27 Oct 2026 01:58:34 GMT"},
+  | {"key":"Connection","value":"keep-alive"},{"key":"Keep
+  | -Alive","value":"timeout=5"}],"body":"{\\"status\\":\\
+  | "accepted\\",\\"message\\":\\"Pedido recibido y enviad
+  | o a RabbitMQ\\",\\"orderId\\":\\"ORD-f83a6ad1-6a43-470
+  | e-8965-1af15a07f6e5\\"}","responseTime":13}}'
+  -
+  Pass  HTTP 202
+  Pass  status accepted
+  Pass  Mensaje esperado
+  Pass  orderId ORD UUID no vacío
+
+Iteration 4/6
+
+Root Crear pedido — esperado HTTP 202
+
+  POST http://localhost:3000/orders  
+  202 Accepted * 14 ms time * 369 B^ 365 Bv size * 9^ 7v headers * 0 cookies
+  - ^ raw * 84 B
+  | {
+  |   "customerName": "Pedro",
+  |   "product": "Libro de arquitectura",
+  |   "quantity": 1
+  | }
+  - 
+  - v application/json * text * json * utf8 * 123 B
+  | {"status":"accepted","message":"Pedido recibido y envi
+  | ado a RabbitMQ","orderId":"ORD-fbd6453d-7827-4b34-acee
+  | -9830dbcb9641"}
+  -
+  prepare   wait     dns-lookup   tcp-handshake   transfer-start   download   process   total 
+  857 us    641 us   (cache)      (cache)         11 ms            1 ms       195 us    14 ms 
+
+  -
+  | 'HTTP_EVIDENCE {"timestamp":"2026-10-27T01:58:34.081Z"
+  | ,"request":{"method":"POST","url":"http://localhost:30
+  | 00/orders","body":"{\\n  \\"customerName\\": \\"Pedro\
+  | \",\\n  \\"product\\": \\"Libro de arquitectura\\",\\n
+  |   \\"quantity\\": 1\\n}"},"response":{"code":202,"head
+  | ers":[{"key":"X-Powered-By","value":"Express"},{"key":
+  | "Content-Type","value":"application/json; charset=utf-
+  | 8"},{"key":"Content-Length","value":"123"},{"key":"ETa
+  | g","value":"W/\\"7b-+SoJrMk6/VtUNDL18wlWPeqcSyQ\\""},{
+  | "key":"Date","value":"Tue, 27 Oct 2026 01:58:34 GMT"},
+  | {"key":"Connection","value":"keep-alive"},{"key":"Keep
+  | -Alive","value":"timeout=5"}],"body":"{\\"status\\":\\
+  | "accepted\\",\\"message\\":\\"Pedido recibido y enviad
+  | o a RabbitMQ\\",\\"orderId\\":\\"ORD-fbd6453d-7827-4b3
+  | 4-acee-9830dbcb9641\\"}","responseTime":14}}'
+  -
+  Pass  HTTP 202
+  Pass  status accepted
+  Pass  Mensaje esperado
+  Pass  orderId ORD UUID no vacío
+
+Iteration 5/6
+
+Root Crear pedido — esperado HTTP 202
+
+  POST http://localhost:3000/orders  
+  202 Accepted * 219 ms time * 369 B^ 365 Bv size * 9^ 7v headers * 0 cookies
+  - ^ raw * 84 B
+  | {
+  |   "customerName": "Pedro",
+  |   "product": "Libro de arquitectura",
+  |   "quantity": 1
+  | }
+  - 
+  - v application/json * text * json * utf8 * 123 B
+  | {"status":"accepted","message":"Pedido recibido y envi
+  | ado a RabbitMQ","orderId":"ORD-462f5dc3-ff41-4990-b841
+  | -a9f4685c1eda"}
+  -
+  prepare   wait     dns-lookup   tcp-handshake   transfer-start   download   process   total  
+  1 ms      691 us   (cache)      (cache)         138 ms           79 ms      295 us    220 ms 
+
+  -
+  | 'HTTP_EVIDENCE {"timestamp":"2026-10-27T01:58:34.387Z"
+  | ,"request":{"method":"POST","url":"http://localhost:30
+  | 00/orders","body":"{\\n  \\"customerName\\": \\"Pedro\
+  | \",\\n  \\"product\\": \\"Libro de arquitectura\\",\\n
+  |   \\"quantity\\": 1\\n}"},"response":{"code":202,"head
+  | ers":[{"key":"X-Powered-By","value":"Express"},{"key":
+  | "Content-Type","value":"application/json; charset=utf-
+  | 8"},{"key":"Content-Length","value":"123"},{"key":"ETa
+  | g","value":"W/\\"7b-17+yV1OVcElwrESq2WnHyxl0jRE\\""},{
+  | "key":"Date","value":"Tue, 27 Oct 2026 01:58:34 GMT"},
+  | {"key":"Connection","value":"keep-alive"},{"key":"Keep
+  | -Alive","value":"timeout=5"}],"body":"{\\"status\\":\\
+  | "accepted\\",\\"message\\":\\"Pedido recibido y enviad
+  | o a RabbitMQ\\",\\"orderId\\":\\"ORD-462f5dc3-ff41-499
+  | 0-b841-a9f4685c1eda\\"}","responseTime":219}}'
+  -
+  Pass  HTTP 202
+  Pass  status accepted
+  Pass  Mensaje esperado
+  Pass  orderId ORD UUID no vacío
+
+Iteration 6/6
+
+Root Crear pedido — esperado HTTP 202
+
+  POST http://localhost:3000/orders  
+  202 Accepted * 45 ms time * 369 B^ 365 Bv size * 9^ 7v headers * 0 cookies
+  - ^ raw * 84 B
+  | {
+  |   "customerName": "Pedro",
+  |   "product": "Libro de arquitectura",
+  |   "quantity": 1
+  | }
+  - 
+  - v application/json * text * json * utf8 * 123 B
+  | {"status":"accepted","message":"Pedido recibido y envi
+  | ado a RabbitMQ","orderId":"ORD-e3d243ec-52e8-4afe-a5ca
+  | -442066ef336e"}
+  -
+  prepare   wait   dns-lookup   tcp-handshake   transfer-start   download   process   total 
+  2 ms      1 ms   (cache)      (cache)         41 ms            1 ms       131 us    46 ms 
+
+  -
+  | 'HTTP_EVIDENCE {"timestamp":"2026-10-27T01:58:34.596Z"
+  | ,"request":{"method":"POST","url":"http://localhost:30
+  | 00/orders","body":"{\\n  \\"customerName\\": \\"Pedro\
+  | \",\\n  \\"product\\": \\"Libro de arquitectura\\",\\n
+  |   \\"quantity\\": 1\\n}"},"response":{"code":202,"head
+  | ers":[{"key":"X-Powered-By","value":"Express"},{"key":
+  | "Content-Type","value":"application/json; charset=utf-
+  | 8"},{"key":"Content-Length","value":"123"},{"key":"ETa
+  | g","value":"W/\\"7b-8UHB/6wS6L699UKw9VzklGyfGeo\\""},{
+  | "key":"Date","value":"Tue, 27 Oct 2026 01:58:34 GMT"},
+  | {"key":"Connection","value":"keep-alive"},{"key":"Keep
+  | -Alive","value":"timeout=5"}],"body":"{\\"status\\":\\
+  | "accepted\\",\\"message\\":\\"Pedido recibido y enviad
+  | o a RabbitMQ\\",\\"orderId\\":\\"ORD-e3d243ec-52e8-4af
+  | e-a5ca-442066ef336e\\"}","responseTime":45}}'
+  -
+  Pass  HTTP 202
+  Pass  status accepted
+  Pass  Mensaje esperado
+  Pass  orderId ORD UUID no vacío
+
+------------------------------------------------------------------------
+|                         |             executed |              failed |
+--------------------------+----------------------+----------------------
+|              iterations |                    6 |                   0 |
+--------------------------+----------------------+----------------------
+|                requests |                    6 |                   0 |
+--------------------------+----------------------+----------------------
+|            test-scripts |                    6 |                   0 |
+--------------------------+----------------------+----------------------
+|      prerequest-scripts |                    0 |                   0 |
+--------------------------+----------------------+----------------------
+|              assertions |                   24 |                   0 |
+------------------------------------------------------------------------
+| total run duration: 840 ms                                           |
+------------------------------------------------------------------------
+| total data received: 738 B (approx)                                  |
+------------------------------------------------------------------------
+| average response time: 67 ms [min: 13 ms, max: 219 ms, s.d.: 73 ms]  |
+------------------------------------------------------------------------
+| average DNS lookup time: 8 ms [min: 8 ms, max: 8 ms, s.d.: 0 us]     |
+------------------------------------------------------------------------
+| average first byte time: 43 ms [min: 9 ms, max: 138 ms, s.d.: 45 ms] |
+------------------------------------------------------------------------
+Postman credentials are required for publishing run details to Postman cloud.
+Please specify it by using the `postman login` command

@@ -1,0 +1,24 @@
+✖ API rechaza datos inválidos sin aceptarlos como pedido (112.657851ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 258.595816
+
+✖ failing tests:
+
+test at Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq/pruebas/flujo.test.mjs:64:1
+✖ API rechaza datos inválidos sin aceptarlos como pedido (112.657851ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect ECONNREFUSED 127.0.0.1:3000
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2021:16) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 3000
+    }
+  }

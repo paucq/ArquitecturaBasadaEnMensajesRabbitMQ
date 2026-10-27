@@ -1,0 +1,7 @@
+{
+  "cmdline": [
+    "node",
+    "worker.mjs"
+  ],
+  "exe": "/usr/local/bin/node"
+}

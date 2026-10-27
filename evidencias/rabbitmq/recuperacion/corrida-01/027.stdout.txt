@@ -1,0 +1,74 @@
+No authorization data found. Please use the `postman login` command.
+Refer:https://learning.postman.com/docs/postman-cli/postman-cli-options/#postman-login
+
+Running your collection...
+postman
+
+Taller integración — RabbitMQ
+
+Root Crear pedido — esperado HTTP 202
+
+  POST http://localhost:3000/orders  
+  202 Accepted * 71 ms time * 369 B^ 365 Bv size * 9^ 7v headers * 0 cookies
+  - ^ raw * 84 B
+  | {
+  |   "customerName": "Pedro",
+  |   "product": "Libro de arquitectura",
+  |   "quantity": 1
+  | }
+  - 
+  - v application/json * text * json * utf8 * 123 B
+  | {"status":"accepted","message":"Pedido recibido y envi
+  | ado a RabbitMQ","orderId":"ORD-ea298437-f581-4b8f-b80d
+  | -2706f3659b80"}
+  -
+  prepare   wait    dns-lookup   tcp-handshake   transfer-start   download   process   total 
+  1 ms      11 ms   1 ms         332 us          53 ms            3 ms       1 ms      73 ms 
+
+  -
+  | 'HTTP_EVIDENCE {"timestamp":"2026-10-27T03:46:24.307Z"
+  | ,"request":{"method":"POST","url":"http://localhost:30
+  | 00/orders","body":"{\\n  \\"customerName\\": \\"Pedro\
+  | \",\\n  \\"product\\": \\"Libro de arquitectura\\",\\n
+  |   \\"quantity\\": 1\\n}"},"response":{"code":202,"head
+  | ers":[{"key":"X-Powered-By","value":"Express"},{"key":
+  | "Content-Type","value":"application/json; charset=utf-
+  | 8"},{"key":"Content-Length","value":"123"},{"key":"ETa
+  | g","value":"W/\\"7b-NuHY1MdXjBTARlneX4FrXzuALag\\""},{
+  | "key":"Date","value":"Tue, 27 Oct 2026 03:46:24 GMT"},
+  | {"key":"Connection","value":"keep-alive"},{"key":"Keep
+  | -Alive","value":"timeout=5"}],"body":"{\\"status\\":\\
+  | "accepted\\",\\"message\\":\\"Pedido recibido y enviad
+  | o a RabbitMQ\\",\\"orderId\\":\\"ORD-ea298437-f581-4b8
+  | f-b80d-2706f3659b80\\"}","responseTime":71}}'
+  -
+  Pass  HTTP 202
+  Pass  status accepted
+  Pass  Mensaje esperado
+  Pass  orderId ORD UUID no vacío
+
+-----------------------------------------------------------------------
+|                         |            executed |              failed |
+--------------------------+---------------------+----------------------
+|              iterations |                   1 |                   0 |
+--------------------------+---------------------+----------------------
+|                requests |                   1 |                   0 |
+--------------------------+---------------------+----------------------
+|            test-scripts |                   1 |                   0 |
+--------------------------+---------------------+----------------------
+|      prerequest-scripts |                   0 |                   0 |
+--------------------------+---------------------+----------------------
+|              assertions |                   4 |                   0 |
+-----------------------------------------------------------------------
+| total run duration: 141 ms                                          |
+-----------------------------------------------------------------------
+| total data received: 123 B (approx)                                 |
+-----------------------------------------------------------------------
+| average response time: 71 ms [min: 71 ms, max: 71 ms, s.d.: 0 us]   |
+-----------------------------------------------------------------------
+| average DNS lookup time: 1 ms [min: 1 ms, max: 1 ms, s.d.: 0 us]    |
+-----------------------------------------------------------------------
+| average first byte time: 53 ms [min: 53 ms, max: 53 ms, s.d.: 0 us] |
+-----------------------------------------------------------------------
+Postman credentials are required for publishing run details to Postman cloud.
+Please specify it by using the `postman login` command

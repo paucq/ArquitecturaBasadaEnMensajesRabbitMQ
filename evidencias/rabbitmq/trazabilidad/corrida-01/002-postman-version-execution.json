@@ -1,0 +1,12 @@
+{
+  "cwd": "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq",
+  "command": [
+    "postman",
+    "--version"
+  ],
+  "start": "2026-10-27T02:40:01.655Z",
+  "end": "2026-10-27T02:41:24.280Z",
+  "exitcode": 0,
+  "signal": null,
+  "error": "spawnSync postman ETIMEDOUT"
+}

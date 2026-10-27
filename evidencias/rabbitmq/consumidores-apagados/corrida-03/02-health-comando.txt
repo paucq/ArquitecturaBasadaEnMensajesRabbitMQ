@@ -1,0 +1,2 @@
+cwd: /home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq
+curl --silent --show-error --fail --max-time 5 http://localhost:3000/health

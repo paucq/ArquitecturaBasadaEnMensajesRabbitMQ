@@ -1,0 +1,12 @@
+{
+  "cwd": "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq",
+  "command": [
+    "node",
+    "--test",
+    "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/evidencias/rabbitmq/trazabilidad/trace-format.test.mjs"
+  ],
+  "start": "2026-10-27T02:41:24.281Z",
+  "end": "2026-10-27T02:41:25.747Z",
+  "exitcode": 0,
+  "signal": null
+}

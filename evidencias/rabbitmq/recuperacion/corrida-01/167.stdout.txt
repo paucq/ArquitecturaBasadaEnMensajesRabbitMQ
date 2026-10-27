@@ -1,0 +1,1 @@
+2026-10-27T03:46:24.258396976Z {"timestamp":"2026-10-27T03:46:24.255Z","service":"orders-api","instance":"28a4ac996bc2","event":"order_published","orderId":"ORD-ea298437-f581-4b8f-b80d-2706f3659b80","correlationId":"ORD-ea298437-f581-4b8f-b80d-2706f3659b80","queue":"pedidos"}

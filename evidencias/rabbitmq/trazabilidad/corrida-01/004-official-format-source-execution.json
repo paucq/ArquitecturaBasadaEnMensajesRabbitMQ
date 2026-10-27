@@ -1,0 +1,14 @@
+{
+  "cwd": "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq",
+  "command": [
+    "curl",
+    "-fsS",
+    "--max-time",
+    "15",
+    "https://raw.githubusercontent.com/rabbitmq/rabbitmq-server/v4.4.0/deps/rabbitmq_tracing/src/rabbit_tracing_consumer.erl"
+  ],
+  "start": "2026-10-27T02:41:25.747Z",
+  "end": "2026-10-27T02:41:26.725Z",
+  "exitcode": 0,
+  "signal": null
+}

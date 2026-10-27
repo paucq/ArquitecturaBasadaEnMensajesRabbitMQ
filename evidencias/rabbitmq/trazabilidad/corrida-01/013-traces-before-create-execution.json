@@ -1,0 +1,20 @@
+{
+  "cwd": "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq",
+  "command": [
+    "curl",
+    "-sS",
+    "--max-time",
+    "12",
+    "-u",
+    "admin:admin",
+    "-X",
+    "GET",
+    "-w",
+    "\n%{http_code}",
+    "http://localhost:15672/api/traces"
+  ],
+  "start": "2026-10-27T02:42:16.176Z",
+  "end": "2026-10-27T02:42:16.242Z",
+  "exitcode": 0,
+  "signal": null
+}

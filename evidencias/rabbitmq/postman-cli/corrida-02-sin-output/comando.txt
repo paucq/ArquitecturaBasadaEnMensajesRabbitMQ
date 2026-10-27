@@ -1,0 +1,1 @@
+postman collection run "Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq/pruebas/RabbitMQ.postman_collection.json" --no-report-events --verbose --timeout 30000 --timeout-request 10000 --timeout-script 5000

@@ -1,0 +1,2 @@
+{"queue":{"arguments":{"x-queue-type":"classic"},"auto_delete":false,"durable":false,"exclusive":true,"internal":false,"internal_owner":false,"name":"amq.gen-u_2ZdI0hR0a8W0DoRkJeLA","node":"rabbit@rabbitmq","state":"running","type":"classic","vhost":"/"},"vhost":"/","name":"CP06-2026-10-27T02-40-01-594Z","format":"json","pattern":"#","tracer_connection_username":"admin","format":"json","pattern":"#","tracer_connection_username":"admin"}
+200

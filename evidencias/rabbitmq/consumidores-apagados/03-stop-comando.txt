@@ -1,0 +1,2 @@
+cwd: /home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq
+docker compose -p qa-taller-integracion-rabbitmq stop notification-worker

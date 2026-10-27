@@ -1,0 +1,49 @@
+{
+  "orderId": "ORD-b7a74952-2957-49cb-a5db-f88d7b2ce443",
+  "published_utc": "2026-10-27T01:39:39.627Z",
+  "started_utc": "2026-10-27T01:46:28.729993+00:00",
+  "before": {
+    "durable": true,
+    "consumers": 0,
+    "messages_ready": 1,
+    "messages_unacknowledged": 0,
+    "messages": 1
+  },
+  "wait_verified": true,
+  "final": {
+    "durable": true,
+    "consumers": 2,
+    "messages_ready": 0,
+    "messages_unacknowledged": 0,
+    "messages": 0
+  },
+  "containers": [
+    {
+      "Name": "qa-taller-integracion-rabbitmq-notification-worker-1",
+      "Service": "notification-worker",
+      "State": "running",
+      "Health": ""
+    },
+    {
+      "Name": "qa-taller-integracion-rabbitmq-notification-worker-2",
+      "Service": "notification-worker",
+      "State": "running",
+      "Health": ""
+    },
+    {
+      "Name": "qa-taller-integracion-rabbitmq-orders-api-1",
+      "Service": "orders-api",
+      "State": "running",
+      "Health": "healthy"
+    },
+    {
+      "Name": "qa-taller-integracion-rabbitmq-rabbitmq-1",
+      "Service": "rabbitmq",
+      "State": "running",
+      "Health": "healthy"
+    }
+  ],
+  "health_verified": true,
+  "status": "consumo_verificado",
+  "finished_utc": "2026-10-27T01:46:40.985636+00:00"
+}

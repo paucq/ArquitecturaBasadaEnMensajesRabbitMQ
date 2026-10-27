@@ -1,0 +1,642 @@
+rabbitmq-1  | 2026-10-27T00:58:47.867002623Z 2026-10-27 00:58:47.858162+00:00 [notice] <0.500.0> Application syslog exited with reason: stopped
+rabbitmq-1  | 2026-10-27T00:58:47.867127675Z 2026-10-27 00:58:47.866775+00:00 [notice] <0.209.0> Logging: switching to configured handler(s); following messages may not be visible in this log output
+rabbitmq-1  | 2026-10-27T00:58:47.867747605Z [38;5;87m2026-10-27 00:58:47.867468+00:00 [notice] <0.209.0> Logging: configured log handlers are now ACTIVE[0m
+rabbitmq-1  | 2026-10-27T00:58:47.879765375Z 2026-10-27 00:58:47.879379+00:00 [info] <0.209.0> ra: starting system coordination[0m
+rabbitmq-1  | 2026-10-27T00:58:47.879807083Z 2026-10-27 00:58:47.879569+00:00 [info] <0.209.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+rabbitmq-1  | 2026-10-27T00:58:47.892453644Z 2026-10-27 00:58:47.892013+00:00 [info] <0.506.0> ra_coordination_log_ets: in system coordination initialising. Mem table opts: [set,{write_concurrency,auto},public,{compressed,false}][0m
+rabbitmq-1  | 2026-10-27T00:58:47.958081873Z 2026-10-27 00:58:47.957700+00:00 [info] <0.512.0> ra system 'coordination' running pre init for 0 registered servers[0m
+rabbitmq-1  | 2026-10-27T00:58:47.967688195Z 2026-10-27 00:58:47.967266+00:00 [info] <0.513.0> ra: meta data store initialised for system coordination. 0 record(s) recovered[0m
+rabbitmq-1  | 2026-10-27T00:58:47.976733334Z 2026-10-27 00:58:47.976258+00:00 [info] <0.518.0> segment_writer: upgrading segment file names to new format in dirctory /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+rabbitmq-1  | 2026-10-27T00:58:48.008649060Z [38;5;87m2026-10-27 00:58:48.008239+00:00 [notice] <0.520.0> WAL in coordination initialising with name ra_coordination_log_wal[0m
+rabbitmq-1  | 2026-10-27T00:58:48.260902766Z 2026-10-27 00:58:48.260442+00:00 [info] <0.209.0> ra: starting system quorum_queues[0m
+rabbitmq-1  | 2026-10-27T00:58:48.260933751Z 2026-10-27 00:58:48.260524+00:00 [info] <0.209.0> starting Ra system: quorum_queues in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/quorum/rabbit@rabbitmq[0m
+rabbitmq-1  | 2026-10-27T00:58:48.261943272Z 2026-10-27 00:58:48.261650+00:00 [info] <0.524.0> ra_log_ets: in system quorum_queues initialising. Mem table opts: [set,{write_concurrency,auto},public,{compressed,true}][0m
+rabbitmq-1  | 2026-10-27T00:58:48.262974564Z 2026-10-27 00:58:48.262658+00:00 [info] <0.528.0> ra system 'quorum_queues' running pre init for 0 registered servers[0m
+rabbitmq-1  | 2026-10-27T00:58:48.264000738Z 2026-10-27 00:58:48.263661+00:00 [info] <0.529.0> ra: meta data store initialised for system quorum_queues. 0 record(s) recovered[0m
+rabbitmq-1  | 2026-10-27T00:58:48.264625181Z 2026-10-27 00:58:48.264198+00:00 [info] <0.534.0> segment_writer: upgrading segment file names to new format in dirctory /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/quorum/rabbit@rabbitmq[0m
+rabbitmq-1  | 2026-10-27T00:58:48.310196657Z [38;5;87m2026-10-27 00:58:48.309681+00:00 [notice] <0.536.0> WAL in quorum_queues initialising with name ra_log_wal[0m
+rabbitmq-1  | 2026-10-27T00:58:48.575075381Z 2026-10-27 00:58:48.574366+00:00 [info] <0.538.0> ra_system_recover: ra system 'quorum_queues' server recovery strategy rabbit_quorum_queue:system_recover[0m
+rabbitmq-1  | 2026-10-27T00:58:48.575119008Z 2026-10-27 00:58:48.574647+00:00 [info] <0.538.0> [rabbit_quorum_queue:system_recover/1] rabbit not booted, skipping queue recovery[0m
+rabbitmq-1  | 2026-10-27T00:58:48.575400323Z 2026-10-27 00:58:48.575004+00:00 [info] <0.209.0> ra: starting system coordination[0m
+rabbitmq-1  | 2026-10-27T00:58:48.575413306Z 2026-10-27 00:58:48.575166+00:00 [info] <0.209.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq[0m
+rabbitmq-1  | 2026-10-27T00:58:49.075351986Z [38;5;87m2026-10-27 00:58:49.074457+00:00 [notice] <0.540.0> RabbitMQ metadata store: candidate -> leader in term: 1 machine version: 4, last applied 0[0m
+rabbitmq-1  | 2026-10-27T00:58:49.076700181Z 2026-10-27 00:58:49.076232+00:00 [info] <0.209.0> [0m
+rabbitmq-1  | 2026-10-27T00:58:49.076737548Z 2026-10-27 00:58:49.076232+00:00 [info] <0.209.0>  Starting RabbitMQ 4.4.0 on Erlang 29.1.2 [jit][0m
+rabbitmq-1  | 2026-10-27T00:58:49.076741573Z 2026-10-27 00:58:49.076232+00:00 [info] <0.209.0>  Copyright (c) 2007-2026 Broadcom Inc and/or its subsidiaries[0m
+rabbitmq-1  | 2026-10-27T00:58:49.076744063Z 2026-10-27 00:58:49.076232+00:00 [info] <0.209.0>  Licensed under the MPL 2.0. Website: https://rabbitmq.com[0m
+rabbitmq-1  | 2026-10-27T00:58:49.077815495Z 
+rabbitmq-1  | 2026-10-27T00:58:49.077876869Z   ##  ##      RabbitMQ 4.4.0
+rabbitmq-1  | 2026-10-27T00:58:49.077879892Z   ##  ##
+rabbitmq-1  | 2026-10-27T00:58:49.077881880Z   ##########  Copyright (c) 2007-2026 Broadcom Inc and/or its subsidiaries
+rabbitmq-1  | 2026-10-27T00:58:49.077884055Z   ######  ##
+rabbitmq-1  | 2026-10-27T00:58:49.077885931Z   ##########  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+rabbitmq-1  | 2026-10-27T00:58:49.077887913Z 
+rabbitmq-1  | 2026-10-27T00:58:49.077889700Z   Erlang:      29.1.2 [jit]
+rabbitmq-1  | 2026-10-27T00:58:49.077891640Z   TLS Library: OpenSSL - OpenSSL 3.5.9 29 Sep 2026
+rabbitmq-1  | 2026-10-27T00:58:49.077893514Z   Release series support status: see https://www.rabbitmq.com/release-information
+rabbitmq-1  | 2026-10-27T00:58:49.077895403Z 
+rabbitmq-1  | 2026-10-27T00:58:49.077897138Z   Doc guides:  https://www.rabbitmq.com/docs
+rabbitmq-1  | 2026-10-27T00:58:49.077899021Z   Support:     https://www.rabbitmq.com/docs/contact
+rabbitmq-1  | 2026-10-27T00:58:49.077900828Z   Tutorials:   https://www.rabbitmq.com/tutorials
+rabbitmq-1  | 2026-10-27T00:58:49.077902788Z   Monitoring:  https://www.rabbitmq.com/docs/monitoring
+rabbitmq-1  | 2026-10-27T00:58:49.077904529Z   Upgrading:   https://www.rabbitmq.com/docs/upgrade
+rabbitmq-1  | 2026-10-27T00:58:49.077906431Z 
+rabbitmq-1  | 2026-10-27T00:58:49.077908289Z   Logs: <stdout>
+rabbitmq-1  | 2026-10-27T00:58:49.077910314Z 
+rabbitmq-1  | 2026-10-27T00:58:49.077911974Z   Config file(s): /etc/rabbitmq/conf.d/10-defaults.conf
+rabbitmq-1  | 2026-10-27T00:58:49.077913810Z 
+rabbitmq-1  | 2026-10-27T00:58:49.078412404Z   Starting broker...2026-10-27 00:58:49.078113+00:00 [info] <0.209.0> [0m
+rabbitmq-1  | 2026-10-27T00:58:49.078422038Z 2026-10-27 00:58:49.078113+00:00 [info] <0.209.0>  node           : rabbit@rabbitmq[0m
+rabbitmq-1  | 2026-10-27T00:58:49.078438186Z 2026-10-27 00:58:49.078113+00:00 [info] <0.209.0>  home dir       : /var/lib/rabbitmq[0m
+rabbitmq-1  | 2026-10-27T00:58:49.078440837Z 2026-10-27 00:58:49.078113+00:00 [info] <0.209.0>  config file(s) : /etc/rabbitmq/conf.d/10-defaults.conf[0m
+rabbitmq-1  | 2026-10-27T00:58:49.078443014Z 2026-10-27 00:58:49.078113+00:00 [info] <0.209.0>  log(s)         : <stdout>[0m
+rabbitmq-1  | 2026-10-27T00:58:49.078445349Z 2026-10-27 00:58:49.078113+00:00 [info] <0.209.0>  data dir       : /var/lib/rabbitmq/mnesia/rabbit@rabbitmq[0m
+rabbitmq-1  | 2026-10-27T00:58:49.327110281Z [38;5;87m2026-10-27 00:58:49.326709+00:00 [notice] <0.543.0> Feature flags: attempt to enable `detailed_queues_endpoint`...[0m
+rabbitmq-1  | 2026-10-27T00:58:49.350812434Z [38;5;87m2026-10-27 00:58:49.350078+00:00 [notice] <0.543.0> Feature flags: `detailed_queues_endpoint` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:49.351187856Z [38;5;87m2026-10-27 00:58:49.350178+00:00 [notice] <0.543.0> Feature flags: attempt to enable `khepri_db`...[0m
+rabbitmq-1  | 2026-10-27T00:58:49.463127621Z [38;5;87m2026-10-27 00:58:49.462268+00:00 [notice] <0.543.0> Feature flags: `khepri_db` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:49.463337054Z [38;5;87m2026-10-27 00:58:49.462541+00:00 [notice] <0.543.0> Feature flags: attempt to enable `message_containers_deaths_v2`...[0m
+rabbitmq-1  | 2026-10-27T00:58:49.506514545Z [38;5;87m2026-10-27 00:58:49.505710+00:00 [notice] <0.543.0> Feature flags: `message_containers_deaths_v2` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:49.506788192Z [38;5;87m2026-10-27 00:58:49.505865+00:00 [notice] <0.543.0> Feature flags: attempt to enable `quorum_queue_non_voters`...[0m
+rabbitmq-1  | 2026-10-27T00:58:49.524214186Z [38;5;87m2026-10-27 00:58:49.523681+00:00 [notice] <0.543.0> Feature flags: `quorum_queue_non_voters` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:49.524650751Z [38;5;87m2026-10-27 00:58:49.523835+00:00 [notice] <0.543.0> Feature flags: attempt to enable `rabbit_exchange_type_local_random`...[0m
+rabbitmq-1  | 2026-10-27T00:58:49.550919710Z [38;5;87m2026-10-27 00:58:49.550487+00:00 [notice] <0.543.0> Feature flags: `rabbit_exchange_type_local_random` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:49.550970548Z [38;5;87m2026-10-27 00:58:49.550566+00:00 [notice] <0.543.0> Feature flags: attempt to enable `rabbitmq_4.0.0`...[0m
+rabbitmq-1  | 2026-10-27T00:58:49.565872561Z [38;5;87m2026-10-27 00:58:49.565371+00:00 [notice] <0.543.0> Feature flags: `rabbitmq_4.0.0` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:49.567915220Z [38;5;87m2026-10-27 00:58:49.565490+00:00 [notice] <0.543.0> Feature flags: attempt to enable `rabbitmq_4.1.0`...[0m
+rabbitmq-1  | 2026-10-27T00:58:49.580713433Z [38;5;87m2026-10-27 00:58:49.580306+00:00 [notice] <0.543.0> Feature flags: `rabbitmq_4.1.0` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:49.580756218Z [38;5;87m2026-10-27 00:58:49.580379+00:00 [notice] <0.543.0> Feature flags: attempt to enable `rabbitmq_4.2.0`...[0m
+rabbitmq-1  | 2026-10-27T00:58:49.646629119Z [38;5;87m2026-10-27 00:58:49.644514+00:00 [notice] <0.543.0> Feature flags: `rabbitmq_4.2.0` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:49.656810676Z 2026-10-27 00:58:49.651591+00:00 [info] <0.209.0> Running boot step pre_boot defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:49.656966975Z 2026-10-27 00:58:49.651743+00:00 [info] <0.209.0> Running boot step rabbit_global_counters defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:49.656989775Z 2026-10-27 00:58:49.652564+00:00 [info] <0.209.0> Running boot step rabbit_osiris_metrics defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:49.656992812Z 2026-10-27 00:58:49.652846+00:00 [info] <0.209.0> Running boot step rabbit_core_metrics defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:49.657014222Z 2026-10-27 00:58:49.655817+00:00 [info] <0.209.0> Running boot step worker_pool defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:49.657298427Z 2026-10-27 00:58:49.656139+00:00 [info] <0.542.0> Will use 8 processes for default worker pool[0m
+rabbitmq-1  | 2026-10-27T00:58:49.657321803Z 2026-10-27 00:58:49.656259+00:00 [info] <0.542.0> Starting worker pool 'worker_pool' with 8 processes in it[0m
+rabbitmq-1  | 2026-10-27T00:58:49.679217264Z 2026-10-27 00:58:49.678508+00:00 [info] <0.209.0> Running boot step rabbit_registry defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:49.679310775Z 2026-10-27 00:58:49.678854+00:00 [info] <0.209.0> Running boot step database defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:49.680596053Z 2026-10-27 00:58:49.680172+00:00 [info] <0.209.0> Peer discovery: configured backend: rabbit_peer_discovery_classic_config[0m
+rabbitmq-1  | 2026-10-27T00:58:49.680932797Z 2026-10-27 00:58:49.680590+00:00 [info] <0.543.0> Feature flags: starting an unclustered node for the first time: all stable feature flags will be enabled by default[0m
+rabbitmq-1  | 2026-10-27T00:58:49.682451074Z [38;5;87m2026-10-27 00:58:49.681972+00:00 [notice] <0.543.0> Feature flags: attempt to enable `topic_binding_projection_v4`...[0m
+rabbitmq-1  | 2026-10-27T00:58:49.698867292Z [38;5;87m2026-10-27 00:58:49.697828+00:00 [notice] <0.543.0> Feature flags: attempt to enable `rabbitmq_4.3.0`...[0m
+rabbitmq-1  | 2026-10-27T00:58:49.722610937Z [38;5;87m2026-10-27 00:58:49.721939+00:00 [notice] <0.543.0> Feature flags: `rabbitmq_4.3.0` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:50.378520793Z [38;5;87m2026-10-27 00:58:50.377538+00:00 [notice] <0.543.0> Feature flags: `topic_binding_projection_v4` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:50.378582045Z [38;5;87m2026-10-27 00:58:50.377779+00:00 [notice] <0.543.0> Feature flags: attempt to enable `topic_binding_projection_v5`...[0m
+rabbitmq-1  | 2026-10-27T00:58:50.522926314Z [38;5;87m2026-10-27 00:58:50.522358+00:00 [notice] <0.543.0> Feature flags: `topic_binding_projection_v5` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:50.522959315Z [38;5;87m2026-10-27 00:58:50.522500+00:00 [notice] <0.543.0> Feature flags: attempt to enable `track_qq_members_uids`...[0m
+rabbitmq-1  | 2026-10-27T00:58:50.542536957Z [38;5;87m2026-10-27 00:58:50.541885+00:00 [notice] <0.543.0> Feature flags: `track_qq_members_uids` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:50.542572468Z [38;5;87m2026-10-27 00:58:50.542030+00:00 [notice] <0.543.0> Feature flags: attempt to enable `tie_binding_to_dest_with_keep_while_cond`...[0m
+rabbitmq-1  | 2026-10-27T00:58:50.592332977Z [38;5;87m2026-10-27 00:58:50.591413+00:00 [notice] <0.543.0> Feature flags: `tie_binding_to_dest_with_keep_while_cond` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:50.592376202Z [38;5;87m2026-10-27 00:58:50.591699+00:00 [notice] <0.543.0> Feature flags: attempt to enable `rabbitmq_4.4.0`...[0m
+rabbitmq-1  | 2026-10-27T00:58:50.611025359Z [38;5;87m2026-10-27 00:58:50.610314+00:00 [notice] <0.543.0> Feature flags: `rabbitmq_4.4.0` enabled[0m
+rabbitmq-1  | 2026-10-27T00:58:50.611070443Z 2026-10-27 00:58:50.610738+00:00 [info] <0.209.0> DB: virgin node -> run peer discovery[0m
+rabbitmq-1  | 2026-10-27T00:58:50.611292803Z [38;5;214m2026-10-27 00:58:50.610868+00:00 [warning] <0.209.0> Classic peer discovery backend: list of nodes does not contain the local node [][0m
+rabbitmq-1  | 2026-10-27T00:58:50.611304766Z [38;5;87m2026-10-27 00:58:50.610995+00:00 [notice] <0.209.0> Found the following metadata store members: [{rabbitmq_metadata,[0m
+rabbitmq-1  | 2026-10-27T00:58:50.611307319Z [38;5;87m2026-10-27 00:58:50.610995+00:00 [notice] <0.209.0>                                               rabbit@rabbitmq}][0m
+rabbitmq-1  | 2026-10-27T00:58:50.679791209Z 2026-10-27 00:58:50.679351+00:00 [info] <0.209.0> Running boot step tracking_metadata_store defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.679821535Z 2026-10-27 00:58:50.679559+00:00 [info] <0.807.0> Setting up a table for connection tracking on this node: tracked_connection[0m
+rabbitmq-1  | 2026-10-27T00:58:50.679949750Z 2026-10-27 00:58:50.679641+00:00 [info] <0.807.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost[0m
+rabbitmq-1  | 2026-10-27T00:58:50.680152819Z 2026-10-27 00:58:50.679756+00:00 [info] <0.807.0> Setting up a table for per-user connection counting on this node: tracked_connection_per_user[0m
+rabbitmq-1  | 2026-10-27T00:58:50.680171806Z 2026-10-27 00:58:50.679932+00:00 [info] <0.807.0> Setting up a table for channel tracking on this node: tracked_channel[0m
+rabbitmq-1  | 2026-10-27T00:58:50.680310620Z 2026-10-27 00:58:50.680024+00:00 [info] <0.807.0> Setting up a table for channel tracking on this node: tracked_channel_per_user[0m
+rabbitmq-1  | 2026-10-27T00:58:50.680385089Z 2026-10-27 00:58:50.680121+00:00 [info] <0.209.0> Running boot step networking_metadata_store defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.680508889Z 2026-10-27 00:58:50.680198+00:00 [info] <0.209.0> Running boot step feature_flags defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.680709117Z 2026-10-27 00:58:50.680435+00:00 [info] <0.209.0> Running boot step rabbit_alarm defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.697644357Z 2026-10-27 00:58:50.697124+00:00 [info] <0.812.0> Memory high watermark set to 3494 MiB (3664279142 bytes) of 5824 MiB (6107131904 bytes) total[0m
+rabbitmq-1  | 2026-10-27T00:58:50.702749423Z 2026-10-27 00:58:50.702084+00:00 [info] <0.814.0> Enabling free disk space monitoring (disk free space: 1009866604544, total memory: 6107131904)[0m
+rabbitmq-1  | 2026-10-27T00:58:50.702969217Z 2026-10-27 00:58:50.702276+00:00 [info] <0.814.0> Disk free limit set to 50MB[0m
+rabbitmq-1  | 2026-10-27T00:58:50.705984038Z 2026-10-27 00:58:50.705437+00:00 [info] <0.209.0> Running boot step auth_backend_plugins_check defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.706397439Z 2026-10-27 00:58:50.705681+00:00 [info] <0.209.0> Running boot step codec_correctness_check defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.706441655Z 2026-10-27 00:58:50.705743+00:00 [info] <0.209.0> Running boot step external_infrastructure defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.706447043Z 2026-10-27 00:58:50.705804+00:00 [info] <0.209.0> Running boot step rabbit_event defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.706602920Z 2026-10-27 00:58:50.705974+00:00 [info] <0.209.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.706727944Z 2026-10-27 00:58:50.706107+00:00 [info] <0.209.0> Running boot step rabbit_auth_mechanism_anonymous defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.706944604Z 2026-10-27 00:58:50.706200+00:00 [info] <0.209.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.706980306Z 2026-10-27 00:58:50.706258+00:00 [info] <0.209.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.707126611Z 2026-10-27 00:58:50.706344+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_direct defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.707326824Z 2026-10-27 00:58:50.706401+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.707475172Z 2026-10-27 00:58:50.706449+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_headers defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.707677956Z 2026-10-27 00:58:50.706517+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_local_random defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.707870330Z 2026-10-27 00:58:50.706570+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_modulus_hash defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.708180361Z 2026-10-27 00:58:50.706625+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_topic defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.708378633Z 2026-10-27 00:58:50.706672+00:00 [info] <0.209.0> Running boot step rabbit_priority_queue defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.708649064Z 2026-10-27 00:58:50.706716+00:00 [info] <0.209.0> Priority queues enabled, real BQ is rabbit_variable_queue[0m
+rabbitmq-1  | 2026-10-27T00:58:50.708839399Z 2026-10-27 00:58:50.706796+00:00 [info] <0.209.0> Running boot step kernel_ready defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.709119628Z 2026-10-27 00:58:50.706828+00:00 [info] <0.209.0> Running boot step pg_local_amqp091_connection defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.757139468Z 2026-10-27 00:58:50.750944+00:00 [info] <0.209.0> Running boot step pg_local_non_amqp_connection defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.757191719Z 2026-10-27 00:58:50.755932+00:00 [info] <0.209.0> Running boot step pg_local_amqp091_channel defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.757199264Z 2026-10-27 00:58:50.756341+00:00 [info] <0.209.0> Running boot step pg_local_amqp_connection defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.757638569Z 2026-10-27 00:58:50.756523+00:00 [info] <0.209.0> Running boot step pg_local_amqp_session defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.757659269Z 2026-10-27 00:58:50.756624+00:00 [info] <0.209.0> Running boot step rabbit_sysmon_minder defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.757904866Z 2026-10-27 00:58:50.756753+00:00 [info] <0.209.0> Running boot step rabbit_epmd_monitor defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.758234410Z 2026-10-27 00:58:50.757808+00:00 [info] <0.825.0> epmd monitor knows us, inter-node communication (distribution) port: 25672[0m
+rabbitmq-1  | 2026-10-27T00:58:50.758371494Z 2026-10-27 00:58:50.757995+00:00 [info] <0.209.0> Running boot step guid_generator defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.764814892Z 2026-10-27 00:58:50.764255+00:00 [info] <0.209.0> Running boot step rabbit_node_monitor defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.765203378Z 2026-10-27 00:58:50.764653+00:00 [info] <0.829.0> Starting rabbit_node_monitor[0m
+rabbitmq-1  | 2026-10-27T00:58:50.765357430Z 2026-10-27 00:58:50.764844+00:00 [info] <0.209.0> Running boot step delegate_sup defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.766319874Z 2026-10-27 00:58:50.765624+00:00 [info] <0.209.0> Running boot step rabbit_chaos defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.766610873Z 2026-10-27 00:58:50.766132+00:00 [info] <0.209.0> Running boot step rabbit_fifo_dlx_sup defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.766693618Z 2026-10-27 00:58:50.766332+00:00 [info] <0.209.0> Running boot step core_initialized defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.766702626Z 2026-10-27 00:58:50.766385+00:00 [info] <0.209.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.770467890Z 2026-10-27 00:58:50.767004+00:00 [info] <0.209.0> Running boot step rabbit_classic_queue_type defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.770518470Z 2026-10-27 00:58:50.767238+00:00 [info] <0.209.0> Running boot step rabbit_classic_queue defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.770521994Z 2026-10-27 00:58:50.767495+00:00 [info] <0.209.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.770524509Z 2026-10-27 00:58:50.767625+00:00 [info] <0.209.0> Running boot step rabbit_definitions_hashing defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.770526850Z 2026-10-27 00:58:50.767701+00:00 [info] <0.209.0> Running boot step rabbit_exchange_parameters defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.772336620Z 2026-10-27 00:58:50.771795+00:00 [info] <0.209.0> Running boot step rabbit_policies defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.773605369Z 2026-10-27 00:58:50.772395+00:00 [info] <0.209.0> Running boot step rabbit_quorum_queue_type defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.773697976Z 2026-10-27 00:58:50.772553+00:00 [info] <0.209.0> Running boot step rabbit_stream_queue defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.773826103Z 2026-10-27 00:58:50.772703+00:00 [info] <0.209.0> Running boot step rabbit_policy defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.774436547Z 2026-10-27 00:58:50.772793+00:00 [info] <0.209.0> Running boot step rabbit_quorum_event_subscriber defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.774445754Z 2026-10-27 00:58:50.772877+00:00 [info] <0.209.0> Running boot step rabbit_quorum_queue defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.774465166Z 2026-10-27 00:58:50.773278+00:00 [info] <0.209.0> Running boot step quorum_memory_alarm_handler defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.774574640Z 2026-10-27 00:58:50.773345+00:00 [info] <0.209.0> Running boot step rabbit_stream_coordinator defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.774587069Z 2026-10-27 00:58:50.773558+00:00 [info] <0.209.0> Running boot step rabbit_vhost_limit defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.774746281Z 2026-10-27 00:58:50.773698+00:00 [info] <0.209.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management[0m
+rabbitmq-1  | 2026-10-27T00:58:50.774910441Z 2026-10-27 00:58:50.773805+00:00 [info] <0.209.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent[0m
+rabbitmq-1  | 2026-10-27T00:58:50.775094360Z 2026-10-27 00:58:50.773979+00:00 [info] <0.209.0> Management plugin: using rates mode 'basic'[0m
+rabbitmq-1  | 2026-10-27T00:58:50.775394805Z 2026-10-27 00:58:50.774167+00:00 [info] <0.209.0> Running boot step recovery defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.775405782Z 2026-10-27 00:58:50.774366+00:00 [info] <0.209.0> Running boot step channel_interceptor_priorities_check defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.775637185Z 2026-10-27 00:58:50.774456+00:00 [info] <0.209.0> Running boot step rabbit_sole_conn defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.775645742Z 2026-10-27 00:58:50.774672+00:00 [info] <0.209.0> Running boot step rabbit_observer_cli defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.775653081Z 2026-10-27 00:58:50.774761+00:00 [info] <0.209.0> Running boot step rabbit_core_metrics_gc defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.775749903Z 2026-10-27 00:58:50.774968+00:00 [info] <0.209.0> Running boot step background_gc defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.775758532Z 2026-10-27 00:58:50.775371+00:00 [info] <0.209.0> Running boot step prevent_startup_if_node_was_reset defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.775834917Z 2026-10-27 00:58:50.775534+00:00 [info] <0.209.0> Running boot step empty_db_check defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:50.776063907Z 2026-10-27 00:58:50.775837+00:00 [info] <0.209.0> Will seed default virtual host and user...[0m
+rabbitmq-1  | 2026-10-27T00:58:50.776483488Z 2026-10-27 00:58:50.776080+00:00 [info] <0.209.0> Adding vhost '/' (description: 'Default virtual host', tags: [])[0m
+rabbitmq-1  | 2026-10-27T00:58:50.810707530Z 2026-10-27 00:58:50.810287+00:00 [info] <0.862.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists[0m
+rabbitmq-1  | 2026-10-27T00:58:50.813745717Z 2026-10-27 00:58:50.813182+00:00 [info] <0.862.0> Setting segment_entry_count for vhost '/' with 0 queues to '2048'[0m
+rabbitmq-1  | 2026-10-27T00:58:50.867746948Z 2026-10-27 00:58:50.867162+00:00 [info] <0.862.0> Starting message stores for vhost '/'[0m
+rabbitmq-1  | 2026-10-27T00:58:50.871656140Z 2026-10-27 00:58:50.870309+00:00 [info] <0.862.0> Started message store of type transient for vhost '/'[0m
+rabbitmq-1  | 2026-10-27T00:58:50.938344904Z [38;5;214m2026-10-27 00:58:50.934936+00:00 [warning] <0.874.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": rebuilding indices from scratch[0m
+rabbitmq-1  | 2026-10-27T00:58:50.941170844Z 2026-10-27 00:58:50.940570+00:00 [info] <0.862.0> Started message store of type persistent for vhost '/'[0m
+rabbitmq-1  | 2026-10-27T00:58:50.941634367Z 2026-10-27 00:58:50.941086+00:00 [info] <0.862.0> Recovering 0 queues of type rabbit_classic_queue took 105ms[0m
+rabbitmq-1  | 2026-10-27T00:58:50.941848579Z 2026-10-27 00:58:50.941252+00:00 [info] <0.862.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms[0m
+rabbitmq-1  | 2026-10-27T00:58:50.942069420Z 2026-10-27 00:58:50.941376+00:00 [info] <0.862.0> Recovering 0 queues of type rabbit_stream_queue took 0ms[0m
+rabbitmq-1  | 2026-10-27T00:58:50.945849299Z 2026-10-27 00:58:50.945222+00:00 [info] <0.209.0> Created user 'admin'[0m
+rabbitmq-1  | 2026-10-27T00:58:51.043562646Z 2026-10-27 00:58:51.039110+00:00 [info] <0.209.0> Successfully set user tags for user 'admin' to [<<"administrator">>][0m
+rabbitmq-1  | 2026-10-27T00:58:51.073389409Z 2026-10-27 00:58:51.072408+00:00 [info] <0.209.0> Successfully set permissions for user 'admin' in virtual host '/' to '.*', '.*', '.*'[0m
+rabbitmq-1  | 2026-10-27T00:58:51.074122837Z 2026-10-27 00:58:51.072567+00:00 [info] <0.209.0> Running boot step rabbit_observer_cli_classic_queues defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.074144551Z 2026-10-27 00:58:51.073011+00:00 [info] <0.209.0> Running boot step rabbit_observer_cli_quorum_queues defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.074425043Z 2026-10-27 00:58:51.073291+00:00 [info] <0.209.0> Running boot step routing_ready defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.074746037Z 2026-10-27 00:58:51.073660+00:00 [info] <0.209.0> Running boot step pre_flight defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.074881550Z 2026-10-27 00:58:51.073815+00:00 [info] <0.209.0> Running boot step direct_client defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.075043699Z 2026-10-27 00:58:51.074046+00:00 [info] <0.209.0> Running boot step cluster_tags defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.079167164Z 2026-10-27 00:58:51.078620+00:00 [info] <0.209.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management[0m
+rabbitmq-1  | 2026-10-27T00:58:51.079216940Z 2026-10-27 00:58:51.078756+00:00 [info] <0.209.0> Running boot step notify_cluster defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.079394973Z 2026-10-27 00:58:51.078860+00:00 [info] <0.209.0> Running boot step networking defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.079793388Z 2026-10-27 00:58:51.079193+00:00 [info] <0.209.0> Running boot step rabbit_quorum_queue_periodic_membership_reconciliation defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.080628082Z 2026-10-27 00:58:51.080199+00:00 [info] <0.209.0> Running boot step definition_import_worker_pool defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.081080574Z 2026-10-27 00:58:51.080428+00:00 [info] <0.542.0> Starting worker pool 'definition_import_pool' with 8 processes in it[0m
+rabbitmq-1  | 2026-10-27T00:58:51.082057228Z 2026-10-27 00:58:51.081605+00:00 [info] <0.209.0> Running boot step cluster_name defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.082200351Z 2026-10-27 00:58:51.081912+00:00 [info] <0.209.0> Initialising internal cluster ID to 'rabbitmq-cluster-id-Rudd574cG8Vy4HeqkFksAA'[0m
+rabbitmq-1  | 2026-10-27T00:58:51.095477736Z 2026-10-27 00:58:51.086350+00:00 [info] <0.209.0> Running boot step virtual_host_reconciliation defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.099475451Z 2026-10-27 00:58:51.087828+00:00 [info] <0.209.0> Running boot step logger_exchange defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.109165179Z 2026-10-27 00:58:51.108220+00:00 [info] <0.209.0> Running boot step queue_type_registrations defined by app rabbit[0m
+rabbitmq-1  | 2026-10-27T00:58:51.109256729Z 2026-10-27 00:58:51.108507+00:00 [info] <0.905.0> Resetting node maintenance status[0m
+rabbitmq-1  | 2026-10-27T00:58:51.157988646Z [38;5;214m2026-10-27 00:58:51.157040+00:00 [warning] <0.925.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.[0m
+rabbitmq-1  | 2026-10-27T00:58:51.158045389Z [38;5;214m2026-10-27 00:58:51.157040+00:00 [warning] <0.925.0> By default, this feature can still be used for now.[0m
+rabbitmq-1  | 2026-10-27T00:58:51.158048711Z [38;5;214m2026-10-27 00:58:51.157040+00:00 [warning] <0.925.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.[0m
+rabbitmq-1  | 2026-10-27T00:58:51.158051387Z [38;5;214m2026-10-27 00:58:51.157040+00:00 [warning] <0.925.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:[0m
+rabbitmq-1  | 2026-10-27T00:58:51.158054054Z [38;5;214m2026-10-27 00:58:51.157040+00:00 [warning] <0.925.0>     "deprecated_features.permit.management_metrics_collection = true"[0m
+rabbitmq-1  | 2026-10-27T00:58:51.158057058Z [38;5;214m2026-10-27 00:58:51.157040+00:00 [warning] <0.925.0> To test RabbitMQ as if the feature was removed, set this in your configuration:[0m
+rabbitmq-1  | 2026-10-27T00:58:51.158059534Z [38;5;214m2026-10-27 00:58:51.157040+00:00 [warning] <0.925.0>     "deprecated_features.permit.management_metrics_collection = false"[0m
+rabbitmq-1  | 2026-10-27T00:58:51.231125616Z 2026-10-27 00:58:51.230684+00:00 [info] <0.961.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692[0m
+rabbitmq-1  | 2026-10-27T00:58:51.236478108Z 2026-10-27 00:58:51.235895+00:00 [info] <0.989.0> Management plugin: HTTP (non-TLS) listener started on port 15672[0m
+rabbitmq-1  | 2026-10-27T00:58:51.236534490Z 2026-10-27 00:58:51.236211+00:00 [info] <0.1017.0> Statistics database started.[0m
+rabbitmq-1  | 2026-10-27T00:58:51.236558433Z 2026-10-27 00:58:51.236343+00:00 [info] <0.1016.0> Starting worker pool 'management_worker_pool' with 3 processes in it[0m
+rabbitmq-1  | 2026-10-27T00:58:51.237301571Z 2026-10-27 00:58:51.236930+00:00 [info] <0.905.0> Ready to start client connection listeners[0m
+rabbitmq-1  | 2026-10-27T00:58:51.239720592Z 2026-10-27 00:58:51.239265+00:00 [info] <0.1041.0> started TCP listener on [::]:5672[0m
+rabbitmq-1  | 2026-10-27T00:58:51.430518242Z  completed with 4 plugins.
+rabbitmq-1  | 2026-10-27T00:58:51.430672420Z 2026-10-27 00:58:51.429081+00:00 [info] <0.905.0> Server startup complete; 4 plugins started.[0m
+rabbitmq-1  | 2026-10-27T00:58:51.430687868Z 2026-10-27 00:58:51.429081+00:00 [info] <0.905.0>  * rabbitmq_management[0m
+rabbitmq-1  | 2026-10-27T00:58:51.430691122Z 2026-10-27 00:58:51.429081+00:00 [info] <0.905.0>  * rabbitmq_prometheus[0m
+rabbitmq-1  | 2026-10-27T00:58:51.430693920Z 2026-10-27 00:58:51.429081+00:00 [info] <0.905.0>  * rabbitmq_management_agent[0m
+rabbitmq-1  | 2026-10-27T00:58:51.430696775Z 2026-10-27 00:58:51.429081+00:00 [info] <0.905.0>  * rabbitmq_web_dispatch[0m
+rabbitmq-1  | 2026-10-27T00:58:51.510688318Z 2026-10-27 00:58:51.510127+00:00 [info] <0.10.0> Time to start RabbitMQ: 7694 ms[0m
+rabbitmq-1  | 2026-10-27T00:58:51.923665758Z 2026-10-27 00:58:51.922476+00:00 [info] <0.1046.0> accepting AMQP connection 172.23.0.3:40752 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T00:58:51.930777464Z 2026-10-27 00:58:51.930105+00:00 [info] <0.1046.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T00:58:51.974255329Z 2026-10-27 00:58:51.973583+00:00 [info] <0.1046.0> connection 172.23.0.3:40752 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T00:58:52.221161323Z 2026-10-27 00:58:52.220050+00:00 [info] <0.1063.0> accepting AMQP connection 172.23.0.4:59440 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T00:58:52.239277310Z 2026-10-27 00:58:52.237739+00:00 [info] <0.1063.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T00:58:52.283275570Z 2026-10-27 00:58:52.282056+00:00 [info] <0.1063.0> connection 172.23.0.4:59440 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T00:59:12.260505630Z [38;5;214m2026-10-27 00:59:12.260032+00:00 [warning] <0.1046.0> closing AMQP connection <0.1046.0> (172.23.0.3:40752 -> 172.23.0.2:5672, vhost: '/', user: 'admin', duration: '20s'):[0m
+rabbitmq-1  | 2026-10-27T00:59:12.260553015Z [38;5;214m2026-10-27 00:59:12.260032+00:00 [warning] <0.1046.0> client unexpectedly closed TCP connection[0m
+rabbitmq-1  | 2026-10-27T00:59:13.177605252Z 2026-10-27 00:59:13.176837+00:00 [info] <0.1086.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T00:59:13.210502555Z [38;5;214m2026-10-27 00:59:13.210045+00:00 [warning] <0.1086.0> AMQP 0-9-1 client call timeout was 70000 ms, is updated to a safe effective value of 130000 ms[0m
+rabbitmq-1  | 2026-10-27T00:59:13.226115464Z 2026-10-27 00:59:13.225675+00:00 [info] <0.1090.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T00:59:13.287236854Z 2026-10-27 00:59:13.286650+00:00 [info] <0.1108.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T00:59:14.797792661Z 2026-10-27 00:59:14.795879+00:00 [info] <0.1112.0> accepting AMQP connection 172.23.0.3:51236 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T00:59:14.817449191Z 2026-10-27 00:59:14.816701+00:00 [info] <0.1112.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T00:59:14.886871320Z 2026-10-27 00:59:14.879616+00:00 [info] <0.1112.0> connection 172.23.0.3:51236 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T01:01:11.481757312Z [38;5;214m2026-10-27 01:01:11.479386+00:00 [warning] <0.1112.0> closing AMQP connection <0.1112.0> (172.23.0.3:51236 -> 172.23.0.2:5672, vhost: '/', user: 'admin', duration: '1M, 56s'):[0m
+rabbitmq-1  | 2026-10-27T01:01:11.481916825Z [38;5;214m2026-10-27 01:01:11.479386+00:00 [warning] <0.1112.0> client unexpectedly closed TCP connection[0m
+rabbitmq-1  | 2026-10-27T01:01:12.940748201Z 2026-10-27 01:01:12.940174+00:00 [info] <0.1181.0> accepting AMQP connection 172.23.0.3:43728 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T01:01:12.949022521Z 2026-10-27 01:01:12.948339+00:00 [info] <0.1181.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:01:12.998941409Z 2026-10-27 01:01:12.997269+00:00 [info] <0.1181.0> connection 172.23.0.3:43728 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T01:01:13.251561584Z 2026-10-27 01:01:13.250919+00:00 [info] <0.1195.0> accepting AMQP connection 172.23.0.5:57478 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T01:01:13.271326077Z 2026-10-27 01:01:13.270519+00:00 [info] <0.1195.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:01:13.316930266Z 2026-10-27 01:01:13.316338+00:00 [info] <0.1195.0> connection 172.23.0.5:57478 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T01:01:24.497135044Z [38;5;214m2026-10-27 01:01:24.494612+00:00 [warning] <0.1195.0> closing AMQP connection <0.1195.0> (172.23.0.5:57478 -> 172.23.0.2:5672, vhost: '/', user: 'admin', duration: '11s'):[0m
+rabbitmq-1  | 2026-10-27T01:01:24.497201638Z [38;5;214m2026-10-27 01:01:24.494612+00:00 [warning] <0.1195.0> client unexpectedly closed TCP connection[0m
+rabbitmq-1  | 2026-10-27T01:01:24.497640351Z [38;5;214m2026-10-27 01:01:24.495015+00:00 [warning] <0.1181.0> closing AMQP connection <0.1181.0> (172.23.0.3:43728 -> 172.23.0.2:5672, vhost: '/', user: 'admin', duration: '11s'):[0m
+rabbitmq-1  | 2026-10-27T01:01:24.497705246Z [38;5;214m2026-10-27 01:01:24.495015+00:00 [warning] <0.1181.0> client unexpectedly closed TCP connection[0m
+rabbitmq-1  | 2026-10-27T01:01:25.218488089Z 2026-10-27 01:01:25.217516+00:00 [info] <0.1221.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:01:25.219922258Z 2026-10-27 01:01:25.218968+00:00 [info] <0.1225.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:01:25.246413816Z 2026-10-27 01:01:25.235809+00:00 [info] <0.1242.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:01:26.671884125Z 2026-10-27 01:01:26.670451+00:00 [info] <0.1246.0> accepting AMQP connection 172.23.0.3:50840 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T01:01:26.684586229Z 2026-10-27 01:01:26.683808+00:00 [info] <0.1246.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:01:26.728574457Z 2026-10-27 01:01:26.728000+00:00 [info] <0.1246.0> connection 172.23.0.3:50840 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T01:01:27.015017740Z 2026-10-27 01:01:27.014479+00:00 [info] <0.1260.0> accepting AMQP connection 172.23.0.5:57492 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T01:01:27.029656301Z 2026-10-27 01:01:27.025941+00:00 [info] <0.1260.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:01:27.082219270Z 2026-10-27 01:01:27.081441+00:00 [info] <0.1260.0> connection 172.23.0.5:57492 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T01:09:14.626059884Z [38;5;214m2026-10-27 01:09:14.622606+00:00 [warning] <0.1497.0> User 'guest' failed to authenticate: user 'guest' - invalid credentials[0m
+rabbitmq-1  | 2026-10-27T01:09:14.626695161Z [38;5;214m2026-10-27 01:09:14.624187+00:00 [warning] <0.1497.0> HTTP access denied: user 'guest' - invalid credentials[0m
+rabbitmq-1  | 2026-10-27T01:09:19.029714962Z 2026-10-27 01:09:19.029052+00:00 [info] <0.1501.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:19.037170101Z 2026-10-27 01:09:19.036190+00:00 [info] <0.1502.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:19.095124049Z 2026-10-27 01:09:19.082877+00:00 [info] <0.1507.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:19.200298486Z 2026-10-27 01:09:19.199489+00:00 [info] <0.1509.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:19.219836650Z 2026-10-27 01:09:19.219050+00:00 [info] <0.1513.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:19.227190223Z 2026-10-27 01:09:19.226453+00:00 [info] <0.1515.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:19.247486902Z 2026-10-27 01:09:19.244178+00:00 [info] <0.1517.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:19.254758527Z 2026-10-27 01:09:19.253182+00:00 [info] <0.1518.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:24.377474859Z 2026-10-27 01:09:24.376966+00:00 [info] <0.1525.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:24.387595523Z 2026-10-27 01:09:24.386876+00:00 [info] <0.1529.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:24.394722304Z 2026-10-27 01:09:24.393771+00:00 [info] <0.1531.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:29.529455613Z 2026-10-27 01:09:29.528780+00:00 [info] <0.1536.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:29.540615574Z 2026-10-27 01:09:29.540053+00:00 [info] <0.1540.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:29.547402054Z 2026-10-27 01:09:29.546801+00:00 [info] <0.1542.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:34.522812374Z 2026-10-27 01:09:34.522229+00:00 [info] <0.1546.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:34.536483288Z 2026-10-27 01:09:34.535950+00:00 [info] <0.1550.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:34.541925657Z 2026-10-27 01:09:34.541312+00:00 [info] <0.1552.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:39.362794876Z 2026-10-27 01:09:39.362198+00:00 [info] <0.1556.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:39.372274885Z 2026-10-27 01:09:39.371693+00:00 [info] <0.1560.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:39.377527097Z 2026-10-27 01:09:39.376970+00:00 [info] <0.1562.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:44.372813691Z 2026-10-27 01:09:44.372088+00:00 [info] <0.1566.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:44.381634462Z 2026-10-27 01:09:44.381128+00:00 [info] <0.1570.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:44.389107444Z 2026-10-27 01:09:44.387795+00:00 [info] <0.1572.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:49.374646865Z 2026-10-27 01:09:49.374023+00:00 [info] <0.1576.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:49.384001257Z 2026-10-27 01:09:49.383374+00:00 [info] <0.1580.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:49.392167442Z 2026-10-27 01:09:49.391674+00:00 [info] <0.1582.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:54.534624839Z 2026-10-27 01:09:54.534018+00:00 [info] <0.1585.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:54.547023654Z 2026-10-27 01:09:54.545862+00:00 [info] <0.1589.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:54.552501397Z 2026-10-27 01:09:54.551911+00:00 [info] <0.1591.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:59.524918550Z 2026-10-27 01:09:59.524002+00:00 [info] <0.1595.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:59.538123074Z 2026-10-27 01:09:59.537547+00:00 [info] <0.1599.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:09:59.545124721Z 2026-10-27 01:09:59.544620+00:00 [info] <0.1601.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:04.530431002Z 2026-10-27 01:10:04.529789+00:00 [info] <0.1605.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:04.543975655Z 2026-10-27 01:10:04.543353+00:00 [info] <0.1609.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:04.550548437Z 2026-10-27 01:10:04.549895+00:00 [info] <0.1611.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:09.533733130Z 2026-10-27 01:10:09.530970+00:00 [info] <0.1615.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:09.550919640Z 2026-10-27 01:10:09.550154+00:00 [info] <0.1619.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:09.560667706Z 2026-10-27 01:10:09.559579+00:00 [info] <0.1621.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:14.540676803Z 2026-10-27 01:10:14.539931+00:00 [info] <0.1623.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:14.578618307Z 2026-10-27 01:10:14.577231+00:00 [info] <0.1627.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:14.601664295Z 2026-10-27 01:10:14.600953+00:00 [info] <0.1629.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:19.522287215Z 2026-10-27 01:10:19.521635+00:00 [info] <0.1633.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:19.533968454Z 2026-10-27 01:10:19.533252+00:00 [info] <0.1637.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:19.546576472Z 2026-10-27 01:10:19.546010+00:00 [info] <0.1639.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:24.531169312Z 2026-10-27 01:10:24.530368+00:00 [info] <0.1643.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:24.555456869Z 2026-10-27 01:10:24.554625+00:00 [info] <0.1647.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:24.562983954Z 2026-10-27 01:10:24.562051+00:00 [info] <0.1649.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:29.529711316Z 2026-10-27 01:10:29.528968+00:00 [info] <0.1653.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:29.542915958Z 2026-10-27 01:10:29.541838+00:00 [info] <0.1657.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:29.558064359Z 2026-10-27 01:10:29.557231+00:00 [info] <0.1659.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:34.519151604Z 2026-10-27 01:10:34.518492+00:00 [info] <0.1661.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:34.528586793Z 2026-10-27 01:10:34.527912+00:00 [info] <0.1665.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:34.535259071Z 2026-10-27 01:10:34.534501+00:00 [info] <0.1667.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:39.527012574Z 2026-10-27 01:10:39.526231+00:00 [info] <0.1671.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:39.538762908Z 2026-10-27 01:10:39.538188+00:00 [info] <0.1675.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:39.546185619Z 2026-10-27 01:10:39.545613+00:00 [info] <0.1677.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:44.362349919Z 2026-10-27 01:10:44.361742+00:00 [info] <0.1682.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:44.372278281Z 2026-10-27 01:10:44.371614+00:00 [info] <0.1686.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:44.377719090Z 2026-10-27 01:10:44.377072+00:00 [info] <0.1688.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:49.378031822Z 2026-10-27 01:10:49.377319+00:00 [info] <0.1692.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:49.388423971Z 2026-10-27 01:10:49.387858+00:00 [info] <0.1696.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:49.393510424Z 2026-10-27 01:10:49.392888+00:00 [info] <0.1698.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:54.366430374Z 2026-10-27 01:10:54.365446+00:00 [info] <0.1706.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:54.377430726Z 2026-10-27 01:10:54.376705+00:00 [info] <0.1710.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:54.382441493Z 2026-10-27 01:10:54.381788+00:00 [info] <0.1712.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:59.373537824Z 2026-10-27 01:10:59.372785+00:00 [info] <0.1716.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:59.384203605Z 2026-10-27 01:10:59.383701+00:00 [info] <0.1720.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:10:59.389743625Z 2026-10-27 01:10:59.389280+00:00 [info] <0.1722.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:04.375403284Z 2026-10-27 01:11:04.374504+00:00 [info] <0.1726.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:04.387390147Z 2026-10-27 01:11:04.386838+00:00 [info] <0.1730.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:04.392960221Z 2026-10-27 01:11:04.392462+00:00 [info] <0.1732.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:09.361531845Z 2026-10-27 01:11:09.361020+00:00 [info] <0.1734.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:09.373208814Z 2026-10-27 01:11:09.372828+00:00 [info] <0.1738.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:09.379341868Z 2026-10-27 01:11:09.378877+00:00 [info] <0.1740.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:14.529752633Z 2026-10-27 01:11:14.529157+00:00 [info] <0.1745.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:14.540585647Z 2026-10-27 01:11:14.539810+00:00 [info] <0.1749.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:14.547424745Z 2026-10-27 01:11:14.546859+00:00 [info] <0.1751.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:19.367786415Z 2026-10-27 01:11:19.367164+00:00 [info] <0.1755.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:19.378021882Z 2026-10-27 01:11:19.377528+00:00 [info] <0.1759.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:19.383841065Z 2026-10-27 01:11:19.383367+00:00 [info] <0.1761.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:22.106397094Z 2026-10-27 01:11:22.105577+00:00 [info] <0.1765.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:22.116133139Z 2026-10-27 01:11:22.115484+00:00 [info] <0.1768.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:22.126114515Z 2026-10-27 01:11:22.125297+00:00 [info] <0.1770.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:22.133238807Z 2026-10-27 01:11:22.132501+00:00 [info] <0.1771.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:24.878549402Z 2026-10-27 01:11:24.877943+00:00 [info] <0.1772.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:24.888684345Z 2026-10-27 01:11:24.887968+00:00 [info] <0.1773.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:24.898955685Z 2026-10-27 01:11:24.898273+00:00 [info] <0.1774.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:24.903851199Z 2026-10-27 01:11:24.903256+00:00 [info] <0.1775.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:29.933650044Z 2026-10-27 01:11:29.933195+00:00 [info] <0.1779.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:29.939637631Z 2026-10-27 01:11:29.939113+00:00 [info] <0.1780.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:34.932057310Z 2026-10-27 01:11:34.931377+00:00 [info] <0.1783.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:34.938471219Z 2026-10-27 01:11:34.937853+00:00 [info] <0.1784.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:40.524488147Z 2026-10-27 01:11:40.523786+00:00 [info] <0.1788.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:40.531679169Z 2026-10-27 01:11:40.531061+00:00 [info] <0.1789.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:44.923916121Z 2026-10-27 01:11:44.922924+00:00 [info] <0.1792.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:44.931264451Z 2026-10-27 01:11:44.930692+00:00 [info] <0.1793.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:49.931814219Z 2026-10-27 01:11:49.931258+00:00 [info] <0.1794.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:49.938747722Z 2026-10-27 01:11:49.938123+00:00 [info] <0.1795.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:54.938062317Z 2026-10-27 01:11:54.937427+00:00 [info] <0.1798.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:54.943842220Z 2026-10-27 01:11:54.943319+00:00 [info] <0.1799.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:59.926074321Z 2026-10-27 01:11:59.925330+00:00 [info] <0.1802.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:11:59.930590785Z 2026-10-27 01:11:59.930152+00:00 [info] <0.1803.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:04.925082856Z 2026-10-27 01:12:04.924191+00:00 [info] <0.1806.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:04.939873762Z 2026-10-27 01:12:04.939162+00:00 [info] <0.1807.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:10.533013970Z 2026-10-27 01:12:10.532079+00:00 [info] <0.1811.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:10.542096089Z 2026-10-27 01:12:10.541412+00:00 [info] <0.1812.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:15.533573674Z 2026-10-27 01:12:15.531615+00:00 [info] <0.1815.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:15.543232453Z 2026-10-27 01:12:15.540439+00:00 [info] <0.1816.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:20.519318911Z 2026-10-27 01:12:20.518354+00:00 [info] <0.1820.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:20.527864855Z 2026-10-27 01:12:20.527044+00:00 [info] <0.1821.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:25.548499473Z 2026-10-27 01:12:25.544434+00:00 [info] <0.1823.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:25.558779240Z 2026-10-27 01:12:25.556479+00:00 [info] <0.1824.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:30.520395946Z 2026-10-27 01:12:30.519403+00:00 [info] <0.1827.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:30.529284317Z 2026-10-27 01:12:30.528590+00:00 [info] <0.1828.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:35.538761854Z 2026-10-27 01:12:35.535826+00:00 [info] <0.1832.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:35.560230532Z 2026-10-27 01:12:35.557761+00:00 [info] <0.1833.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:40.521541954Z 2026-10-27 01:12:40.519987+00:00 [info] <0.1836.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:40.532513457Z 2026-10-27 01:12:40.531677+00:00 [info] <0.1837.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:45.525478279Z 2026-10-27 01:12:45.524391+00:00 [info] <0.1839.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:45.534355816Z 2026-10-27 01:12:45.533887+00:00 [info] <0.1840.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:50.532419028Z 2026-10-27 01:12:50.531879+00:00 [info] <0.1843.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:50.539379467Z 2026-10-27 01:12:50.538921+00:00 [info] <0.1844.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:55.523117237Z 2026-10-27 01:12:55.522051+00:00 [info] <0.1851.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:12:55.532768086Z 2026-10-27 01:12:55.532045+00:00 [info] <0.1852.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:13:00.527290019Z 2026-10-27 01:13:00.525921+00:00 [info] <0.1855.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:13:00.535992535Z 2026-10-27 01:13:00.535369+00:00 [info] <0.1856.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:13:05.538136418Z 2026-10-27 01:13:05.526644+00:00 [info] <0.1859.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:13:05.543617169Z 2026-10-27 01:13:05.541070+00:00 [info] <0.1860.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:13:10.525005121Z 2026-10-27 01:13:10.523696+00:00 [info] <0.1863.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:13:10.532683584Z 2026-10-27 01:13:10.531857+00:00 [info] <0.1864.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:13:24.431764937Z 2026-10-27 01:13:24.421089+00:00 [info] <0.1866.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:13:34.706903458Z 2026-10-27 01:13:34.659304+00:00 [info] <0.1868.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:18:42.941524379Z 2026-10-27 01:18:42.898097+00:00 [info] <0.1970.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:18:43.031357763Z 2026-10-27 01:18:43.029325+00:00 [info] <0.1971.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:18:51.567367254Z 2026-10-27 01:18:51.556655+00:00 [info] <0.1980.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:18:51.587219806Z 2026-10-27 01:18:51.585625+00:00 [info] <0.1981.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:19:51.630656847Z 2026-10-27 01:19:51.629135+00:00 [info] <0.1997.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:19:53.627983589Z 2026-10-27 01:19:53.627139+00:00 [info] <0.1998.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:20:51.526357312Z 2026-10-27 01:20:51.525151+00:00 [info] <0.2025.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:20:51.533949762Z 2026-10-27 01:20:51.532948+00:00 [info] <0.2026.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:21:51.542339753Z 2026-10-27 01:21:51.541587+00:00 [info] <0.2048.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:21:51.550470896Z 2026-10-27 01:21:51.549171+00:00 [info] <0.2049.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:22:51.532269042Z 2026-10-27 01:22:51.531049+00:00 [info] <0.2074.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:22:51.547916103Z 2026-10-27 01:22:51.546832+00:00 [info] <0.2075.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:23:51.543882352Z 2026-10-27 01:23:51.540598+00:00 [info] <0.2093.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:23:51.560377827Z 2026-10-27 01:23:51.558642+00:00 [info] <0.2094.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:05.355966260Z 2026-10-27 01:24:05.355270+00:00 [info] <0.2096.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:05.370801644Z 2026-10-27 01:24:05.370000+00:00 [info] <0.2097.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:09.906857100Z 2026-10-27 01:24:09.905746+00:00 [info] <0.2102.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:09.915027942Z 2026-10-27 01:24:09.914146+00:00 [info] <0.2103.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:15.561017891Z 2026-10-27 01:24:15.557287+00:00 [info] <0.2105.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:15.571787756Z 2026-10-27 01:24:15.569164+00:00 [info] <0.2106.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:20.532471002Z 2026-10-27 01:24:20.531018+00:00 [info] <0.2109.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:20.542300131Z 2026-10-27 01:24:20.541811+00:00 [info] <0.2110.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:25.540551187Z 2026-10-27 01:24:25.534726+00:00 [info] <0.2113.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:25.560086054Z 2026-10-27 01:24:25.557402+00:00 [info] <0.2114.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:30.527177857Z 2026-10-27 01:24:30.526397+00:00 [info] <0.2117.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:30.534917516Z 2026-10-27 01:24:30.534401+00:00 [info] <0.2118.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:35.530458428Z 2026-10-27 01:24:35.528717+00:00 [info] <0.2119.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:35.567118387Z 2026-10-27 01:24:35.553284+00:00 [info] <0.2120.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:40.515144112Z 2026-10-27 01:24:40.514470+00:00 [info] <0.2123.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:40.524463097Z 2026-10-27 01:24:40.523807+00:00 [info] <0.2124.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:45.542920126Z 2026-10-27 01:24:45.542013+00:00 [info] <0.2129.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:45.551796571Z 2026-10-27 01:24:45.551063+00:00 [info] <0.2130.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:50.522527007Z 2026-10-27 01:24:50.520359+00:00 [info] <0.2136.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:50.529512531Z 2026-10-27 01:24:50.528870+00:00 [info] <0.2137.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:55.547947614Z 2026-10-27 01:24:55.544529+00:00 [info] <0.2142.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:24:55.562190662Z 2026-10-27 01:24:55.553016+00:00 [info] <0.2143.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:25:00.529728681Z 2026-10-27 01:25:00.528634+00:00 [info] <0.2144.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:25:00.539846296Z 2026-10-27 01:25:00.539094+00:00 [info] <0.2145.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:25:05.534207216Z 2026-10-27 01:25:05.533666+00:00 [info] <0.2148.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:25:05.560741375Z 2026-10-27 01:25:05.559816+00:00 [info] <0.2149.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:25:10.528013172Z 2026-10-27 01:25:10.527486+00:00 [info] <0.2152.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:25:10.534391644Z 2026-10-27 01:25:10.533759+00:00 [info] <0.2153.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:25:15.548957386Z 2026-10-27 01:25:15.547352+00:00 [info] <0.2157.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:25:15.561280639Z 2026-10-27 01:25:15.560195+00:00 [info] <0.2158.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:25:51.534437134Z 2026-10-27 01:25:51.533764+00:00 [info] <0.2172.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:25:51.543579021Z 2026-10-27 01:25:51.543046+00:00 [info] <0.2173.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:26:51.534950734Z 2026-10-27 01:26:51.533979+00:00 [info] <0.2198.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:26:51.543995960Z 2026-10-27 01:26:51.543320+00:00 [info] <0.2199.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:27:51.532841432Z 2026-10-27 01:27:51.532013+00:00 [info] <0.2221.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:27:51.543406538Z 2026-10-27 01:27:51.542338+00:00 [info] <0.2222.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:27:55.557288943Z 2026-10-27 01:27:55.544211+00:00 [info] <0.2223.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:27:55.635714730Z 2026-10-27 01:27:55.631028+00:00 [info] <0.2224.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:00.555183045Z 2026-10-27 01:28:00.546978+00:00 [info] <0.2227.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:00.579782800Z 2026-10-27 01:28:00.578595+00:00 [info] <0.2228.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:05.526341226Z 2026-10-27 01:28:05.522277+00:00 [info] <0.2231.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:05.542801878Z 2026-10-27 01:28:05.542059+00:00 [info] <0.2232.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:10.540175459Z 2026-10-27 01:28:10.535055+00:00 [info] <0.2233.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:10.567486886Z 2026-10-27 01:28:10.566296+00:00 [info] <0.2234.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:15.515998748Z 2026-10-27 01:28:15.515216+00:00 [info] <0.2237.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:15.524838826Z 2026-10-27 01:28:15.523691+00:00 [info] <0.2238.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:20.530365446Z 2026-10-27 01:28:20.529489+00:00 [info] <0.2242.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:20.537440996Z 2026-10-27 01:28:20.536677+00:00 [info] <0.2243.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:25.517242985Z 2026-10-27 01:28:25.516414+00:00 [info] <0.2246.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:25.524921207Z 2026-10-27 01:28:25.523784+00:00 [info] <0.2247.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:30.538725977Z 2026-10-27 01:28:30.537793+00:00 [info] <0.2249.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:30.554202766Z 2026-10-27 01:28:30.553388+00:00 [info] <0.2250.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:35.525303008Z 2026-10-27 01:28:35.524255+00:00 [info] <0.2253.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:35.533440632Z 2026-10-27 01:28:35.532258+00:00 [info] <0.2254.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:40.536309315Z 2026-10-27 01:28:40.534956+00:00 [info] <0.2257.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:40.546400239Z 2026-10-27 01:28:40.544986+00:00 [info] <0.2258.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:45.527779980Z 2026-10-27 01:28:45.524869+00:00 [info] <0.2262.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:45.535467824Z 2026-10-27 01:28:45.534204+00:00 [info] <0.2263.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:50.529742503Z 2026-10-27 01:28:50.529152+00:00 [info] <0.2267.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:28:50.537163828Z 2026-10-27 01:28:50.536216+00:00 [info] <0.2268.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:29:33.450321168Z [38;5;214m2026-10-27 01:29:33.442744+00:00 [warning] <0.1246.0> closing AMQP connection <0.1246.0> (172.23.0.3:50840 -> 172.23.0.2:5672, vhost: '/', user: 'admin', duration: '28M, 6s'):[0m
+rabbitmq-1  | 2026-10-27T01:29:33.450363855Z [38;5;214m2026-10-27 01:29:33.442744+00:00 [warning] <0.1246.0> client unexpectedly closed TCP connection[0m
+rabbitmq-1  | 2026-10-27T01:29:33.455913637Z [38;5;214m2026-10-27 01:29:33.445857+00:00 [warning] <0.1260.0> closing AMQP connection <0.1260.0> (172.23.0.5:57492 -> 172.23.0.2:5672, vhost: '/', user: 'admin', duration: '28M, 6s'):[0m
+rabbitmq-1  | 2026-10-27T01:29:33.455951892Z [38;5;214m2026-10-27 01:29:33.445857+00:00 [warning] <0.1260.0> client unexpectedly closed TCP connection[0m
+rabbitmq-1  | 2026-10-27T01:29:34.289867905Z 2026-10-27 01:29:34.288193+00:00 [info] <0.2293.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:29:36.157785887Z 2026-10-27 01:29:36.156304+00:00 [info] <0.2297.0> accepting AMQP connection 172.23.0.3:44018 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T01:29:36.182405838Z 2026-10-27 01:29:36.180605+00:00 [info] <0.2297.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:29:36.241668975Z 2026-10-27 01:29:36.232837+00:00 [info] <0.2297.0> connection 172.23.0.3:44018 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T01:29:36.612934368Z 2026-10-27 01:29:36.612357+00:00 [info] <0.2311.0> accepting AMQP connection 172.23.0.5:42062 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T01:29:36.624682416Z 2026-10-27 01:29:36.622057+00:00 [info] <0.2311.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:29:36.676682564Z 2026-10-27 01:29:36.675448+00:00 [info] <0.2311.0> connection 172.23.0.5:42062 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T01:29:51.541241021Z 2026-10-27 01:29:51.540223+00:00 [info] <0.2329.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:29:51.549492591Z 2026-10-27 01:29:51.548432+00:00 [info] <0.2330.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:30:51.541052175Z 2026-10-27 01:30:51.537670+00:00 [info] <0.2353.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:30:51.557299118Z 2026-10-27 01:30:51.551788+00:00 [info] <0.2354.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:31:51.563642431Z 2026-10-27 01:31:51.562446+00:00 [info] <0.2374.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:31:51.599231907Z 2026-10-27 01:31:51.593136+00:00 [info] <0.2375.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:32:30.925767712Z [38;5;214m2026-10-27 01:32:30.924956+00:00 [warning] <0.2297.0> closing AMQP connection <0.2297.0> (172.23.0.3:44018 -> 172.23.0.2:5672, vhost: '/', user: 'admin', duration: '2M, 54s'):[0m
+rabbitmq-1  | 2026-10-27T01:32:30.925821475Z [38;5;214m2026-10-27 01:32:30.924956+00:00 [warning] <0.2297.0> client unexpectedly closed TCP connection[0m
+rabbitmq-1  | 2026-10-27T01:32:30.928081267Z [38;5;214m2026-10-27 01:32:30.927351+00:00 [warning] <0.2311.0> closing AMQP connection <0.2311.0> (172.23.0.5:42062 -> 172.23.0.2:5672, vhost: '/', user: 'admin', duration: '2M, 54s'):[0m
+rabbitmq-1  | 2026-10-27T01:32:30.928128609Z [38;5;214m2026-10-27 01:32:30.927351+00:00 [warning] <0.2311.0> client unexpectedly closed TCP connection[0m
+rabbitmq-1  | 2026-10-27T01:32:31.966395700Z 2026-10-27 01:32:31.965122+00:00 [info] <0.2397.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:32:32.996567686Z 2026-10-27 01:32:32.995490+00:00 [info] <0.2399.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:32:34.013065400Z 2026-10-27 01:32:34.012519+00:00 [info] <0.2403.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:32:35.025735328Z 2026-10-27 01:32:35.025042+00:00 [info] <0.2405.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:32:36.048800908Z 2026-10-27 01:32:36.048082+00:00 [info] <0.2407.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:32:43.152879147Z 2026-10-27 01:32:43.151940+00:00 [info] <0.2413.0> accepting AMQP connection 172.23.0.3:56856 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T01:32:43.179810221Z 2026-10-27 01:32:43.176354+00:00 [info] <0.2413.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:32:43.221789713Z 2026-10-27 01:32:43.220968+00:00 [info] <0.2413.0> connection 172.23.0.3:56856 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T01:32:43.650057207Z 2026-10-27 01:32:43.649540+00:00 [info] <0.2428.0> accepting AMQP connection 172.23.0.5:56784 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T01:32:43.670334358Z 2026-10-27 01:32:43.669210+00:00 [info] <0.2428.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:32:43.719152730Z 2026-10-27 01:32:43.716767+00:00 [info] <0.2428.0> connection 172.23.0.5:56784 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T01:32:51.532478611Z 2026-10-27 01:32:51.531590+00:00 [info] <0.2446.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:32:51.550044139Z 2026-10-27 01:32:51.546692+00:00 [info] <0.2447.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:33:00.313584062Z 2026-10-27 01:33:00.312407+00:00 [info] <0.2451.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:33:51.542779096Z 2026-10-27 01:33:51.541966+00:00 [info] <0.2469.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:33:51.550178696Z 2026-10-27 01:33:51.549117+00:00 [info] <0.2470.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:34:51.534924965Z 2026-10-27 01:34:51.534096+00:00 [info] <0.2497.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:34:51.541733211Z 2026-10-27 01:34:51.540994+00:00 [info] <0.2498.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:35:51.530634193Z 2026-10-27 01:35:51.529665+00:00 [info] <0.2518.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:35:51.536889707Z 2026-10-27 01:35:51.536152+00:00 [info] <0.2519.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:35:58.848151080Z 2026-10-27 01:35:58.833403+00:00 [info] <0.2521.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:35:59.090773967Z 2026-10-27 01:35:59.084539+00:00 [info] <0.2522.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:35:59.987039594Z 2026-10-27 01:35:59.930479+00:00 [info] <0.2523.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:00.022976435Z 2026-10-27 01:36:00.021493+00:00 [info] <0.2524.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:05.531891896Z 2026-10-27 01:36:05.531193+00:00 [info] <0.2528.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:05.539699743Z 2026-10-27 01:36:05.538676+00:00 [info] <0.2529.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:10.523128370Z 2026-10-27 01:36:10.522304+00:00 [info] <0.2532.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:10.534454965Z 2026-10-27 01:36:10.531692+00:00 [info] <0.2533.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:15.521603366Z 2026-10-27 01:36:15.518906+00:00 [info] <0.2536.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:15.532588832Z 2026-10-27 01:36:15.529423+00:00 [info] <0.2537.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:20.523217725Z 2026-10-27 01:36:20.522138+00:00 [info] <0.2538.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:20.532881909Z 2026-10-27 01:36:20.531465+00:00 [info] <0.2539.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:25.525561327Z 2026-10-27 01:36:25.524533+00:00 [info] <0.2542.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:25.541460055Z 2026-10-27 01:36:25.539238+00:00 [info] <0.2543.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:30.523188882Z 2026-10-27 01:36:30.521887+00:00 [info] <0.2546.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:30.530382732Z 2026-10-27 01:36:30.529722+00:00 [info] <0.2547.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:35.522292371Z 2026-10-27 01:36:35.521534+00:00 [info] <0.2550.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:35.527530772Z 2026-10-27 01:36:35.526993+00:00 [info] <0.2551.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:40.531693852Z 2026-10-27 01:36:40.527047+00:00 [info] <0.2552.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:40.543346535Z 2026-10-27 01:36:40.542073+00:00 [info] <0.2553.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:45.529739747Z 2026-10-27 01:36:45.525686+00:00 [info] <0.2557.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:45.545101105Z 2026-10-27 01:36:45.544047+00:00 [info] <0.2558.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:50.532516823Z 2026-10-27 01:36:50.530980+00:00 [info] <0.2564.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:50.543721969Z 2026-10-27 01:36:50.543070+00:00 [info] <0.2565.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:55.521258407Z 2026-10-27 01:36:55.520619+00:00 [info] <0.2569.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:36:55.526919089Z 2026-10-27 01:36:55.526457+00:00 [info] <0.2570.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:37:00.551033306Z 2026-10-27 01:37:00.542815+00:00 [info] <0.2574.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:37:00.565770871Z 2026-10-27 01:37:00.563990+00:00 [info] <0.2575.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:37:51.537651607Z 2026-10-27 01:37:51.534734+00:00 [info] <0.2591.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:37:51.564546415Z 2026-10-27 01:37:51.562925+00:00 [info] <0.2594.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:38:51.531084248Z 2026-10-27 01:38:51.530264+00:00 [info] <0.2619.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:38:51.548104519Z 2026-10-27 01:38:51.546507+00:00 [info] <0.2620.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:29.636637816Z [38;5;214m2026-10-27 01:39:29.632776+00:00 [warning] <0.2413.0> closing AMQP connection <0.2413.0> (172.23.0.3:56856 -> 172.23.0.2:5672, vhost: '/', user: 'admin', duration: '6M, 46s'):[0m
+rabbitmq-1  | 2026-10-27T01:39:29.636726642Z [38;5;214m2026-10-27 01:39:29.632776+00:00 [warning] <0.2413.0> client unexpectedly closed TCP connection[0m
+rabbitmq-1  | 2026-10-27T01:39:29.642548275Z [38;5;214m2026-10-27 01:39:29.635529+00:00 [warning] <0.2428.0> closing AMQP connection <0.2428.0> (172.23.0.5:56784 -> 172.23.0.2:5672, vhost: '/', user: 'admin', duration: '6M, 45s'):[0m
+rabbitmq-1  | 2026-10-27T01:39:29.642601488Z [38;5;214m2026-10-27 01:39:29.635529+00:00 [warning] <0.2428.0> client unexpectedly closed TCP connection[0m
+rabbitmq-1  | 2026-10-27T01:39:30.514695096Z 2026-10-27 01:39:30.514013+00:00 [info] <0.2640.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:31.535053275Z 2026-10-27 01:39:31.534182+00:00 [info] <0.2644.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:32.551460353Z 2026-10-27 01:39:32.550668+00:00 [info] <0.2646.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:33.564863332Z 2026-10-27 01:39:33.564318+00:00 [info] <0.2648.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:34.583973085Z 2026-10-27 01:39:34.583452+00:00 [info] <0.2650.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:35.600377620Z 2026-10-27 01:39:35.599869+00:00 [info] <0.2652.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:40.940315379Z 2026-10-27 01:39:40.936175+00:00 [info] <0.2656.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:41.995466982Z 2026-10-27 01:39:41.994827+00:00 [info] <0.2658.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:43.015623398Z 2026-10-27 01:39:43.015087+00:00 [info] <0.2660.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:44.040753740Z 2026-10-27 01:39:44.040081+00:00 [info] <0.2662.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:45.056722853Z 2026-10-27 01:39:45.055949+00:00 [info] <0.2666.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:51.533165407Z 2026-10-27 01:39:51.532615+00:00 [info] <0.2670.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:39:51.541811454Z 2026-10-27 01:39:51.541050+00:00 [info] <0.2671.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:40:51.527445330Z 2026-10-27 01:40:51.526736+00:00 [info] <0.2696.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:40:51.533265285Z 2026-10-27 01:40:51.532589+00:00 [info] <0.2697.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:41:51.529320397Z 2026-10-27 01:41:51.528740+00:00 [info] <0.2717.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:41:51.535083536Z 2026-10-27 01:41:51.534457+00:00 [info] <0.2718.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:30.728338021Z 2026-10-27 01:42:30.727509+00:00 [info] <0.2734.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:30.734897624Z 2026-10-27 01:42:30.734247+00:00 [info] <0.2735.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:34.512493930Z 2026-10-27 01:42:34.511797+00:00 [info] <0.2736.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:34.528742818Z 2026-10-27 01:42:34.528002+00:00 [info] <0.2738.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:34.553037599Z 2026-10-27 01:42:34.550044+00:00 [info] <0.2740.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:34.569282047Z 2026-10-27 01:42:34.568165+00:00 [info] <0.2741.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:40.522895880Z 2026-10-27 01:42:40.522411+00:00 [info] <0.2747.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:40.528705124Z 2026-10-27 01:42:40.528178+00:00 [info] <0.2749.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:44.584611676Z 2026-10-27 01:42:44.584168+00:00 [info] <0.2752.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:44.589851589Z 2026-10-27 01:42:44.589406+00:00 [info] <0.2754.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:45.193073198Z 2026-10-27 01:42:45.192410+00:00 [info] <0.2756.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:45.198499503Z 2026-10-27 01:42:45.197829+00:00 [info] <0.2757.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:45.203526150Z 2026-10-27 01:42:45.202839+00:00 [info] <0.2758.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:45.209823494Z 2026-10-27 01:42:45.209213+00:00 [info] <0.2759.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:50.529134447Z 2026-10-27 01:42:50.528515+00:00 [info] <0.2766.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:50.534478750Z 2026-10-27 01:42:50.533917+00:00 [info] <0.2767.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:55.232922065Z 2026-10-27 01:42:55.232184+00:00 [info] <0.2771.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:42:55.238820316Z 2026-10-27 01:42:55.238444+00:00 [info] <0.2772.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:00.232038328Z 2026-10-27 01:43:00.231574+00:00 [info] <0.2775.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:00.236605702Z 2026-10-27 01:43:00.236149+00:00 [info] <0.2776.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:05.241151813Z 2026-10-27 01:43:05.240680+00:00 [info] <0.2780.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:05.246869091Z 2026-10-27 01:43:05.246363+00:00 [info] <0.2781.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:07.801374468Z 2026-10-27 01:43:07.800855+00:00 [info] <0.2813.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:07.807272523Z 2026-10-27 01:43:07.806569+00:00 [info] <0.2814.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:07.837893814Z 2026-10-27 01:43:07.836841+00:00 [info] <0.2818.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:07.893488679Z 2026-10-27 01:43:07.892382+00:00 [info] <0.2821.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:07.901332987Z 2026-10-27 01:43:07.900797+00:00 [info] <0.2822.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:07.909270808Z 2026-10-27 01:43:07.908760+00:00 [info] <0.2823.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:07.915210673Z 2026-10-27 01:43:07.914643+00:00 [info] <0.2824.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:12.951914006Z 2026-10-27 01:43:12.951397+00:00 [info] <0.2828.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:12.957558554Z 2026-10-27 01:43:12.956938+00:00 [info] <0.2829.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:17.953289045Z 2026-10-27 01:43:17.952823+00:00 [info] <0.2832.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:17.960894051Z 2026-10-27 01:43:17.959734+00:00 [info] <0.2833.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:23.520302175Z 2026-10-27 01:43:23.519272+00:00 [info] <0.2837.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:23.525623478Z 2026-10-27 01:43:23.525051+00:00 [info] <0.2838.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:28.524832660Z 2026-10-27 01:43:28.524075+00:00 [info] <0.2841.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:28.532170464Z 2026-10-27 01:43:28.531405+00:00 [info] <0.2842.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:33.518551634Z 2026-10-27 01:43:33.517933+00:00 [info] <0.2845.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:33.527625987Z 2026-10-27 01:43:33.526847+00:00 [info] <0.2846.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:38.518384687Z 2026-10-27 01:43:38.517558+00:00 [info] <0.2849.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:38.526285358Z 2026-10-27 01:43:38.525441+00:00 [info] <0.2850.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:43.531464099Z 2026-10-27 01:43:43.530723+00:00 [info] <0.2852.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:43.537321793Z 2026-10-27 01:43:43.536453+00:00 [info] <0.2853.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:47.956684956Z 2026-10-27 01:43:47.956072+00:00 [info] <0.2856.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:47.963202834Z 2026-10-27 01:43:47.962568+00:00 [info] <0.2857.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:53.532571227Z 2026-10-27 01:43:53.531952+00:00 [info] <0.2861.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:53.540033321Z 2026-10-27 01:43:53.538830+00:00 [info] <0.2862.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:58.527183374Z 2026-10-27 01:43:58.525736+00:00 [info] <0.2865.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:43:58.535403279Z 2026-10-27 01:43:58.534803+00:00 [info] <0.2866.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:03.530224675Z 2026-10-27 01:44:03.529638+00:00 [info] <0.2869.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:03.535302429Z 2026-10-27 01:44:03.534753+00:00 [info] <0.2870.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:08.526300659Z 2026-10-27 01:44:08.522343+00:00 [info] <0.2871.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:08.533376471Z 2026-10-27 01:44:08.532560+00:00 [info] <0.2872.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:13.527355363Z 2026-10-27 01:44:13.526771+00:00 [info] <0.2875.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:13.533364925Z 2026-10-27 01:44:13.532765+00:00 [info] <0.2876.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:18.518151567Z 2026-10-27 01:44:18.517328+00:00 [info] <0.2879.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:18.524403819Z 2026-10-27 01:44:18.523590+00:00 [info] <0.2880.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:23.517048180Z 2026-10-27 01:44:23.516351+00:00 [info] <0.2883.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:23.523929680Z 2026-10-27 01:44:23.522994+00:00 [info] <0.2884.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:28.532775895Z 2026-10-27 01:44:28.532133+00:00 [info] <0.2888.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:28.538430735Z 2026-10-27 01:44:28.537551+00:00 [info] <0.2889.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:33.532243064Z 2026-10-27 01:44:33.528882+00:00 [info] <0.2890.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:33.547521695Z 2026-10-27 01:44:33.545219+00:00 [info] <0.2891.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:38.519930427Z 2026-10-27 01:44:38.518046+00:00 [info] <0.2894.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:38.528873911Z 2026-10-27 01:44:38.527808+00:00 [info] <0.2895.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:43.528690784Z 2026-10-27 01:44:43.527440+00:00 [info] <0.2899.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:43.535776118Z 2026-10-27 01:44:43.535027+00:00 [info] <0.2900.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:48.519178662Z 2026-10-27 01:44:48.518331+00:00 [info] <0.2903.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:44:48.526768830Z 2026-10-27 01:44:48.526102+00:00 [info] <0.2904.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:45:51.537018426Z 2026-10-27 01:45:51.535182+00:00 [info] <0.2926.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:45:51.565380395Z 2026-10-27 01:45:51.564124+00:00 [info] <0.2927.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:46:29.402986064Z 2026-10-27 01:46:29.396770+00:00 [info] <0.2941.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:46:31.078578046Z 2026-10-27 01:46:31.074412+00:00 [info] <0.2945.0> accepting AMQP connection 172.23.0.3:60626 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T01:46:31.096231184Z 2026-10-27 01:46:31.093647+00:00 [info] <0.2945.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:46:31.152138120Z 2026-10-27 01:46:31.150198+00:00 [info] <0.2945.0> connection 172.23.0.3:60626 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T01:46:31.602541067Z 2026-10-27 01:46:31.601312+00:00 [info] <0.2959.0> accepting AMQP connection 172.23.0.5:41064 -> 172.23.0.2:5672[0m
+rabbitmq-1  | 2026-10-27T01:46:31.623628699Z 2026-10-27 01:46:31.621640+00:00 [info] <0.2959.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:46:31.688673885Z 2026-10-27 01:46:31.687648+00:00 [info] <0.2959.0> connection 172.23.0.5:41064 -> 172.23.0.2:5672: user 'admin' authenticated and granted access to vhost '/'[0m
+rabbitmq-1  | 2026-10-27T01:46:31.903315415Z 2026-10-27 01:46:31.902507+00:00 [info] <0.2971.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:46:33.090252874Z 2026-10-27 01:46:33.088806+00:00 [info] <0.2975.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:46:34.301018876Z 2026-10-27 01:46:34.299839+00:00 [info] <0.2977.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:46:35.450357322Z 2026-10-27 01:46:35.449750+00:00 [info] <0.2979.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:46:36.702594311Z 2026-10-27 01:46:36.698703+00:00 [info] <0.2981.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:46:37.902003897Z 2026-10-27 01:46:37.899925+00:00 [info] <0.2983.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:46:39.225713424Z 2026-10-27 01:46:39.224188+00:00 [info] <0.2987.0> User 'admin' authenticated successfully[0m
+rabbitmq-1  | 2026-10-27T01:46:40.370011994Z 2026-10-27 01:46:40.369543+00:00 [info] <0.2989.0> User 'admin' authenticated successfully[0m

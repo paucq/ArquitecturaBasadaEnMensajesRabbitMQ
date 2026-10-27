@@ -1,0 +1,15 @@
+{
+  "command": [
+    "curl",
+    "-fsS",
+    "--max-time",
+    "5",
+    "-u",
+    "admin:admin",
+    "http://localhost:15672/api/queues/%2F/pedidos"
+  ],
+  "start": "2026-10-27T02:46:41.893Z",
+  "end": "2026-10-27T02:46:41.908Z",
+  "exitcode": 0,
+  "signal": null
+}

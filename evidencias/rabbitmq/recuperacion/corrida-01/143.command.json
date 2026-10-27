@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "docker",
+    "inspect",
+    "--format",
+    "{\"Id\":{{json .Id}},\"Name\":{{json .Name}},\"Config\":{\"Labels\":{{json .Config.Labels}}},\"State\":{{json .State}},\"RestartPolicy\":{{json .HostConfig.RestartPolicy}}}",
+    "aea9d0d7aa0048044777558fc51b45495452dbfe31c4b334536eb498d53837f7"
+  ],
+  "started": "2026-10-27T03:46:51.115Z",
+  "startMonotonicMs": 49349.106257,
+  "timeoutMs": 12000,
+  "finished": "2026-10-27T03:46:51.176Z",
+  "durationMs": 60.69447200000286,
+  "exitcode": 0,
+  "signal": null,
+  "timedOut": false
+}

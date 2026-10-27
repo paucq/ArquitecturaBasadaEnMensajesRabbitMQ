@@ -1,0 +1,15 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {extractBatch} from './batch.mjs';
+const prior = readFileSync(new URL('../../consumidores-apagados/corrida-03/06-postman-stdout.txt', import.meta.url),'utf8');
+const id='ORD-b7a74952-2957-49cb-a5db-f88d7b2ce443';
+test('real multiline response',()=>assert.deepEqual(extractBatch(prior,1),[id]));
+const earlier=readFileSync(new URL('../../consumidores-apagados/corrida-02/06-postman-stdout.txt',import.meta.url),'utf8');
+test('earlier real fixture',()=>assert.equal(extractBatch(earlier,1)[0],'ORD-4cc41fe7-7675-4929-a274-74f02a7b3a1e'));
+test('malformed JSON rejected',()=>assert.throws(()=>extractBatch(prior.replace('"status":"accepted"','"status":broken')),/Invalid HTTP JSON/));
+const six=Array.from({length:6},(_,i)=>prior.replaceAll(id.slice(0,8),`ORD-${i}7a7`)).join('\n');
+test('six real-shaped wrapped responses',()=>assert.equal(extractBatch(six).length,6));
+test('duplicates rejected',()=>assert.throws(()=>extractBatch(prior.repeat(6)),/unique/));
+test('missing responses rejected',()=>assert.throws(()=>extractBatch('HTTP_EVIDENCE '+id),/Expected/));
+test('non202 rejected',()=>assert.throws(()=>extractBatch(six.replace('202 Accepted','400 Bad')),/202/));

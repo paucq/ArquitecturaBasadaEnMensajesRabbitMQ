@@ -1,0 +1,19 @@
+{
+  "cwd": "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq",
+  "command": [
+    "docker",
+    "compose",
+    "-p",
+    "qa-taller-integracion-rabbitmq",
+    "logs",
+    "--no-color",
+    "--timestamps",
+    "--since",
+    "2026-10-27T02:40:01.595Z",
+    "notification-worker"
+  ],
+  "start": "2026-10-27T02:42:41.211Z",
+  "end": "2026-10-27T02:42:41.665Z",
+  "exitcode": 0,
+  "signal": null
+}

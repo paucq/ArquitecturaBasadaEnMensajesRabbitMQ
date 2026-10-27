@@ -1,0 +1,5 @@
+NAME                                                   IMAGE                                                COMMAND                  SERVICE               CREATED          STATUS                    PORTS
+qa-taller-integracion-rabbitmq-notification-worker-1   qa-taller-integracion-rabbitmq-notification-worker   "docker-entrypoint.s…"   notification-worker   23 minutes ago   Up 22 minutes             
+qa-taller-integracion-rabbitmq-notification-worker-2   qa-taller-integracion-rabbitmq-notification-worker   "docker-entrypoint.s…"   notification-worker   23 minutes ago   Up 22 minutes             
+qa-taller-integracion-rabbitmq-orders-api-1            qa-taller-integracion-rabbitmq-orders-api            "docker-entrypoint.s…"   orders-api            25 minutes ago   Up 25 minutes (healthy)   127.0.0.1:3000->3000/tcp
+qa-taller-integracion-rabbitmq-rabbitmq-1              rabbitmq:4-management                                "docker-entrypoint.s…"   rabbitmq              25 minutes ago   Up 25 minutes (healthy)   127.0.0.1:5672->5672/tcp, 127.0.0.1:15672->15672/tcp

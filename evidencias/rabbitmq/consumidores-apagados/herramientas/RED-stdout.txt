@@ -1,0 +1,87 @@
+✖ real fixture ../corrida-02/06-postman-stdout.txt => ORD-4cc41fe7-7675-4929-a274-74f02a7b3a1e (4.696488ms)
+✖ real fixture ../../postman-cli/corrida-02-sin-output/stdout.txt => ORD-abf9d555-aa78-4f7f-8ff6-ae0a520a816a (0.338108ms)
+✖ synthetic UUID split across HTTP body lines (0.277387ms)
+✔ missing ID fails explicitly (1.656249ms)
+✖ test text and request body are not HTTP response evidence (1.302067ms)
+✖ reject malformed UUID, non-string, nested ID and malformed JSON (0.593744ms)
+✔ multiple response IDs are ambiguous (0.843375ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 2
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 296.316606
+
+✖ failing tests:
+
+test at extract-order-id.test.mjs:11:3
+✖ real fixture ../corrida-02/06-postman-stdout.txt => ORD-4cc41fe7-7675-4929-a274-74f02a7b3a1e (4.696488ms)
+  Error: Expected exactly one orderId
+      at extractOrderId (file:///home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller%20de%20Pruebas%20de%20Integraci%C3%B3n/evidencias/rabbitmq/consumidores-apagados/herramientas/extract-order-id.mjs:3:31)
+      at TestContext.<anonymous> (file:///home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller%20de%20Pruebas%20de%20Integraci%C3%B3n/evidencias/rabbitmq/consumidores-apagados/herramientas/extract-order-id.test.mjs:12:18)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at extract-order-id.test.mjs:11:3
+✖ real fixture ../../postman-cli/corrida-02-sin-output/stdout.txt => ORD-abf9d555-aa78-4f7f-8ff6-ae0a520a816a (0.338108ms)
+  Error: Expected exactly one orderId
+      at extractOrderId (file:///home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller%20de%20Pruebas%20de%20Integraci%C3%B3n/evidencias/rabbitmq/consumidores-apagados/herramientas/extract-order-id.mjs:3:31)
+      at TestContext.<anonymous> (file:///home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller%20de%20Pruebas%20de%20Integraci%C3%B3n/evidencias/rabbitmq/consumidores-apagados/herramientas/extract-order-id.test.mjs:12:18)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at extract-order-id.test.mjs:17:1
+✖ synthetic UUID split across HTTP body lines (0.277387ms)
+  Error: Expected exactly one orderId
+      at extractOrderId (file:///home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller%20de%20Pruebas%20de%20Integraci%C3%B3n/evidencias/rabbitmq/consumidores-apagados/herramientas/extract-order-id.mjs:3:31)
+      at TestContext.<anonymous> (file:///home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller%20de%20Pruebas%20de%20Integraci%C3%B3n/evidencias/rabbitmq/consumidores-apagados/herramientas/extract-order-id.test.mjs:18:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at extract-order-id.test.mjs:25:1
+✖ test text and request body are not HTTP response evidence (1.302067ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller%20de%20Pruebas%20de%20Integraci%C3%B3n/evidencias/rabbitmq/consumidores-apagados/herramientas/extract-order-id.test.mjs:26:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /orderId/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at extract-order-id.test.mjs:31:1
+✖ reject malformed UUID, non-string, nested ID and malformed JSON (0.593744ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller%20de%20Pruebas%20de%20Integraci%C3%B3n/evidencias/rabbitmq/consumidores-apagados/herramientas/extract-order-id.test.mjs:36:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /orderId|JSON/,
+    operator: 'throws',
+    diff: 'simple'
+  }

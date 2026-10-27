@@ -1,0 +1,2 @@
+docker compose -p qa-taller-integracion-rabbitmq -f 'Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq/docker-compose.yml' logs --timestamps --since 2026-10-27T01:23:35Z orders-api notification-worker
+# Espera finita: máximo 10 consultas, intervalo 1 segundo, hasta order_processed del mismo ID.

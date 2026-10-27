@@ -1,0 +1,17 @@
+{
+  "command": [
+    "docker",
+    "compose",
+    "-p",
+    "qa-taller-integracion-rabbitmq",
+    "exec",
+    "-T",
+    "rabbitmq",
+    "sha256sum",
+    "/var/tmp/rabbitmq-tracing/CP06-2026-10-27T02-40-01-594Z.log"
+  ],
+  "start": "2026-10-27T02:50:31.653Z",
+  "end": "2026-10-27T02:50:31.931Z",
+  "exitcode": 0,
+  "signal": null
+}

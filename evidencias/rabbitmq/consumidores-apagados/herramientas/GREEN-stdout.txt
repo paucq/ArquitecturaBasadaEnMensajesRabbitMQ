@@ -1,0 +1,15 @@
+✔ real fixture ../corrida-02/06-postman-stdout.txt => ORD-4cc41fe7-7675-4929-a274-74f02a7b3a1e (7.483051ms)
+✔ real fixture ../../postman-cli/corrida-02-sin-output/stdout.txt => ORD-abf9d555-aa78-4f7f-8ff6-ae0a520a816a (1.978401ms)
+✔ synthetic UUID split across HTTP body lines (2.338985ms)
+✔ missing ID fails explicitly (2.547222ms)
+✔ test text and request body are not HTTP response evidence (0.326585ms)
+✔ reject malformed UUID, non-string, nested ID and malformed JSON (0.374925ms)
+✔ multiple response IDs are ambiguous (0.200558ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 129.717914

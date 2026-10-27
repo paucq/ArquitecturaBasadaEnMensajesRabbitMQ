@@ -1,0 +1,15 @@
+✔ real multiline response (2.318641ms)
+✔ earlier real fixture (0.297807ms)
+✔ malformed JSON rejected (0.538124ms)
+✔ six real-shaped wrapped responses (0.345679ms)
+✔ duplicates rejected (0.355694ms)
+✔ missing responses rejected (0.403199ms)
+✔ non202 rejected (1.646331ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 146.147532

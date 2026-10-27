@@ -1,0 +1,46 @@
+✖ Postman command selects only the known local request with -i (14.191263ms)
+✔ decoder handles timestamps, fragmented UTF8 and EOF (4.277021ms)
+✔ old logs ignored; one fresh receive; single publish (1.174211ms)
+✔ gate requires STOP, HTTP match, API publication, queue and deadline (0.820467ms)
+✔ processed before STOP or after STOP forbids fault; EOF before fault fails (0.659854ms)
+✔ only fresh redelivered true followed by processed qualifies recovery (0.396331ms)
+✔ scope mismatch refuses cleanup; no duplicate start on running (0.500094ms)
+✔ HTTP wrapped UUID and multiple IDs; strict queue (0.880322ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 191.472536
+
+✖ failing tests:
+
+test at Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/evidencias/rabbitmq/recuperacion/cp12.test.mjs:11:1
+✖ Postman command selects only the known local request with -i (14.191263ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'postman',
+      'collection',
+      'run',
+      '/tmp/collection.json',
+  +   '--folder',
+  -   '-i',
+      'Crear pedido — esperado HTTP 202'
+    ]
+  
+      at TestContext.<anonymous> (file:///home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller%20de%20Pruebas%20de%20Integraci%C3%B3n/evidencias/rabbitmq/recuperacion/cp12.test.mjs:13:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'postman', 'collection', 'run', '/tmp/collection.json', '--folder', 'Crear pedido — esperado HTTP 202' ],
+    expected: [ 'postman', 'collection', 'run', '/tmp/collection.json', '-i', 'Crear pedido — esperado HTTP 202' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

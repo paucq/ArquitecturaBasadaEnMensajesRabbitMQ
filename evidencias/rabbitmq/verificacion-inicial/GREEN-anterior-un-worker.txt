@@ -1,0 +1,22 @@
+
+> taller-integracion-rabbitmq@1.0.0 test
+> node --test pruebas/*.test.mjs
+
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Stopping 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Stopped 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Waiting 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Healthy 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Starting 
+ Container qa-taller-integracion-rabbitmq-notification-worker-1 Started 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Waiting 
+ Container qa-taller-integracion-rabbitmq-rabbitmq-1 Healthy 
+✔ API publica en RabbitMQ y el worker independiente procesa el mismo pedido (18745.116071ms)
+✔ API rechaza datos inválidos sin aceptarlos como pedido (10.929131ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19539.958175

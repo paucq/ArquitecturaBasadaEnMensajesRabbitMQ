@@ -1,0 +1,15 @@
+✔ decoder handles timestamps, fragmented UTF8 and EOF (3.957606ms)
+✔ old logs ignored; one fresh receive; single publish (0.522132ms)
+✔ gate requires STOP, HTTP match, API publication, queue and deadline (0.47855ms)
+✔ processed before STOP or after STOP forbids fault; EOF before fault fails (0.467687ms)
+✔ only fresh redelivered true followed by processed qualifies recovery (0.243069ms)
+✔ scope mismatch refuses cleanup; no duplicate start on running (0.2455ms)
+✔ HTTP wrapped UUID and multiple IDs; strict queue (0.554803ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 171.351299

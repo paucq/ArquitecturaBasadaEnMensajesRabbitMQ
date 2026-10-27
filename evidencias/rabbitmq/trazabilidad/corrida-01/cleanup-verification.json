@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-10-27T02:46:41.930Z",
+  "restoredPlugins": true,
+  "restoredFirehose": true,
+  "workersRunning": 2,
+  "consumers": 2,
+  "ready": 0,
+  "unacked": 0,
+  "total": 0,
+  "pluginDisabled": true,
+  "previousTraces": [],
+  "remainingTracesBeforePluginDisabled": [],
+  "diagnosticFileRetainedInBroker": "CP06-2026-10-27T02-40-01-594Z.log",
+  "localCopyNonempty": true,
+  "note": "Parent independently verified final state after child interruption. No recorded exit code for plugin-disable command; do not infer one. Diagnostic API curl exit 22 (HTTP 404) is expected while tracing plugin is disabled."
+}

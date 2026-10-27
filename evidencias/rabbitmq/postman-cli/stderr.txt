@@ -1,0 +1,2 @@
+You must be signed in to use --output. Please run the `postman login` command.
+Refer: https://learning.postman.com/docs/postman-cli/postman-cli-options/#postman-login

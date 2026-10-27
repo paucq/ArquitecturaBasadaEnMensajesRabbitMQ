@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "docker",
+    "ps",
+    "-aq",
+    "--no-trunc",
+    "--filter",
+    "label=com.docker.compose.project=qa-taller-integracion-rabbitmq"
+  ],
+  "started": "2026-10-27T03:46:33.004Z",
+  "startMonotonicMs": 31236.55278,
+  "timeoutMs": 1000,
+  "finished": "2026-10-27T03:46:33.088Z",
+  "durationMs": 83.48566599999685,
+  "exitcode": 0,
+  "signal": null,
+  "timedOut": false
+}

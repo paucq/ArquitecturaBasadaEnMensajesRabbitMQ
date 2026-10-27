@@ -1,0 +1,2 @@
+cwd: /home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/rabbitmq
+node '/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/evidencias/rabbitmq/consumidores-apagados/herramientas/extract-order-id.mjs' '/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/evidencias/rabbitmq/consumidores-apagados/corrida-03/06-postman-stdout.txt'

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "local_links": 93,
+  "report_fields": 11,
+  "rabbitmq_checked": [
+    "01",
+    "02",
+    "03",
+    "06",
+    "10",
+    "11"
+  ],
+  "kafka": "pending",
+  "original_correlation": "PASS",
+  "broker_sha256": "04c9a549f36c5253a7e2ee3927a6e403a38b20609b4c967bbb08f613c3f99146",
+  "image": "exists PNG; visual review supplied by parent",
+  "runtime_operations": false,
+  "lsp": "Unavailable: no diagnostic tool exposed; not a clean LSP result"
+}

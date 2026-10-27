@@ -1,0 +1,13 @@
+Enabling plugins on node rabbit@rabbitmq:
+rabbitmq_tracing
+The following plugins have been configured:
+  rabbitmq_management
+  rabbitmq_management_agent
+  rabbitmq_prometheus
+  rabbitmq_tracing
+  rabbitmq_web_dispatch
+Applying plugin configuration to rabbit@rabbitmq...
+The following plugins have been enabled:
+  rabbitmq_tracing
+
+started 1 plugins.

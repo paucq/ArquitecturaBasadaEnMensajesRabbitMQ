@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "docker",
+    "exec",
+    "9daaf02d21e371996a271e5593f53808da530dc096c7a372c9b4e6b1db568437",
+    "node",
+    "-e",
+    "const f=require('node:fs');console.log(JSON.stringify({cmdline:f.readFileSync('/proc/1/cmdline','utf8').split('\\0').filter(Boolean),exe:f.readlinkSync('/proc/1/exe')}))"
+  ],
+  "started": "2026-10-27T03:46:02.419Z",
+  "startMonotonicMs": 647.175114,
+  "timeoutMs": 12000,
+  "finished": "2026-10-27T03:46:02.689Z",
+  "durationMs": 269.386442,
+  "exitcode": 0,
+  "signal": null,
+  "timedOut": false
+}

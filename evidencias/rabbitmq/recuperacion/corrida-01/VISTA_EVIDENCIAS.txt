@@ -1,0 +1,35 @@
+CP12 VISTA DERIVADA REGISTROS REALES
+Fuentes originales conservadas; no GUI ni log nativo nuevo.
+UTC 2026-10-27. Criterio técnico verificado; captura PENDIENTE.
+API [final-logs-28a4ac996bc2.txt / 027.stdout.txt]
+03:46:24.255Z order_published; HTTP 202, 71 ms, 1 request, 4/4
+ORD-ea298437-f581-4b8f-b80d-2706f3659b80
+WORKER-1 target 9daaf02d21e3 [final-logs-9daaf02d21e3.txt]
+03:46:24.274Z order_received redelivered=false
+ORD-ea298437-f581-4b8f-b80d-2706f3659b80
+INSTRUMENTACION [028.command.json / intent.jsonl]
+03:46:24.289Z docker kill --signal SIGSTOP target; exitcode=0
+PID1 suspendido brevemente; NO ack ni caida del broker.
+ANTES [before-fault-queue.json / 061.get.json]
+03:46:32.993-33.003Z Ready=0 Unacked=1 Total=1 Consumers=1
+FALLO [064.command.json / after-stop-containers.json]
+03:46:33.178Z docker stop --signal SIGKILL --timeout 0 target
+Orden exitcode=0; target exited, ExitCode=137, OOMKilled=false
+REQUEUE [after-fault-queue.json / 103.get.json]
+03:46:42.944Z Ready=1 Unacked=0 Total=1 Consumers=0
+REINICIO [104.command.json] docker start mismo target; exitcode=0
+REENTREGA [final-logs-9daaf02d21e3.txt]
+03:46:45.109Z order_received redelivered=true
+ORD-ea298437-f581-4b8f-b80d-2706f3659b80
+PROCESADO [final-logs-9daaf02d21e3.txt]
+03:46:48.123Z order_processed redelivered=true (3.014 s)
+ORD-ea298437-f581-4b8f-b80d-2706f3659b80
+RESTAURACION [117.command.json] docker start peer; exitcode=0
+FINAL [final.json / 165.get.json / original-containers.json]
+03:46:52.947Z Ready=0 Unacked=0 Total=0 Consumers=2
+Mismos 4 IDs; 2 workers running/no paused; API/broker healthy
+API 28a4ac996bc2; broker 874ff8f0d7a7
+Workers 9daaf02d21e3 / aea9d0d7aa00; IDs completos en originales
+[recovery.json] 1 publicacion, cleanup=[], fin 03:46:53.157Z
+Dos entregas / un processed observado; NO exactly-once general.
+Recuperacion WORKER, no broker; imagen real aun pendiente.

@@ -1,0 +1,1 @@
+'docker' 'compose' '-p' 'qa-taller-integracion-rabbitmq' 'logs' '--no-color' '--timestamps' '--since' '2026-10-27T01:58:25.577Z' 'orders-api' 'notification-worker'

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "/home/juandav12/projects/8thSemester/Aseguramiento_de_Calidad/Talleres/Taller de Pruebas de Integración/evidencias/rabbitmq/trazabilidad/trace-format.test.mjs"
+  ],
+  "start": "2026-10-27T02:51:05.971Z",
+  "end": "2026-10-27T02:51:06.231Z",
+  "exitcode": 0,
+  "signal": null
+}

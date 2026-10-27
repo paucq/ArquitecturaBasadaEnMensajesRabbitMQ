@@ -1,0 +1,9 @@
+{
+  "method": "GET",
+  "url": "http://127.0.0.1:15672/api/queues/%2F/pedidos",
+  "started": "2026-10-27T03:46:38.766Z",
+  "finished": "2026-10-27T03:46:38.772Z",
+  "durationMs": 5.886017000004358,
+  "status": 200,
+  "body": "{\"consumer_details\":[],\"arguments\":{\"x-queue-type\":\"classic\"},\"auto_delete\":false,\"consumer_capacity\":1.0,\"consumer_utilisation\":1.0,\"consumers\":1,\"deliveries\":[],\"durable\":true,\"effective_policy_definition\":{},\"exclusive\":false,\"exclusive_consumer_tag\":null,\"garbage_collection\":{\"fullsweep_after\":65535,\"max_heap_size\":0,\"min_bin_vheap_size\":46422,\"min_heap_size\":233,\"minor_gcs\":21},\"head_message_timestamp\":null,\"incoming\":[],\"internal\":false,\"internal_owner\":false,\"memory\":22376,\"message_bytes\":185,\"message_bytes_persistent\":185,\"message_bytes_ram\":185,\"message_bytes_ready\":0,\"message_bytes_unacknowledged\":185,\"message_stats\":{\"ack\":12,\"ack_details\":{\"rate\":0.0},\"deliver\":13,\"deliver_details\":{\"rate\":0.0},\"deliver_get\":15,\"deliver_get_details\":{\"rate\":0.0},\"deliver_no_ack\":0,\"deliver_no_ack_details\":{\"rate\":0.0},\"get\":2,\"get_details\":{\"rate\":0.0},\"get_empty\":2,\"get_empty_details\":{\"rate\":0.0},\"get_no_ack\":0,\"get_no_ack_details\":{\"rate\":0.0},\"publish\":13,\"publish_details\":{\"rate\":0.0},\"redeliver\":2,\"redeliver_details\":{\"rate\":0.0}},\"messages\":1,\"messages_details\":{\"rate\":0.2},\"messages_persistent\":1,\"messages_ram\":1,\"messages_ready\":0,\"messages_ready_details\":{\"rate\":0.0},\"messages_ready_ram\":0,\"messages_unacknowledged\":1,\"messages_unacknowledged_details\":{\"rate\":0.2},\"messages_unacknowledged_ram\":1,\"name\":\"pedidos\",\"node\":\"rabbit@rabbitmq\",\"operator_policy\":null,\"policy\":null,\"reductions\":57112,\"reductions_details\":{\"rate\":338.2},\"single_active_consumer_tag\":null,\"state\":\"running\",\"storage_version\":2,\"type\":\"classic\",\"vhost\":\"/\"}"
+}

@@ -1,0 +1,1 @@
+2026-10-27T03:46:24.285597739Z {"timestamp":"2026-10-27T03:46:24.274Z","service":"notification-worker","instance":"9daaf02d21e3","event":"order_received","orderId":"ORD-ea298437-f581-4b8f-b80d-2706f3659b80","correlationId":"ORD-ea298437-f581-4b8f-b80d-2706f3659b80","redelivered":false}

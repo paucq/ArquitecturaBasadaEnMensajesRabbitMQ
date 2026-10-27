@@ -1,0 +1,16 @@
+✔ Postman command selects only the known local request with -i (1.950524ms)
+✔ decoder handles timestamps, fragmented UTF8 and EOF (1.322937ms)
+✔ old logs ignored; one fresh receive; single publish (0.458637ms)
+✔ gate requires STOP, HTTP match, API publication, queue and deadline (0.533698ms)
+✔ processed before STOP or after STOP forbids fault; EOF before fault fails (0.437235ms)
+✔ only fresh redelivered true followed by processed qualifies recovery (0.265057ms)
+✔ scope mismatch refuses cleanup; no duplicate start on running (0.225618ms)
+✔ HTTP wrapped UUID and multiple IDs; strict queue (0.803034ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 148.329065
