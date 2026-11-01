@@ -2,7 +2,7 @@
 
 - ID del caso: CP-08.
 - Arquitectura: RabbitMQ.
-- Objetivo: comprobar comunicación API–worker mediada por el broker, sin llamadas directas entre esos servicios en la implementación inspeccionada (guía del taller p. 4; PLAN §7.1/7.3).
+- Objetivo: comprobar comunicación API–worker mediada por el broker, sin llamadas directas entre esos servicios en la implementación inspeccionada (guía del taller p. 4 y Anexo 1 pp. 7–13).
 - Precondiciones: implementación existente Node.js/Express/amqplib; API, broker y workers independientes. Se reutiliza únicamente trazabilidad/corrida-01 de CP-06, ejecutada el 2026-10-27. Diagnóstico temporal ya desactivado y dos workers restaurados según [verificación](../trazabilidad/corrida-01/cleanup-verification.json) y [estado conservado](../trazabilidad/corrida-01/resume-final-state.json); no se consulta ni altera el runtime aquí.
 - Datos de entrada: pedido original `{"customerName":"Pedro","product":"Libro de arquitectura","quantity":1}`; mensaje `ProcessOrder`, createdAt `2026-10-27T02:42:34.616Z`. Único orderId/correlationId/messageId: `ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e`.
 - Pasos ejecutados:

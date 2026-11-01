@@ -1,6 +1,6 @@
 # Verificación de la entrega RabbitMQ
 
-La entrega corresponde **solo a RabbitMQ: diez reportes documentados con once campos y capturas**. Kafka, sus diez casos y la comparación experimental global no se presentan como realizados.
+Este repositorio corresponde **a RabbitMQ: diez reportes documentados con once campos y capturas**. La arquitectura Kafka y el informe comparativo global se entregan por separado.
 
 ## Contraste con la guía
 
@@ -14,15 +14,15 @@ Se aclaró la referencia desactualizada de CP-09: su corrida no acredita recuper
 | Campos y evidencia | Once campos por caso, fuentes originales y capturas pertinentes; vistas derivadas identificadas |
 | Código y contenedores | API, broker y dos workers independientes; publicación/consumo AMQP, ack manual y prefetch 1 |
 | Recuperación | Mismo ID recibido sin confirmar, reentregado con redelivered=true y procesado; no exactly-once general |
-| Informe consolidado | PDF de 27 páginas: diez casos con once campos, siete imágenes originales idénticas píxel a píxel, 169 enlaces HTTP portables y cero páginas vacías; render y revisión visual completados |
+| Informe consolidado | Diez casos con once campos y siete capturas; seis completas y un detalle CP-12 identificado. La comprobación de compilación registra páginas, enlaces portables y coincidencia de píxeles con las fuentes |
 
 ## Informe y revisión visual
 
-[PDF de entrega](../../entrega/Informe_RabbitMQ.pdf), [fuente Markdown](INFORME_RABBITMQ.md), [comprobación de compilación](validation-generacion.json) y [cierre visual con SHA-256](verificacion-visual.json). La suite del generador pasó **12/12 tests** y se reconstruyó desde la raíz del clon, sin dependencias absolutas del semestre.
+[PDF de entrega](../../entrega/Informe_RabbitMQ.pdf), [fuente Markdown](INFORME_RABBITMQ.md), [comprobación de compilación](validation-generacion.json) y [revisión visual con SHA-256](verificacion-visual.json). La suite del generador pasó **15/15 tests**. El informe contiene 27 páginas y diez casos con once campos.
 
-Se renderizaron las 27 páginas a 110 dpi y se revisaron sus hojas de contacto; adicionalmente se inspeccionaron páginas completas de código, aceptación HTTP, logs de Docker Desktop y recuperación CP-12. No se observaron recortes ni solapamientos con el pie. Las capturas mantienen resolución original y enlaces a sus PNG; los detalles de logs GUI pueden consultarse con zoom. El diagrama de la guía p. 7 se contrastó visualmente: API, broker y consumidores separados, con segundo consumidor para escalado. El diagrama del informe es propio, no una captura de ejecución.
+La versión actual pasó el control geométrico de texto de las 27 páginas. Se inspeccionó la página 27 a escala 1,5 para comprobar el detalle CP-12: sin cortes de registros ni solapamientos con el pie. Se verificó además la coincidencia de píxeles de seis imágenes completas y del detalle recortado con sus fuentes. Los originales completos permanecen enlazados; los detalles de logs GUI pueden consultarse con zoom. Esta revisión muestral no equivale a una lectura visual exhaustiva de todas las figuras.
 
-La compilación registra la revisión visual como pendiente porque precede al render; su cierre posterior está en el registro independiente enlazado, no se falsifica aquel resultado. Se corrigió una etiqueta del primer borrador que confundía Docker con Node 24; la versión final distingue Docker Engine 29.6.2, Node host 26.8.1 y Node 24 en contenedores. Los registros iniciales se conservan como historial de preparación.
+El registro enlazado identifica por SHA-256 el PDF revisado. Docker Engine 29.6.2, Node host 26.8.1 y Node 24 en contenedores se distinguen en la documentación. Los registros de preparación conservan las condiciones y resultados de sus ejecuciones originales.
 
 ## Comprobación funcional desde PowerShell
 
@@ -43,10 +43,10 @@ El parser de PowerShell 7.6.9 informó cero errores en los tres scripts: [regist
 
 ## Integridad y publicación
 
-Se copiaron **1045 archivos originales de evidencia byte a byte**, incluidos intentos fallidos y cierres posteriores. El [manifest SHA-256](MANIFEST_EVIDENCIAS.sha256) permite contrastarlos. Los finales de línea de evidencias y PDF no se normalizan; los scripts PowerShell tienen política CRLF y el código LF mediante `.gitattributes`.
+El [manifiesto SHA-256 de evidencia](MANIFEST_EVIDENCIAS.sha256) registra los **1045 archivos** de la versión de entrega, incluidos intentos fallidos y cierres posteriores. Se actualizó tras las correcciones editoriales de los reportes Markdown; los logs, JSON y capturas originales permanecen byte a byte intactos. Los finales de línea de evidencias y PDF no se normalizan; los scripts PowerShell tienen política CRLF y el código LF mediante `.gitattributes`.
 
 La [revisión inicial de contenido](revision-publicacion-inicial.json) comprobó 1102 archivos: sin nombres inválidos para Windows, piezas de más de 40 MiB ni coincidencias con los patrones de claves privadas/tokens examinados. Un escaneo por patrones no prueba ausencia de todo secreto. `admin/admin` y su Basic auth son credenciales **del laboratorio local** documentadas, no credenciales personales; los puertos se limitan a loopback.
 
 `.gitignore` excluye node_modules, entornos virtuales, cachés y configuración privada; no oculta globalmente txt/json/png/log de evidencia. No se redistribuye el PDF original del profesor ni se añade una licencia o autores no confirmados.
 
-Destino autorizado: https://github.com/paucq/ArquitecturaBasadaEnMensajesRabbitMQ. Se conserva su commit inicial; no se utiliza force push. La comprobación del remoto y el contenido Git definitivo se realiza después de cerrar las verificaciones locales.
+Repositorio de destino: https://github.com/paucq/ArquitecturaBasadaEnMensajesRabbitMQ. Los enlaces documentales no prueban por sí solos acceso remoto ni publicación verificada.

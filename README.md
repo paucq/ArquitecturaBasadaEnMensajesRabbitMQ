@@ -4,7 +4,7 @@ Laboratorio Node.js/Express: API → RabbitMQ → dos workers independientes. Es
 
 ## Entrega RabbitMQ — 10 de 10 casos
 
-- **[Informe PDF consolidado](entrega/Informe_RabbitMQ.pdf)**: diez casos completos, análisis y siete capturas originales con su procedencia.
+- **[Informe PDF consolidado](entrega/Informe_RabbitMQ.pdf)**: diez casos completos, análisis y siete capturas con su procedencia; CP-12 muestra un detalle identificado con enlace al original completo.
 - [Informe fuente y referencias](docs/entrega/INFORME_RABBITMQ.md), [mapa de casos](docs/ARQUITECTURA_RABBITMQ.md) y [verificación de entrega](docs/entrega/VERIFICACION_ENTREGA.md).
 - Código, Compose, colección Postman y evidencias incluidos. También puede descargarse el repositorio desde **Code → Download ZIP**.
 
@@ -72,7 +72,6 @@ En ese caso use API `http://localhost:3300` y Management `http://localhost:15673
 | [evidencias/rabbitmq/](evidencias/rabbitmq/) | Evidencia histórica original; conservar rutas relativas |
 | [docs/entrega/](docs/entrega/) | Auditoría, informe y fuentes de la entrega |
 | [entrega/](entrega/) | PDF final |
-| [PLAN_DE_TRABAJO.md](PLAN_DE_TRABAJO.md) | Alcance y seguimiento documental |
 
 Las evidencias originales incluyen comandos Linux/WSL: describen corridas históricas, **no son instrucciones para repetir en Windows**. Capturas derivadas de salida guardada están identificadas como tales, nunca como una nueva validación Windows.
 

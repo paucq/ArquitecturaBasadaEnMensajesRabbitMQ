@@ -6,7 +6,7 @@ Diez casos RabbitMQ documentados como Cumple, conclusión propia y no evaluació
 profesor. Este PDF consolida la parte RabbitMQ requerida por la guía, no la entrega
 global de veinte casos ni el experimento comparativo Kafka. Objetivo: verificar
 integración HTTP, mensajería y consumo mediante evidencia histórica genuina.
-Generación documental UTC: 2026-10-27T04:37:21.872712+00:00. Ensayos: 2026-10-27 UTC; no se repitieron.
+Generación documental UTC: 2026-11-01T13:17:10.352569+00:00. Ensayos: 2026-10-27 UTC; no se repitieron.
 No se inventan integrantes, grupo, fecha de entrega, licencia ni evaluación docente.
 
 Código de destino y navegación: [repositorio GitHub](https://github.com/paucq/ArquitecturaBasadaEnMensajesRabbitMQ).
@@ -46,20 +46,21 @@ py -m venv .venv
 .venv\Scripts\python tools/generar_informe.py
 ```
 
-Este generador no ejecutó Docker, Postman, curl ni solicitudes. El padre informó
-Start/Test/Stop reales PASS en 77 s en proyecto aislado, 2/2 tests y npm con cero
+Este generador no ejecutó Docker, Postman, curl ni solicitudes. La verificación
+Start/Test/Stop registró PASS en 77 s en proyecto aislado, 2/2 tests y npm con cero
 vulnerabilidades; conservó los cuatro IDs originales y el volumen aislado al detener.
 Ese diagnóstico utilizó PowerShell 7.6.9 en Linux, Node 26.8.1 en el host,
 Docker Engine 29.6.2 y Node 24 dentro de los contenedores:
 valida allí los scripts PowerShell, no una máquina Windows/Hyper-V nativa. La
-validación nativa Windows/Hyper-V sigue sin realizarse. Este resultado, comunicado
-por el integrador, es separado de los ensayos históricos y de las pruebas offline
+validación nativa Windows/Hyper-V sigue sin realizarse. Este resultado está
+documentado en docs/entrega/VERIFICACION_ENTREGA.md y es separado de las pruebas offline
 del generador. No se atribuyen solicitudes nuevas a los casos históricos.
 
 Se incorporan íntegros los once campos de cada reporte. Logs raw y comandos enlazados
 permanecen en evidencias/rabbitmq; no se copian cientos de líneas sin contexto al PDF.
-Las siete PNG se incluyen completas al final, una por página con orientación adecuada.
-Capturas CLI, GUI y vistas derivadas están identificadas por separado.
+Las siete capturas se incluyen al final, una por página con orientación adecuada.
+Seis se muestran completas; CP-12 muestra un detalle identificado con enlace al
+original íntegro. Capturas CLI, GUI y vistas derivadas se identifican por separado.
 
 Familias de IDs: b7a74952 (CP-01/02/03/07/09/11, una publicación compartida);
 8d488fb8 (CP-06/08, traza nativa); seis IDs exclusivos de CP-10 (tabla enlazada);
@@ -68,10 +69,6 @@ En CP-06 published/received nativos del broker preceden al log API order_publish
 el log API se escribe tras confirmación. received nativo significa entrega, no ack.
 El broker registra IDs mediante rabbitmq_tracing, no mediante su stdout operativo
 habitual; se conservaron JSONL/payload y comprobación de restauración del diagnóstico.
-
-Los PENDIENTE de resúmenes iniciales, recovery.json y la vista CP-12 conservan su
-cronología previa a recibir capturas. No invalidan el cierre actual de los diez casos.
-CP-09 ya enlaza la recuperación cerrada CP-12; se preserva la fuente corregida recibida.
 
 ## Matriz de cobertura RabbitMQ
 
@@ -155,12 +152,12 @@ CP-09 ya enlaza la recuperación cerrada CP-12; se preserva la fuente corregida 
   2. Se habilitó temporalmente el plugin nativo `rabbitmq_tracing` online y se creó una traza propia con formato JSON, patrón `#` y vhost `/`; se comprobó que su consumidor estaba listo antes de publicar.
   3. Se ejecutó una sola solicitud Postman CLI: HTTP 202, 1655 ms, 4/4 aserciones y exitcode 0. [Comando y metadatos](../../evidencias/rabbitmq/trazabilidad/corrida-01/017-postman-single-request-execution.json); [stdout original](../../evidencias/rabbitmq/trazabilidad/corrida-01/017-postman-single-request-stdout.txt).
   4. Se exportó el archivo nativo del broker y se conservaron logs API/worker del mismo ID; se verificaron `message_id`, `correlation_id` y `orderId` del payload decodificado.
-  5. Se eliminó solo la traza propia y se apagó Firehose. Tras interrumpirse el subagente, el padre verificó independientemente que el plugin ya estaba deshabilitado y que el estado inicial estaba restaurado, sin volver a publicar ni reiniciar servicios.
+  5. Se eliminó solo la traza propia y se apagó Firehose. Tras interrumpirse la ejecución, una inspección independiente verificó que el plugin ya estaba deshabilitado y que el estado inicial estaba restaurado, sin volver a publicar ni reiniciar servicios.
 - Resultado esperado: El mismo pedido identificable en registros reales de API, broker y consumidor, con evidencias legibles y restauración del diagnóstico temporal.
 - Resultado obtenido: Correlación técnica verificada para el ID indicado. Broker nativo: `published` a **02:42:35.087+00:00**, con routing_keys/routed_queues pedidos; `received` a **02:42:35.103+00:00**, queue pedidos. Ambos registros incluyen `properties.correlation_id` y `properties.message_id` iguales al ID; el payload base64 contiene el mismo orderId. API `order_published` **02:42:35.123Z**. Worker-1 / `9daaf02d21e3`: `order_received` **02:42:35.158Z**, `order_processed` **02:42:38.411Z**, 3.253 s de procesamiento observado. Todo el 2026-10-27, UTC. [JSONL nativo](../../evidencias/rabbitmq/trazabilidad/corrida-01/broker-native-original.jsonl), [log API](../../evidencias/rabbitmq/trazabilidad/corrida-01/logs-orders-api-same-id.txt), [log worker](../../evidencias/rabbitmq/trazabilidad/corrida-01/logs-notification-worker-same-id.txt) y [correlación derivada validada](../../evidencias/rabbitmq/trazabilidad/corrida-01/correlacion-validada.json). Estado final verificado: dos workers, API/broker healthy, Consumers=2, Ready/Unacked/Total=0, plugins iniciales restaurados y Firehose apagado: [verificación](../../evidencias/rabbitmq/trazabilidad/corrida-01/cleanup-verification.json).
-- Evidencia (capturas): [Captura real aportada por el usuario y revisada completa por el padre](../../evidencias/rabbitmq/trazabilidad/corrida-01/captura-trazabilidad-api-broker-worker.png) de API, BROKER NATIVO y WORKER-1 del mismo ID. Captura de [VISTA_EVIDENCIAS.txt](../../evidencias/rabbitmq/trazabilidad/corrida-01/VISTA_EVIDENCIAS.txt), explícitamente DERIVADA de fuentes originales reales, no GUI ni JSONL nativo modificado. Fuentes: [JSONL original](../../evidencias/rabbitmq/trazabilidad/corrida-01/broker-native-original.jsonl), [log API](../../evidencias/rabbitmq/trazabilidad/corrida-01/logs-orders-api-same-id.txt) y [log worker](../../evidencias/rabbitmq/trazabilidad/corrida-01/logs-notification-worker-same-id.txt), conservados intactos. No mezclar con IDs de otros casos.
+- Evidencia (capturas): [Captura real aportada por el usuario y revisada completa](../../evidencias/rabbitmq/trazabilidad/corrida-01/captura-trazabilidad-api-broker-worker.png) de API, BROKER NATIVO y WORKER-1 del mismo ID. Captura de [VISTA_EVIDENCIAS.txt](../../evidencias/rabbitmq/trazabilidad/corrida-01/VISTA_EVIDENCIAS.txt), explícitamente DERIVADA de fuentes originales reales, no GUI ni JSONL nativo modificado. Fuentes: [JSONL original](../../evidencias/rabbitmq/trazabilidad/corrida-01/broker-native-original.jsonl), [log API](../../evidencias/rabbitmq/trazabilidad/corrida-01/logs-orders-api-same-id.txt) y [log worker](../../evidencias/rabbitmq/trazabilidad/corrida-01/logs-notification-worker-same-id.txt), conservados intactos. No mezclar con IDs de otros casos.
 - Estado: Cumple; conclusión propia, no calificación del profesor. Cierre exclusivamente documental, sin nueva ejecución.
-- Análisis técnico: El registro del broker procede de su plugin nativo de diagnóstico, no de una línea inventada de la aplicación ni de contadores de Management. Sus logs operativos habituales no registraron este ID: [filtro vacío conservado](../../evidencias/rabbitmq/trazabilidad/corrida-01/logs-rabbitmq-same-id.txt). En el formato nativo `received` representa entrega desde el broker, no ack ni procesamiento completo; esto último se acredita por el evento del worker. El log API puede aparecer después del evento del broker porque se escribe tras confirmar la publicación. La traza tiene coste de recursos y registra payload; no sirve para extrapolar rendimiento, exactly-once o recuperación ante caídas. La interrupción dejó sin metadatos finales al orquestador: no se inventa exitcode para la deshabilitación del plugin; se acredita la restauración mediante inspección independiente. Tres tests offline del formato pasaron; enlaces, IDs, etapas y limpieza se verificaron. Conclusión propia, no calificación del profesor. [Resumen completo, límites, comandos y fuentes oficiales](../../evidencias/rabbitmq/trazabilidad/RESUMEN.md); fuentes normativas: guía p. 4 y Anexo 1 pp. 7–13. La evidencia previa de corrida 03 permanece intacta, pero ya no es la base principal de este reporte.
+- Análisis técnico: El registro del broker procede de su plugin nativo de diagnóstico, no de una línea inventada de la aplicación ni de contadores de Management. Sus logs operativos habituales no registraron este ID: [filtro vacío conservado](../../evidencias/rabbitmq/trazabilidad/corrida-01/logs-rabbitmq-same-id.txt). En el formato nativo `received` representa entrega desde el broker, no ack ni procesamiento completo; esto último se acredita por el evento del worker. El log API puede aparecer después del evento del broker porque se escribe tras confirmar la publicación. La traza tiene coste de recursos y registra payload; no sirve para extrapolar rendimiento, exactly-once o recuperación ante caídas. La interrupción dejó sin metadatos finales al script de ensayo: no se inventa exitcode para la deshabilitación del plugin; se acredita la restauración mediante inspección independiente. Tres tests offline del formato pasaron; enlaces, IDs, etapas y limpieza se verificaron. Conclusión propia, no calificación del profesor. [Resumen completo, límites, comandos y fuentes oficiales](../../evidencias/rabbitmq/trazabilidad/RESUMEN.md); fuentes normativas: guía p. 4 y Anexo 1 pp. 7–13. La evidencia previa de corrida 03 permanece intacta, pero ya no es la base principal de este reporte.
 
 
 # CP-07 — Responsive — RabbitMQ
@@ -191,7 +188,7 @@ CP-09 ya enlaza la recuperación cerrada CP-12; se preserva la fuente corregida 
 
 - ID del caso: CP-08.
 - Arquitectura: RabbitMQ.
-- Objetivo: comprobar comunicación API–worker mediada por el broker, sin llamadas directas entre esos servicios en la implementación inspeccionada (guía del taller p. 4; PLAN §7.1/7.3).
+- Objetivo: comprobar comunicación API–worker mediada por el broker, sin llamadas directas entre esos servicios en la implementación inspeccionada (guía del taller p. 4 y Anexo 1 pp. 7–13).
 - Precondiciones: implementación existente Node.js/Express/amqplib; API, broker y workers independientes. Se reutiliza únicamente trazabilidad/corrida-01 de CP-06, ejecutada el 2026-10-27. Diagnóstico temporal ya desactivado y dos workers restaurados según [verificación](../../evidencias/rabbitmq/trazabilidad/corrida-01/cleanup-verification.json) y [estado conservado](../../evidencias/rabbitmq/trazabilidad/corrida-01/resume-final-state.json); no se consulta ni altera el runtime aquí.
 - Datos de entrada: pedido original `{"customerName":"Pedro","product":"Libro de arquitectura","quantity":1}`; mensaje `ProcessOrder`, createdAt `2026-10-27T02:42:34.616Z`. Único orderId/correlationId/messageId: `ORD-8d488fb8-62c9-4e37-935d-31aed2a8aa9e`.
 - Pasos ejecutados:
@@ -345,13 +342,13 @@ Revisión documental pasiva, sin TDD de aplicación ni nuevos tests/scripts de p
   4. Iniciar el mismo target: recibe 03:46:45.109Z, redelivered=true; procesa 03:46:48.123Z (3.014 s). Restaurar peer y verificar cuatro IDs originales.
 - Resultado esperado: reentrega/procesamiento del pedido interrumpido y restauración del entorno sin recrear contenedores.
 - Resultado obtenido: criterio técnico verificado. API publica 03:46:24.255Z; dos recepciones y un processed del mismo ID en [worker-1](../../evidencias/rabbitmq/recuperacion/corrida-01/final-logs-9daaf02d21e3.txt); [API](../../evidencias/rabbitmq/recuperacion/corrida-01/final-logs-28a4ac996bc2.txt). Target exited/137 en [after-stop](../../evidencias/rabbitmq/recuperacion/corrida-01/after-stop-containers.json); final dos workers running/no paused, API/broker healthy, health ready, cola 0/0/0/2 y mismos cuatro IDs. [Resumen con comandos y snapshots](../../evidencias/rabbitmq/recuperacion/RESUMEN.md).
-- Evidencia (capturas): [Captura real CP-12 aportada por el usuario y revisada completa por el padre](../../evidencias/rabbitmq/recuperacion/corrida-01/captura-recuperacion-worker.png), de la [vista DERIVADA](../../evidencias/rabbitmq/recuperacion/corrida-01/VISTA_EVIDENCIAS.txt) de fuentes originales reales conservadas: [worker raw](../../evidencias/rabbitmq/recuperacion/corrida-01/final-logs-9daaf02d21e3.txt), [API raw](../../evidencias/rabbitmq/recuperacion/corrida-01/final-logs-28a4ac996bc2.txt), [Unacked antes del fallo](../../evidencias/rabbitmq/recuperacion/corrida-01/before-fault-queue.json), [Ready tras el fallo](../../evidencias/rabbitmq/recuperacion/corrida-01/after-fault-queue.json) y [restauración final](../../evidencias/rabbitmq/recuperacion/corrida-01/final.json). No es GUI ni log nativo modificado. La leyenda «captura PENDIENTE» de la vista y de la imagen refleja el estado histórico previo a recibir la foto; se preserva, no es un pendiente actual. La captura incorrecta anterior de CP-06 no se guardó como evidencia CP-12.
-- Estado: **Cumple**, conclusión propia del reporte, no evaluación del profesor. Cierre técnico y visual de CP-12 RabbitMQ; el [estado original conservado](../../evidencias/rabbitmq/recuperacion/corrida-01/recovery.json) TECHNICALLY_VERIFIED_VISUAL_PENDING documenta la etapa anterior a la foto y no se reescribe.
+- Evidencia (capturas): [Captura real CP-12 aportada por el usuario y revisada completa](../../evidencias/rabbitmq/recuperacion/corrida-01/captura-recuperacion-worker.png), de la [vista DERIVADA](../../evidencias/rabbitmq/recuperacion/corrida-01/VISTA_EVIDENCIAS.txt) de fuentes originales reales conservadas: [worker raw](../../evidencias/rabbitmq/recuperacion/corrida-01/final-logs-9daaf02d21e3.txt), [API raw](../../evidencias/rabbitmq/recuperacion/corrida-01/final-logs-28a4ac996bc2.txt), [Unacked antes del fallo](../../evidencias/rabbitmq/recuperacion/corrida-01/before-fault-queue.json), [Ready tras el fallo](../../evidencias/rabbitmq/recuperacion/corrida-01/after-fault-queue.json) y [restauración final](../../evidencias/rabbitmq/recuperacion/corrida-01/final.json). No es GUI ni log nativo modificado. El PDF muestra un detalle del bloque API–restauración, identificado como recorte de esta vista derivada y enlazado al original completo. Solo excluye tres líneas de encabezado y una de pie; conserva logs, fechas y datos. El original permanece íntegro.
+- Estado: **Cumple**, conclusión propia del reporte, no evaluación del profesor. Cierre técnico y visual de CP-12 RabbitMQ; el [registro original conservado](../../evidencias/rabbitmq/recuperacion/corrida-01/recovery.json) documenta la etapa previa a incorporar la imagen y permanece íntegro.
 - Análisis técnico: La suspensión SIGSTOP de PID1 fue instrumentación breve, no mensaje confirmado ni caída del broker. El gate Unacked terminó 8.714 s después de la intención STOP (03:46:24.289→03:46:33.003), dentro de 12 s; la orden SIGKILL empezó a los 8.889 s. No es una garantía temporal general. La parada fue manual/controlada en su ejecución, pero abrupta para el proceso (SIGKILL): al desconectarse el consumidor, el broker devuelve el trabajo no confirmado a Ready. No se ensayó recuperación del broker.
 
 Se observan dos entregas y un order_processed del mismo pedido; redelivered=true acredita reentrega, **no exactly-once**. Un trabajo sin confirmar puede haber producido efectos antes del fallo y duplicarlos al reintentarse; estos logs no prueban ausencia universal de efectos ni idempotencia. Sin pérdida observada para este único ID, no garantía general, HA, downtime cero ni benchmark. Management no contiene el orderId: su asociación depende de baseline vacío, una publicación y logs correlacionados. Los contadores acumulados no representan exclusivamente esta corrida.
 
-Fuente del caso/formato: [PLAN §§7.1–7.4](../../PLAN_DE_TRABAJO.md); diseño y referencias técnicas leídas: [PLAN_ENSAYO](../../evidencias/rabbitmq/recuperacion/PLAN_ENSAYO.md). Consulta directa del PDF no repetida aquí. Conclusiones propias, no calificación del profesor.
+Fuente del caso/formato: guía del taller p. 4 (casos y once campos) y Anexo 1 pp. 7–13 (RabbitMQ). Diseño y referencias técnicas: [protocolo del ensayo](../../evidencias/rabbitmq/recuperacion/PLAN_ENSAYO.md). Conclusiones propias, no calificación del profesor.
 
 
 # Análisis integrado y conclusiones — guía §10
@@ -406,8 +403,8 @@ la entrega RabbitMQ. Citas según auditoría documental directa de las 24 págin
 no se atribuyen exigencias a una página 22 no identificada por esa auditoría.
 No se redistribuye el original del profesor. Los reportes completos anteriores y sus
 fuentes preservadas son la base experimental, no estas conclusiones como evidencia nueva.
-La publicación GitHub y revisión visual final del PDF corresponden al padre.
-La ejecución aislada PowerShell/Linux informada por el integrador pasó; no certifica
+Los enlaces GitHub no acreditan por sí solos publicación remota verificada.
+La ejecución aislada PowerShell/Linux documentada pasó; no certifica
 Windows/Hyper-V nativo, todavía no verificado. Son comprobaciones distintas de esta
 compilación offline.
 
@@ -438,6 +435,6 @@ Figura 6. CP-10: Docker Desktop worker-1, lote 01:58 UTC, tres procesamientos. N
 
 [evidencias/rabbitmq/reparto-carga/docker-logs-worker-1.png](../../evidencias/rabbitmq/reparto-carga/docker-logs-worker-1.png)
 
-Figura 7. CP-12, ID ea298: captura real de VISTA DERIVADA de fuentes originales. No GUI. PENDIENTE es leyenda histórica previa a recibir la foto; caso cerrado. Dos entregas, un processed; no exactly-once. Sin recortes.
+Figura 7. CP-12, ID ea298: captura real de VISTA DERIVADA de fuentes originales. No GUI. Detalle de captura; original completo enlazado. Recorte: solo tres líneas de encabezado y una de pie; logs y fechas conservados. Dos entregas, un processed; no exactly-once.
 
 [evidencias/rabbitmq/recuperacion/corrida-01/captura-recuperacion-worker.png](../../evidencias/rabbitmq/recuperacion/corrida-01/captura-recuperacion-worker.png)

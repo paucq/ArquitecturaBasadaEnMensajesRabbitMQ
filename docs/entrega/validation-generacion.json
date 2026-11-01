@@ -1,8 +1,8 @@
 {
   "pages": 27,
   "unique_image_xobjects": 7,
-  "seven_images_pixel_identical": true,
-  "portable_http_links": 169,
+  "six_full_images_and_cp12_crop_pixel_identical": true,
+  "portable_http_links": 166,
   "case_ids_present": [
     "CP-01",
     "CP-02",
@@ -31,7 +31,8 @@
         346.45
       ],
       "orientation": "landscape",
-      "cropped": false
+      "cropped": false,
+      "crop_box": null
     },
     {
       "path": "evidencias/rabbitmq/consumidores-apagados/corrida-03/management-pedido-pendiente.png",
@@ -44,7 +45,8 @@
         348.91
       ],
       "orientation": "landscape",
-      "cropped": false
+      "cropped": false,
+      "crop_box": null
     },
     {
       "path": "evidencias/rabbitmq/reparto-carga/docker-logs-worker-2.png",
@@ -57,7 +59,8 @@
         429.28
       ],
       "orientation": "landscape",
-      "cropped": false
+      "cropped": false,
+      "crop_box": null
     },
     {
       "path": "evidencias/rabbitmq/consumidores-apagados/corrida-03/consumo-posterior/management-pedido-consumido.png",
@@ -70,7 +73,8 @@
         351.89
       ],
       "orientation": "landscape",
-      "cropped": false
+      "cropped": false,
+      "crop_box": null
     },
     {
       "path": "evidencias/rabbitmq/trazabilidad/corrida-01/captura-trazabilidad-api-broker-worker.png",
@@ -83,7 +87,8 @@
         511.37
       ],
       "orientation": "portrait",
-      "cropped": false
+      "cropped": false,
+      "crop_box": null
     },
     {
       "path": "evidencias/rabbitmq/reparto-carga/docker-logs-worker-1.png",
@@ -96,25 +101,32 @@
         429.28
       ],
       "orientation": "landscape",
-      "cropped": false
+      "cropped": false,
+      "crop_box": null
     },
     {
       "path": "evidencias/rabbitmq/recuperacion/corrida-01/captura-recuperacion-worker.png",
       "pixels": [
         681,
-        838
+        740
       ],
       "display_points": [
         523.28,
-        643.91
+        568.61
       ],
       "orientation": "portrait",
-      "cropped": false
+      "cropped": true,
+      "crop_box": [
+        0,
+        74,
+        681,
+        814
+      ]
     }
   ],
-  "visual_review": "Pendiente; extracción de texto/objetos no certifica legibilidad visual",
-  "native_windows": "Windows/Hyper-V nativo no verificado; padre informa Start/Test/Stop PASS 77 s, 2/2 tests, npm 0 vulnerabilidades en PowerShell 7.6.9/Linux, Node host 26.8.1, Docker Engine 29.6.2 y Node 24 en contenedores",
-  "generated_at_utc": "2026-10-27T04:37:21.872712+00:00",
+  "visual_review": "Revisión actual documentada en verificacion-visual.json, vinculada por SHA-256 al PDF.",
+  "native_windows": "Windows/Hyper-V nativo no verificado; registro histórico Start/Test/Stop PASS 77 s, 2/2 tests, npm 0 vulnerabilidades en PowerShell 7.6.9/Linux, Node host 26.8.1, Docker Engine 29.6.2 y Node 24 en contenedores",
+  "generated_at_utc": "2026-11-01T13:17:10.352569+00:00",
   "versions": {
     "pypdf": "6.21.2",
     "reportlab": "5.1.0",

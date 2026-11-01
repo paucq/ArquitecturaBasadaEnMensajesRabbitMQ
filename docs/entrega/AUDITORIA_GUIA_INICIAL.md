@@ -4,7 +4,7 @@
 
 ## Alcance y resultado
 
-**RabbitMQ: diez reportes completos y evidencia pertinente; no equivale a entrega global terminada ni a PDF consolidado.** No se detectaron campos obligatorios ausentes, enlaces locales rotos ni una exigencia de repetir los diez experimentos con pedidos nuevos.
+**RabbitMQ: diez reportes completos y evidencia pertinente.** El informe consolidado está enlazado en la verificación de entrega; este registro conserva el contraste normativo inicial. No se detectaron campos obligatorios ausentes, enlaces locales rotos ni una exigencia de repetir los diez experimentos con pedidos nuevos.
 
 Base de rutas: carpeta `Taller de Pruebas de Integración/`; `E/` significa `evidencias/rabbitmq/`. Los anclajes `:N` indican líneas comprobadas del archivo, no enlaces web.
 
@@ -27,8 +27,8 @@ Se leyeron los diez reportes completos, fuentes originales seleccionadas y las s
 | CP-11: publicados apagado, procesados al iniciar | p. 4; pp. 5, 13 | `E/consumidores-apagados/corrida-03/reporteCP11.md:14–21` | Satisfecho: 0→1→0, mismo pedido, sin nueva publicación |
 | CP-12: «consumidor o el broker», pendientes sin pérdida | p. 4 | `E/recuperacion/reporteCP12.md:9–21`; `corrida-01/final-logs-9daaf02d21e3.txt:1–4` | Satisfecho para un reinicio abrupto de worker; reentrega true y procesamiento; no exige ambos tipos de reinicio |
 | Once campos por caso, «Evidencia (capturas)» | p. 4 §7 | Diez reportes anteriores, todos con ID, arquitectura, objetivo, precondiciones, entrada, pasos, esperado, obtenido, capturas, estado y análisis | 10/10 completos; capturas presentes y legibles |
-| «Documento PDF»; pruebas, capturas, logs y repo o ZIP | p. 5 §11; p. 13 | Reportes distribuidos y `rabbitmq/README.md`; consolidado pendiente según alcance recibido | **Pendiente de integración de entrega**, no falla experimental |
-| Tres preguntas de conclusiones | p. 5 §10 | Análisis individuales disponibles; conclusión global no consolidada | RabbitMQ: redactar síntesis y dificultades; comparación experimental exige Kafka |
+| «Documento PDF»; pruebas, capturas, logs y repo o ZIP | p. 5 §11; p. 13 | Reportes distribuidos, `rabbitmq/README.md` y `entrega/Informe_RabbitMQ.pdf` | Consolidado y comprobaciones descritos en VERIFICACION_ENTREGA.md |
+| Tres preguntas de conclusiones | p. 5 §10 | Análisis individuales y síntesis en INFORME_RABBITMQ.md | Síntesis RabbitMQ disponible; comparación global fuera del alcance de este repositorio |
 
 ## Interpretación sin requisitos inventados
 
@@ -36,17 +36,15 @@ Nombre apropiado: **arquitectura basada en mensajes con RabbitMQ**, evaluada med
 
 No se exige SLA de latencia, reparto exactamente igual, seis pedidos, exactly-once, deduplicación, prueba de fallo de broker además de worker, captura GUI de Postman ni publicación cloud. Repo **o ZIP** son alternativas (p. 5), no necesariamente repositorio público. No se verificó el remoto.
 
-Las PNG de Management y Docker Desktop son capturas de interfaces; la HTTP es salida Postman CLI guardada. CP-06 y CP-12 son capturas de **vistas derivadas**, no del JSONL original ni de GUI. Sus fuentes se conservan y concuerdan con lo observado; no deben cambiarse títulos, recortarse leyendas para ocultar procedencia ni presentarse como evidencia nativa. La leyenda histórica «PENDIENTE» en CP-12 está explicada en `reporteCP12.md:15–16`.
+Las PNG de Management y Docker Desktop son capturas de interfaces; la HTTP es salida Postman CLI guardada. CP-06 y CP-12 son capturas de **vistas derivadas**, no del JSONL original ni de GUI. Sus fuentes se conservan y no deben presentarse como evidencia nativa. El PDF muestra un detalle CP-12 identificado como recorte, con enlace al original completo: excluye solo tres líneas de encabezado y una de pie; conserva logs y fechas. El PNG fuente permanece íntegro y el generador comprueba los píxeles del bloque mostrado.
 
 IDs separados correctamente: b7a… para CP-01/02/03/07/09/11; 8d48… para CP-06/08; seis IDs del lote CP-10; ea298… para CP-12. La reutilización está declarada. No se encontró conclusión general de ausencia de pérdida o exactly-once en los reportes actuales.
 
-## Brechas reales y corrección propuesta, sin aplicarla
+## Resolución y límites de la auditoría
 
-**P1 — Consolidación de entrega:** falta presentar el material como informe PDF verificable, requisito de p. 5. Preparar una entrega parcial RabbitMQ explícita, sin llamarla entrega global final. Incorporar los diez reportes con sus once campos, no solo enlaces; capturas legibles y leyendas/procedencia, registros verificables y referencias accesibles, montaje/puertos/arranque, arquitectura y límites; enlace real al código y Compose o ZIP. Validar el PDF exportado: imágenes, páginas, legibilidad y enlaces. No se certifica aquí ese PDF ni la publicación.
+El PDF consolida los diez reportes y sus once campos; CP-09 enlaza el ensayo independiente CP-12. El README ofrece la ruta PowerShell y acceso a instalación, evidencia e informe. Los resultados de compilación y de scripts se documentan en [VERIFICACION_ENTREGA.md](VERIFICACION_ENTREGA.md).
 
-**P2 — Referencia de estado desactualizada:** `E/resilient/reporteCP09.md:21` dice «CP-12 sigue pendiente», contradicho por `E/recuperacion/reporteCP12.md:16`. Proponer una nota fechada de actualización o aclaración de estado histórico, preservando originales. Los pendientes históricos de `verificacion-inicial/RESUMEN.md` también necesitan contexto en el índice consolidado, no reescritura silenciosa.
-
-**P2 — Reproducibilidad Windows solicitada por el usuario, no requisito adicional de la guía:** `rabbitmq/README.md` usa ejemplos Bash (`curl` con barras de continuación). Falta una ruta PowerShell inequívoca y validada; no afirmar que el runner o todo el código son portables. El futuro README debe incluir prerrequisitos/versiones verificadas, ubicación inicial, arranque/estado, request JSON compatible, importación Postman, observación Management/logs, precauciones con dos workers y volumen, índice de casos/evidencias y límites de pruebas históricas frente a nuevas ejecuciones.
+La comprobación PowerShell disponible corresponde a Linux/WSL2: no certifica Windows/Hyper-V nativo. Los resúmenes de corridas y registros originales conservan su cronología; sus estados de preparación no sustituyen los reportes finales. La publicación remota no queda acreditada por esta auditoría.
 
 ## Qué consolidar y qué reservar
 
@@ -54,4 +52,4 @@ En el informe RabbitMQ: objetivo/alcance parcial; diagrama funcional propio basa
 
 Responder ya «¿Qué dificultades se presentaron en pruebas?» con hechos documentados de RabbitMQ. Para «¿Qué arquitectura es más robusta desde QA?» y «¿Qué diferencias reales se evidenciaron?», declarar comparación experimental pendiente de Kafka; no inventar resultados. La entrega global requiere Kafka, sus diez reportes, comparación sustentada y PDF conjunto conforme a p. 5; no son diez brechas RabbitMQ.
 
-Orden propuesto: aclarar estado histórico → organizar README e informe parcial → comprobar reproducibilidad PowerShell autorizada → exportar/revisar PDF → verificar acceso a repo o ZIP. No requiere nuevas licencias ni publicar el PDF original del profesor: citar título, páginas y secciones basta para esta trazabilidad.
+No se redistribuye el PDF original del profesor: título, páginas y secciones permiten trazar los criterios utilizados.

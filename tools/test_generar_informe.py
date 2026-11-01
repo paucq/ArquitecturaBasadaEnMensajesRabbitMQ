@@ -1,5 +1,6 @@
 """Pruebas offline deterministas del compilador documental, sin runtime Node."""
 import unittest
+from importlib import import_module
 from pathlib import Path
 from unittest.mock import patch
 
@@ -76,6 +77,41 @@ class CompilationTests(unittest.TestCase):
         lines = informe.code_lines('x' * 245 + ' → ok')
         self.assertLessEqual(max(map(len, lines)), 90)
         self.assertIn('->', informe.pdf_text('a → b'))
+
+    def test_cp12_detail_preserves_source_pixels(self) -> None:
+        Image = import_module('PIL.Image')
+
+        root = Path(__file__).resolve().parents[1]
+        path = root / ('evidencias/rabbitmq/recuperacion/corrida-01/'
+                       'captura-recuperacion-worker.png')
+        before = path.read_bytes()
+        detail = informe.presentation_image(path)
+        with Image.open(path) as original:
+            self.assertEqual(original.size, (681, 838))
+            expected = original.convert('RGB').crop((0, 74, 681, 814))
+        self.assertEqual(detail.size, (681, 740))
+        self.assertEqual(detail.tobytes(), expected.tobytes())
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_other_images_remain_complete(self) -> None:
+        Image = import_module('PIL.Image')
+
+        root = Path(__file__).resolve().parents[1]
+        path = root / ('evidencias/rabbitmq/trazabilidad/corrida-01/'
+                       'captura-trazabilidad-api-broker-worker.png')
+        with Image.open(path) as original:
+            expected = original.convert('RGB')
+        actual = informe.presentation_image(path)
+        self.assertEqual(actual.size, expected.size)
+        self.assertEqual(actual.tobytes(), expected.tobytes())
+
+    def test_cp12_unexpected_dimensions_rejected(self) -> None:
+        Image = import_module('PIL.Image')
+
+        with patch('PIL.Image.open') as opened:
+            opened.return_value.__enter__.return_value = Image.new('RGB', (10, 10))
+            with self.assertRaisesRegex(ValueError, 'dimensiones'):
+                informe.presentation_image(Path('captura-recuperacion-worker.png'))
 
     def test_root_permission(self) -> None:
         with (

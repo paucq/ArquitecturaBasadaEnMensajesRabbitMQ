@@ -14,6 +14,7 @@ import textwrap
 from datetime import datetime, timezone
 from importlib import import_module
 from importlib.metadata import version
+from io import BytesIO
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote, unquote, urlsplit
@@ -185,8 +186,9 @@ CAPTIONS = {
         'No GUI ni JSONL nativo; consultar broker-native-original.jsonl. Sin recortes.',
     'captura-recuperacion-worker.png':
         'CP-12, ID ea298: captura real de VISTA DERIVADA de fuentes originales. '
-        'No GUI. PENDIENTE es leyenda histórica previa a recibir la foto; caso cerrado. '
-        'Dos entregas, un processed; no exactly-once. Sin recortes.',
+        'No GUI. Detalle de captura; original completo enlazado. '
+        'Recorte: solo tres líneas de encabezado y una de pie; logs y fechas conservados. '
+        'Dos entregas, un processed; no exactly-once.',
 }
 
 INTRO = '''# Trabajo académico RabbitMQ
@@ -237,20 +239,21 @@ py -m venv .venv
 .venv\\Scripts\\python tools/generar_informe.py
 ```
 
-Este generador no ejecutó Docker, Postman, curl ni solicitudes. El padre informó
-Start/Test/Stop reales PASS en 77 s en proyecto aislado, 2/2 tests y npm con cero
+Este generador no ejecutó Docker, Postman, curl ni solicitudes. La verificación
+Start/Test/Stop registró PASS en 77 s en proyecto aislado, 2/2 tests y npm con cero
 vulnerabilidades; conservó los cuatro IDs originales y el volumen aislado al detener.
 Ese diagnóstico utilizó PowerShell 7.6.9 en Linux, Node 26.8.1 en el host,
 Docker Engine 29.6.2 y Node 24 dentro de los contenedores:
 valida allí los scripts PowerShell, no una máquina Windows/Hyper-V nativa. La
-validación nativa Windows/Hyper-V sigue sin realizarse. Este resultado, comunicado
-por el integrador, es separado de los ensayos históricos y de las pruebas offline
+validación nativa Windows/Hyper-V sigue sin realizarse. Este resultado está
+documentado en docs/entrega/VERIFICACION_ENTREGA.md y es separado de las pruebas offline
 del generador. No se atribuyen solicitudes nuevas a los casos históricos.
 
 Se incorporan íntegros los once campos de cada reporte. Logs raw y comandos enlazados
 permanecen en evidencias/rabbitmq; no se copian cientos de líneas sin contexto al PDF.
-Las siete PNG se incluyen completas al final, una por página con orientación adecuada.
-Capturas CLI, GUI y vistas derivadas están identificadas por separado.
+Las siete capturas se incluyen al final, una por página con orientación adecuada.
+Seis se muestran completas; CP-12 muestra un detalle identificado con enlace al
+original íntegro. Capturas CLI, GUI y vistas derivadas se identifican por separado.
 
 Familias de IDs: b7a74952 (CP-01/02/03/07/09/11, una publicación compartida);
 8d488fb8 (CP-06/08, traza nativa); seis IDs exclusivos de CP-10 (tabla enlazada);
@@ -259,10 +262,6 @@ En CP-06 published/received nativos del broker preceden al log API order_publish
 el log API se escribe tras confirmación. received nativo significa entrega, no ack.
 El broker registra IDs mediante rabbitmq_tracing, no mediante su stdout operativo
 habitual; se conservaron JSONL/payload y comprobación de restauración del diagnóstico.
-
-Los PENDIENTE de resúmenes iniciales, recovery.json y la vista CP-12 conservan su
-cronología previa a recibir capturas. No invalidan el cierre actual de los diez casos.
-CP-09 ya enlaza la recuperación cerrada CP-12; se preserva la fuente corregida recibida.
 
 ## Matriz de cobertura RabbitMQ
 
@@ -328,8 +327,8 @@ la entrega RabbitMQ. Citas según auditoría documental directa de las 24 págin
 no se atribuyen exigencias a una página 22 no identificada por esa auditoría.
 No se redistribuye el original del profesor. Los reportes completos anteriores y sus
 fuentes preservadas son la base experimental, no estas conclusiones como evidencia nueva.
-La publicación GitHub y revisión visual final del PDF corresponden al padre.
-La ejecución aislada PowerShell/Linux informada por el integrador pasó; no certifica
+Los enlaces GitHub no acreditan por sí solos publicación remota verificada.
+La ejecución aislada PowerShell/Linux documentada pasó; no certifica
 Windows/Hyper-V nativo, todavía no verificado. Son comprobaciones distintas de esta
 compilación offline.
 '''
@@ -372,9 +371,26 @@ def inline_pdf(text: str) -> str:
     return ''.join(parts).replace('**', '').replace('`', '')
 
 
+def presentation_image(path: Path) -> Any:
+    """Carga una vista RGB; CP-12 excluye solo encabezado y pie administrativos.
+
+    El recorte fijo corresponde al PNG original de 681 x 838 píxeles. Si cambia
+    la fuente se rechaza la operación, en lugar de adivinar un recorte nuevo.
+    El archivo original nunca se modifica.
+    """
+    pillow_image = import_module('PIL.Image')
+    with pillow_image.open(path) as original:
+        image = original.convert('RGB')
+    if path.name == 'captura-recuperacion-worker.png':
+        if image.size != (681, 838):
+            raise ValueError('CP-12: dimensiones originales inesperadas')
+        return image.crop((0, 74, 681, 814))
+    return image
+
+
 def build_pdf(markdown: str, images: list[dict[str, str]], source_root: Path,
               output: Path) -> dict[str, object]:
-    """Genera texto, diagrama y siete páginas de capturas completas; valida con pypdf."""
+    """Genera siete capturas, con detalle CP-12; valida píxeles contra fuentes."""
     from reportlab.lib import colors
     from reportlab.lib.pagesizes import A4, landscape
     from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
@@ -444,8 +460,11 @@ def build_pdf(markdown: str, images: list[dict[str, str]], source_root: Path,
     image_checks = []
     for index, item in enumerate(images, 1):
         path = safe_path(source_root, item['path'])
-        with PillowImage.open(path) as image:
-            width, height = image.size
+        image = presentation_image(path)
+        width, height = image.size
+        image_bytes = BytesIO()
+        image.save(image_bytes, format='PNG')
+        image_bytes.seek(0)
         candidates = [('portrait', A4), ('landscape', landscape(A4))]
         template, (page_width, page_height) = max(
             candidates, key=lambda item: min((item[1][0] - 72) / width,
@@ -455,11 +474,14 @@ def build_pdf(markdown: str, images: list[dict[str, str]], source_root: Path,
         story.extend([NextPageTemplate(template), PageBreak(),
                       Paragraph(f'Figura {index}. {inline_pdf(item["caption"])}', body),
                       Paragraph(inline_pdf(f'[Original preservado](../../{quote(item["path"])})'), body),
-                      Image(str(path), width=width * scale, height=height * scale)])
+                      Image(image_bytes, width=width * scale, height=height * scale)])
         image_checks.append({'path': item['path'], 'pixels': [width, height],
                              'display_points': [round(width * scale, 2),
                                                 round(height * scale, 2)],
-                             'orientation': template, 'cropped': False})
+                             'orientation': template,
+                             'cropped': path.name == 'captura-recuperacion-worker.png',
+                             'crop_box': ([0, 74, 681, 814] if path.name ==
+                                          'captura-recuperacion-worker.png' else None)})
     doc.build(story)
     reader = PdfReader(output)
     extracted = '\n'.join(page.extract_text() for page in reader.pages)
@@ -496,21 +518,27 @@ def build_pdf(markdown: str, images: list[dict[str, str]], source_root: Path,
         raise ValueError('PDF contiene página vacía')
     expected_pixels = set()
     for item in images:
-        with PillowImage.open(safe_path(source_root, item['path'])) as original:
-            expected_pixels.add((original.size, original.convert('RGB').tobytes()))
+        path = safe_path(source_root, item['path'])
+        with PillowImage.open(path) as original:
+            # Independiente de presentation_image: valida el bloque exacto de fuente.
+            expected = original.convert('RGB')
+            if path.name == 'captura-recuperacion-worker.png':
+                expected = expected.crop((0, 74, 681, 814))
+            expected_pixels.add((expected.size, expected.tobytes()))
     embedded_pixels = {(image.image.size, image.image.convert('RGB').tobytes())
                        for page in reader.pages for image in page.images}
     if embedded_pixels != expected_pixels:
-        raise ValueError('Las imágenes PDF no coinciden píxel a píxel con las siete fuentes')
+        raise ValueError('Imágenes PDF distintas de las seis fuentes y el recorte CP-12')
     if '/home/' in extracted or '\u25a0' in extracted:
         raise ValueError('PDF con ruta absoluta o cuadro de glifo no soportado')
     return {'pages': len(reader.pages), 'unique_image_xobjects': len(image_objects),
-            'seven_images_pixel_identical': True, 'portable_http_links': remote_links,
+            'six_full_images_and_cp12_crop_pixel_identical': True,
+            'portable_http_links': remote_links,
             'case_ids_present': ids, 'fields_per_case': len(FIELDS),
             'all_eleven_fields_in_each_case': True, 'empty_pages': 0,
             'layout_error': False, 'images': image_checks,
             'visual_review': 'Pendiente; extracción de texto/objetos no certifica legibilidad visual',
-            'native_windows': 'Windows/Hyper-V nativo no verificado; padre informa '
+            'native_windows': 'Windows/Hyper-V nativo no verificado; registro histórico '
                               'Start/Test/Stop PASS 77 s, 2/2 tests, npm 0 vulnerabilidades '
                               'en PowerShell 7.6.9/Linux, Node host 26.8.1, '
                               'Docker Engine 29.6.2 y Node 24 en contenedores'}
