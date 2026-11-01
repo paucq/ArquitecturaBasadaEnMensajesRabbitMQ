@@ -1,6 +1,13 @@
 # Arquitectura basada en mensajes — RabbitMQ
 
-Laboratorio Node.js/Express: API → RabbitMQ → dos workers independientes. Esta guía usa **Windows PowerShell, sin WSL, Ubuntu ni Git Bash**. Los cuatro contenedores arrancan automáticamente; no hay que lanzar cada worker.
+Laboratorio Node.js/Express: API → cola RabbitMQ → dos réplicas consumidoras. **Tres servicios Compose, cuatro contenedores**; no hay que lanzar cada worker por separado. La ruta de ejecución documentada usa Windows PowerShell sin WSL; la verificación histórica disponible fue en Linux/WSL2, no Windows nativo.
+
+## Integrantes
+
+- Juan David Velasquez Murillo
+- Paula Andrea Calderon Quintero
+- Sara Regino Ferraro
+- Alejandra Madrid Calderon
 
 ## Entrega RabbitMQ — 10 de 10 casos
 
@@ -9,6 +16,26 @@ Laboratorio Node.js/Express: API → RabbitMQ → dos workers independientes. Es
 - Código, Compose, colección Postman y evidencias incluidos. También puede descargarse el repositorio desde **Code → Download ZIP**.
 
 Este repositorio completa **la parte RabbitMQ**, no los veinte casos del taller: Kafka y la comparación experimental global siguen fuera de su alcance. Los estados Cumple son conclusiones de nuestros reportes, no una calificación del profesor.
+
+## Arquitectura real
+
+```mermaid
+flowchart LR
+    cliente[Cliente / Postman] -->|POST /orders| api[orders-api: Express]
+    api -->|AMQP: mensaje persistente| cola
+    subgraph broker[Servicio rabbitmq]
+        cola[(Cola durable: pedidos)]
+    end
+    cola -.->|confirm de publicación| api
+    api -.->|HTTP 202: accepted| cliente
+    cola -->|entrega a un consumidor| w1[notification-worker: réplica 1]
+    cola -->|entrega a un consumidor| w2[notification-worker: réplica 2]
+    w1 -.->|ack al terminar| cola
+    w2 -.->|ack al terminar| cola
+    broker --- volumen[(Volumen rabbitmq-data)]
+```
+
+Las réplicas **compiten por la misma cola**: no es fanout ni una copia por worker. Cada una usa `prefetch(1)`, simula 3000 ms de trabajo y envía ack manual al terminar. El 202 espera confirmación del broker, no la notificación. Puede haber reentrega; no hay deduplicación ni garantía de exactamente una vez. [Decisiones, código y diez casos](docs/ARQUITECTURA_RABBITMQ.md).
 
 ## Inicio rápido
 
@@ -63,6 +90,29 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\windows\Stop-Lab.p
 En ese caso use API `http://localhost:3300` y Management `http://localhost:15673`. Los scripts restauran las variables de proceso al salir; no guardan configuración ni secretos. El nombre del proyecto delimita contenedores, red y volumen.
 
 ## Mapa de la entrega
+
+Árbol resumido de rutas reales; las corridas originales no se desplazan:
+
+```text
+ArquitecturaBasadaEnMensajesRabbitMQ/
+├── README.md
+├── rabbitmq/
+│   ├── api.mjs                   # HTTP y publicación confirmada
+│   ├── broker.mjs                # Conexión AMQP y logs compartidos
+│   ├── worker.mjs                # Consumidor con ack manual
+│   ├── docker-compose.yml       # 3 servicios / 4 contenedores
+│   ├── Dockerfile
+│   ├── package.json / package-lock.json
+│   └── pruebas/                 # Colección Postman y 2 tests de integración
+├── scripts/windows/             # Start-Lab, Test-Lab, Stop-Lab
+├── docs/
+│   ├── ARQUITECTURA_RABBITMQ.md
+│   ├── EJECUCION_WINDOWS.md
+│   └── entrega/                 # Informe fuente, manifiesto y verificaciones históricas
+├── entrega/Informe_RabbitMQ.pdf
+├── evidencias/rabbitmq/          # 1045 archivos originales y diez reportes
+└── tools/                       # Generador PDF, requisitos y tests
+```
 
 | Ruta | Uso |
 |---|---|
